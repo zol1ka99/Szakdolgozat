@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\Pizza\2019TobbformosMvcPizzaTobbTabla\TobbformosMvcPizzaTobbTabla\TobbformosMvcPizzaTobbTabla\packages\MySql.Data.8.0.19\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,11 +55,15 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Auto.cs" />
+    <Compile Include="model\Auto.cs" />
+    <Compile Include="model\AutoDatabase.cs" />
+    <Compile Include="model\Connection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\Auto\RepositoryAuto.cs" />
-    <Compile Include="Repository\Repository.cs" />
+    <Compile Include="repository\Auto\RepositoryAuto.cs" />
+    <Compile Include="repository\Repository.cs" />
+    <Compile Include="repository\RepositoryDatabase.cs" />
+    <Compile Include="repository\ReposytoryException.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,6 +89,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

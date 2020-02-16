@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Szakdoga_autonyilvantartas.Repository;
 
 namespace Szakdoga_autonyilvantartas.Model
 {
@@ -41,49 +42,109 @@ namespace Szakdoga_autonyilvantartas.Model
         {
             this.id = id;
         }
+        public int getId()
+        {
+            return id;
+        }
+
+
         public void setMarka (string marka)
         {
             this.marka = marka;
         }
+        public string getMarka()
+        {
+            return marka;
+        }
+
+
         public void setTipus(string tipus)
         {
             this.tipus = tipus;
         }
+        public string getTipus()
+        {
+            return tipus;
+        }
+
+
         public void setGyartasiev(int gyartasi_ev)
         {
             this.gyartasi_ev = gyartasi_ev;
         }
+        public int getGyartasiev()
+        {
+            return gyartasi_ev;
+        }
+
+
         public void setVetelar(int vetelar)
         {
             this.vetelar = vetelar;
         }
+        public int getVetelar()
+        {
+            return vetelar;
+        }
+
+
         public void setRendszam (string rendszam)
         {
             this.rendszam = rendszam;
         }
+        public string getRendszam()
+        {
+            return rendszam;
+        }
+
+
         public void setKilometeroraallas(int kilometeroraallas)
         {
             this.kilometeroraallas = kilometeroraallas;
         }
+        public int getKilometeroraallas()
+        {
+            return kilometeroraallas;
+        }
+
+
         public void setAlvazszam(string alvazszam)
         {
             this.alvazszam = alvazszam;
         }
+        public string getAlvazszam()
+        {
+            return alvazszam;
+        }
+
+
         public void setGepkocsiTipusa(string gepkocsi_tipusa)
         {
             this.gepkocsi_tipusa = gepkocsi_tipusa;
         }
+        public string getGepkocsiTipusa()
+        {
+            return gepkocsi_tipusa;
+        }
+
+
         public void setUzemanyag(string uzemanyag)
         {
             this.uzemanyag = uzemanyag;
         }
+        public string getUzemanyag()
+        {
+            return uzemanyag;
+        }
+
+
         public void setSebessegvaltoTipusa (string sebessegvalto_tipusa)
         {
             this.sebessegvalto_tipusa = sebessegvalto_tipusa;
         }
-        public int getId()
+        public string getSebessegvaltoTipusa()
         {
-            return id;
+            return sebessegvalto_tipusa;
         }
     }
 }

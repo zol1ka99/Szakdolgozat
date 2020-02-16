@@ -8,21 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using Szakdoga_autonyilvantartas.Model;
+using Szakdoga_autonyilvantartas.Repository;
 
 namespace Szakdoga_autonyilvantartas
 {
     public partial class Form1 : Form
     {
-        /*Autok autok; //tarolo
+
+        Repository repo = new Repository();
 
         public Form1()
         {
-            autok = new Autok(); // példányosítás
+            
             InitializeComponent();
         }
 
         
-
+        /*
         private void megjelenitAutot(Auto h)
         {
             comboBox1.Text = h.getautotipus().ToString();
@@ -237,6 +240,6 @@ namespace Szakdoga_autonyilvantartas
             textBoxGepkocsiTipusa.Text = autok.getAutokSzama().ToString();
         }
 
-
-    }*/
+    */
+    }
 }
