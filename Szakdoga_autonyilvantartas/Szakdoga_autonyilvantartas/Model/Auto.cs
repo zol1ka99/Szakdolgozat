@@ -21,5 +21,25 @@ namespace Szakdoga_autonyilvantartas.Model
         private string sebessegvalto_tipusa; //automata, manuális (később esetleg részletesebb ha szükséges)
         private string tulajdonos_nev;
 
+        public Auto(int id, string marka, string tipus, int gyartasi_ev, int vetelar, string rendszam, int kilometeroraallas, string alvazszam, string gepkocsi_tipusa, string uzemanyag, string sebessegvalto_tipusa, string tulajdonos_nev)
+        {
+            this.id = id;
+            this.marka = marka;
+            this.tipus = tipus;
+            this.gyartasi_ev = gyartasi_ev;
+            this.vetelar = vetelar;
+            this.rendszam = rendszam;
+            this.kilometeroraallas = kilometeroraallas;
+            this.alvazszam = alvazszam;
+            this.gepkocsi_tipusa = gepkocsi_tipusa;
+            this.uzemanyag = uzemanyag;
+            this.sebessegvalto_tipusa = sebessegvalto_tipusa;
+            this.tulajdonos_nev = tulajdonos_nev;
+        }
+
+        public void setId(int id)
+        {
+            this.id = id;
+        }s
     }
 }
