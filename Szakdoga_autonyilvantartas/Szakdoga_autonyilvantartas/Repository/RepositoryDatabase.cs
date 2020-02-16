@@ -68,7 +68,7 @@ namespace Szakdoga_autonyilvantartas.Repository
             {
                 connection.Close();
                 Debug.WriteLine(e.Message);
-                throw new ReposytoryException("Adatbázis törlése nem sikerült!")
+                throw new ReposytoryException("Adatbázis törlése nem sikerült!");
             }
         }
 

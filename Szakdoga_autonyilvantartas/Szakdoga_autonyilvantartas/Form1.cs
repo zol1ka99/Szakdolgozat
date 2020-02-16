@@ -26,7 +26,7 @@ namespace Szakdoga_autonyilvantartas
 
         
         /*
-        private void megjelenitAutot(Auto h)
+        private void megjelenitAutot(Car h)
         {
             comboBox1.Text = h.getautotipus().ToString();
             textBoxUzemanyag.Text = h.getautomodell().ToString();
@@ -85,7 +85,7 @@ namespace Szakdoga_autonyilvantartas
 
             if (!vanHiba)
             {
-                Auto h = new Auto(autotipus, automodell, evjarat, forgalombahelyez_ev);
+                Car h = new Car(autotipus, automodell, evjarat, forgalombahelyez_ev);
                 autok.hozzaadAutot(h);
                 megjelenitAutokatListboxban();
             }
@@ -100,7 +100,7 @@ namespace Szakdoga_autonyilvantartas
             try
             {
                 //kiválasztott elem
-                Auto h = autok.getAdottElem(index);
+                Car h = autok.getAdottElem(index);
                 //id-jét megkeressük, töröljük
                 int id = h.getId();
                 autok.torolIdAlapjan(id);
@@ -191,11 +191,11 @@ namespace Szakdoga_autonyilvantartas
                 int index = listBox1.SelectedIndex;
                 if (index < 0) //üres a ListBox
                     return;
-                Auto modositando = autok.getAdottElem(index);
+                Car modositando = autok.getAdottElem(index);
                 //Lekérjük a módosítandó elem ID-jét 
                 int id = modositando.getId();
                 //Létrehozzuk az autót
-                Auto h = new Auto(autotipus, automodell, evjarat, forgalombahelyez_ev);
+                Car h = new Car(autotipus, automodell, evjarat, forgalombahelyez_ev);
                 //A repositoryban az adott id-vel rendelekező háromszoget módosítjuk az új h háromszögre
                 autok.modositAutot(id, h);
                 //Frissítjük a ListBox-ot az új adatokkal
@@ -226,7 +226,7 @@ namespace Szakdoga_autonyilvantartas
             try
             {
                 //kiválasztott autó lekérése és megjelenítése
-                Auto h = autok.getAdottElem(index);
+                Car h = autok.getAdottElem(index);
                 megjelenitAutot(h);
             }
             catch (Exception ex)

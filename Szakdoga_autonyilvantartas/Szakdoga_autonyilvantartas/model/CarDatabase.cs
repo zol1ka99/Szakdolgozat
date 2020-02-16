@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Szakdoga_autonyilvantartas.Model
 {
-    partial class AutoDatabase
+    partial class CarDatabase
     {
         public string getInsert()
         {
             return
-                "INSERT INTO `autok`(``)"
+                "INSERT INTO `autok`(``)";
         }
     }
 }

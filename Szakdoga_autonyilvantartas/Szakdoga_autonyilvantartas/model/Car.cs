@@ -7,7 +7,7 @@ using Szakdoga_autonyilvantartas.Repository;
 
 namespace Szakdoga_autonyilvantartas.Model
 {
-    partial class Auto
+    partial class Car
     {
         private int id;
         private string marka; //comboboxba be kell tölteni az adatokat
@@ -22,7 +22,7 @@ namespace Szakdoga_autonyilvantartas.Model
         private string sebessegvalto_tipusa; //automata, manuális (később esetleg részletesebb ha szükséges)
         private string tulajdonos_nev;
 
-        public Auto(int id, string marka, string tipus, int gyartasi_ev, int vetelar, string rendszam, int kilometeroraallas, string alvazszam, string gepkocsi_tipusa, string uzemanyag, string sebessegvalto_tipusa, string tulajdonos_nev)
+        public Car(int id, string marka, string tipus, int gyartasi_ev, int vetelar, string rendszam, int kilometeroraallas, string alvazszam, string gepkocsi_tipusa, string uzemanyag, string sebessegvalto_tipusa, string tulajdonos_nev)
         {
             this.id = id;
             this.marka = marka;

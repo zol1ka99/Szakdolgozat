@@ -8,18 +8,18 @@ using Szakdoga_autonyilvantartas.Model;
 
 namespace Szakdoga_autonyilvantartas.Repository.Auto
 {
-    partial class RepositoryAuto
+    partial class RepositoryCar
     { 
-        List<Auto> autok;
+        List<Car> cars;
 
-        public List<Auto> getAutok()
+        public List<Car> getAutok()
         {
-            return autok;
+            return cars;
         }
 
-        public void setAutok(List<Auto> autok)
+        public void setAutok(List<Car> cars)
         {
-            this.autok = autok;
+            this.cars = cars;
         }
     }
 }
