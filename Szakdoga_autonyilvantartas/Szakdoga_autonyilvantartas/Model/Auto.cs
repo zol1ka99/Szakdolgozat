@@ -20,5 +20,6 @@ namespace Szakdoga_autonyilvantartas.Model
         private string uzemanyag; //benzin, gazolaj, cng, hibrid(benzin vagy dizel hibrid ezt majd jelölni kellene), 
         private string sebessegvalto_tipusa; //automata, manuális (később esetleg részletesebb ha szükséges)
         private string tulajdonos_nev;
+
     }
 }
