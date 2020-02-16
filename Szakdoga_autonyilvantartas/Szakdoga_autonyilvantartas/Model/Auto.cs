@@ -40,6 +40,50 @@ namespace Szakdoga_autonyilvantartas.Model
         public void setId(int id)
         {
             this.id = id;
-        }s
+        }
+        public void setMarka (string marka)
+        {
+            this.marka = marka;
+        }
+        public void setTipus(string tipus)
+        {
+            this.tipus = tipus;
+        }
+        public void setGyartasiev(int gyartasi_ev)
+        {
+            this.gyartasi_ev = gyartasi_ev;
+        }
+        public void setVetelar(int vetelar)
+        {
+            this.vetelar = vetelar;
+        }
+        public void setRendszam (string rendszam)
+        {
+            this.rendszam = rendszam;
+        }
+        public void setKilometeroraallas(int kilometeroraallas)
+        {
+            this.kilometeroraallas = kilometeroraallas;
+        }
+        public void setAlvazszam(string alvazszam)
+        {
+            this.alvazszam = alvazszam;
+        }
+        public void setGepkocsiTipusa(string gepkocsi_tipusa)
+        {
+            this.gepkocsi_tipusa = gepkocsi_tipusa;
+        }
+        public void setUzemanyag(string uzemanyag)
+        {
+            this.uzemanyag = uzemanyag;
+        }
+        public void setSebessegvaltoTipusa (string sebessegvalto_tipusa)
+        {
+            this.sebessegvalto_tipusa = sebessegvalto_tipusa;
+        }
+        public int getId()
+        {
+            return id;
+        }
     }
 }
