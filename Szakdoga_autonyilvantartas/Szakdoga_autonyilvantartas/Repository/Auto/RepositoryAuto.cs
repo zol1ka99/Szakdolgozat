@@ -7,7 +7,7 @@ using Szakdoga_autonyilvantartas.Repository;
 
 namespace Szakdoga_autonyilvantartas.Repository.Auto
 {
-    class RepositoryAuto
+    partial class RepositoryAuto
     {
         List<Auto> autok;
 

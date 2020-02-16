@@ -7,15 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Szakdoga_autonyilvantartas.Tarolo;
-using Szakdoga_autonyilvantartas.Model;
 using System.Diagnostics;
 
 namespace Szakdoga_autonyilvantartas
 {
     public partial class Form1 : Form
     {
-        Autok autok; //tarolo
+        /*Autok autok; //tarolo
 
         public Form1()
         {
@@ -240,5 +238,5 @@ namespace Szakdoga_autonyilvantartas
         }
 
 
-    }
+    }*/
 }

@@ -7,8 +7,11 @@ using Szakdoga_autonyilvantartas.Repository;
 
 namespace Szakdoga_autonyilvantartas.Repository
 {
-    class Repository
+    partial class Repository
     {
-        autok = new List<Auto>();
+        public Repository()
+        {
+            autok = new List<Auto>();
+        }
     }
 }
