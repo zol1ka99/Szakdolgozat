@@ -11,7 +11,7 @@ namespace Szakdoga_autonyilvantartas.Repository
     {
         public Repository()
         {
-            car = new List<Car>();
+            autok = new List<Car>();
         }
     }
 }

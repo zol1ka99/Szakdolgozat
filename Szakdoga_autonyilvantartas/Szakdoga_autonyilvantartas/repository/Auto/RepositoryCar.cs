@@ -10,16 +10,16 @@ namespace Szakdoga_autonyilvantartas.Repository.Auto
 {
     partial class RepositoryCar
     { 
-        List<Car> cars;
+        List<Car> autok;
 
         public List<Car> getAutok()
         {
-            return cars;
+            return autok;
         }
 
         public void setAutok(List<Car> cars)
         {
-            this.cars = cars;
+            this.autok = autok;
         }
     }
 }
