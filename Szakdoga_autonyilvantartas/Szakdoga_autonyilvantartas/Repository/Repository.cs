@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Szakdoga_autonyilvantartas.Model;
+using Szakdoga_autonyilvantartas.Repository.Auto;
 
 namespace Szakdoga_autonyilvantartas.Repository
 {
@@ -11,7 +12,8 @@ namespace Szakdoga_autonyilvantartas.Repository
     {
         public Repository()
         {
-            autok = new List<Car>();
+            //autok = new List<Car>(); //ezzel fogalmam sincs mi baja de majd kiderül xd
+
         }
     }
 }

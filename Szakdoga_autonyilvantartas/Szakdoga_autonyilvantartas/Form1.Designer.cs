@@ -38,43 +38,43 @@
             this.kilépésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageAutok = new System.Windows.Forms.TabPage();
-            this.tabPageTulajdonosok = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonAdatokBetoltese = new System.Windows.Forms.Button();
-            this.panelModositTorolGomb = new System.Windows.Forms.Panel();
-            this.buttonModosit = new System.Windows.Forms.Button();
-            this.buttonTorol = new System.Windows.Forms.Button();
-            this.panelAutok = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBoxTipus = new System.Windows.Forms.TextBox();
-            this.comboBoxMarka = new System.Windows.Forms.ComboBox();
-            this.dateTimePickerGyartasiEv = new System.Windows.Forms.DateTimePicker();
-            this.textBoxVetelar = new System.Windows.Forms.TextBox();
-            this.textBoxRendszam = new System.Windows.Forms.TextBox();
-            this.textBoxKilometeroraAllas = new System.Windows.Forms.TextBox();
-            this.textBoxAlvazszam = new System.Windows.Forms.TextBox();
-            this.textBoxGepkocsiTipusa = new System.Windows.Forms.TextBox();
-            this.textBoxUzemanyag = new System.Windows.Forms.TextBox();
-            this.textBoxSebessegvaltoTipusa = new System.Windows.Forms.TextBox();
-            this.textBoxTulajdonosNeve = new System.Windows.Forms.TextBox();
-            this.buttonUjAuto = new System.Windows.Forms.Button();
             this.buttonUjMentes = new System.Windows.Forms.Button();
+            this.buttonUjAuto = new System.Windows.Forms.Button();
+            this.panelAutok = new System.Windows.Forms.Panel();
+            this.textBoxTulajdonosNeve = new System.Windows.Forms.TextBox();
+            this.textBoxSebessegvaltoTipusa = new System.Windows.Forms.TextBox();
+            this.textBoxUzemanyag = new System.Windows.Forms.TextBox();
+            this.textBoxGepkocsiTipusa = new System.Windows.Forms.TextBox();
+            this.textBoxAlvazszam = new System.Windows.Forms.TextBox();
+            this.textBoxKilometeroraAllas = new System.Windows.Forms.TextBox();
+            this.textBoxRendszam = new System.Windows.Forms.TextBox();
+            this.textBoxVetelar = new System.Windows.Forms.TextBox();
+            this.dateTimePickerGyartasiEv = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxMarka = new System.Windows.Forms.ComboBox();
+            this.textBoxTipus = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelModositTorolGomb = new System.Windows.Forms.Panel();
+            this.buttonTorol = new System.Windows.Forms.Button();
+            this.buttonModosit = new System.Windows.Forms.Button();
+            this.buttonAdatokBetoltese = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabPageTulajdonosok = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageAutok.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panelModositTorolGomb.SuspendLayout();
             this.panelAutok.SuspendLayout();
+            this.panelModositTorolGomb.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -93,7 +93,7 @@
             this.tesztadatokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adatbázisToolStripMenuItem});
             this.tesztadatokToolStripMenuItem.Name = "tesztadatokToolStripMenuItem";
-            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.tesztadatokToolStripMenuItem.Text = "Tesztadatok";
             // 
             // adatbázisToolStripMenuItem
@@ -112,6 +112,7 @@
             this.adatbázisLétrehozásaToolStripMenuItem.Name = "adatbázisLétrehozásaToolStripMenuItem";
             this.adatbázisLétrehozásaToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.adatbázisLétrehozásaToolStripMenuItem.Text = "Adatbázis létrehozása";
+            this.adatbázisLétrehozásaToolStripMenuItem.Click += new System.EventHandler(this.adatbázisLétrehozásaToolStripMenuItem_Click);
             // 
             // feltöltésTesztadatokkalToolStripMenuItem
             // 
@@ -130,6 +131,7 @@
             this.törölAdatbázistToolStripMenuItem.Name = "törölAdatbázistToolStripMenuItem";
             this.törölAdatbázistToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.törölAdatbázistToolStripMenuItem.Text = "Töröl adatbázist";
+            this.törölAdatbázistToolStripMenuItem.Click += new System.EventHandler(this.törölAdatbázistToolStripMenuItem_Click);
             // 
             // kilépésToolStripMenuItem
             // 
@@ -163,59 +165,23 @@
             this.tabPageAutok.Text = "Autók";
             this.tabPageAutok.UseVisualStyleBackColor = true;
             // 
-            // tabPageTulajdonosok
+            // buttonUjMentes
             // 
-            this.tabPageTulajdonosok.Location = new System.Drawing.Point(4, 22);
-            this.tabPageTulajdonosok.Name = "tabPageTulajdonosok";
-            this.tabPageTulajdonosok.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTulajdonosok.Size = new System.Drawing.Size(965, 535);
-            this.tabPageTulajdonosok.TabIndex = 1;
-            this.tabPageTulajdonosok.Text = "Tulajdonosok";
-            this.tabPageTulajdonosok.UseVisualStyleBackColor = true;
+            this.buttonUjMentes.Location = new System.Drawing.Point(831, 139);
+            this.buttonUjMentes.Name = "buttonUjMentes";
+            this.buttonUjMentes.Size = new System.Drawing.Size(86, 23);
+            this.buttonUjMentes.TabIndex = 5;
+            this.buttonUjMentes.Text = "Új Mentése";
+            this.buttonUjMentes.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // buttonUjAuto
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 7);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(615, 532);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // buttonAdatokBetoltese
-            // 
-            this.buttonAdatokBetoltese.Location = new System.Drawing.Point(660, 19);
-            this.buttonAdatokBetoltese.Name = "buttonAdatokBetoltese";
-            this.buttonAdatokBetoltese.Size = new System.Drawing.Size(264, 51);
-            this.buttonAdatokBetoltese.TabIndex = 1;
-            this.buttonAdatokBetoltese.Text = "Adatok betöltése";
-            this.buttonAdatokBetoltese.UseVisualStyleBackColor = true;
-            // 
-            // panelModositTorolGomb
-            // 
-            this.panelModositTorolGomb.Controls.Add(this.buttonTorol);
-            this.panelModositTorolGomb.Controls.Add(this.buttonModosit);
-            this.panelModositTorolGomb.Location = new System.Drawing.Point(634, 76);
-            this.panelModositTorolGomb.Name = "panelModositTorolGomb";
-            this.panelModositTorolGomb.Size = new System.Drawing.Size(325, 47);
-            this.panelModositTorolGomb.TabIndex = 2;
-            // 
-            // buttonModosit
-            // 
-            this.buttonModosit.Location = new System.Drawing.Point(26, 8);
-            this.buttonModosit.Name = "buttonModosit";
-            this.buttonModosit.Size = new System.Drawing.Size(93, 31);
-            this.buttonModosit.TabIndex = 0;
-            this.buttonModosit.Text = "Módosít";
-            this.buttonModosit.UseVisualStyleBackColor = true;
-            // 
-            // buttonTorol
-            // 
-            this.buttonTorol.Location = new System.Drawing.Point(197, 8);
-            this.buttonTorol.Name = "buttonTorol";
-            this.buttonTorol.Size = new System.Drawing.Size(93, 31);
-            this.buttonTorol.TabIndex = 1;
-            this.buttonTorol.Text = "Töröl";
-            this.buttonTorol.UseVisualStyleBackColor = true;
+            this.buttonUjAuto.Location = new System.Drawing.Point(660, 139);
+            this.buttonUjAuto.Name = "buttonUjAuto";
+            this.buttonUjAuto.Size = new System.Drawing.Size(93, 23);
+            this.buttonUjAuto.TabIndex = 4;
+            this.buttonUjAuto.Text = "Új";
+            this.buttonUjAuto.UseVisualStyleBackColor = true;
             // 
             // panelAutok
             // 
@@ -246,95 +212,83 @@
             this.panelAutok.Size = new System.Drawing.Size(325, 318);
             this.panelAutok.TabIndex = 3;
             // 
-            // label1
+            // textBoxTulajdonosNeve
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Márka:";
+            this.textBoxTulajdonosNeve.Location = new System.Drawing.Point(108, 289);
+            this.textBoxTulajdonosNeve.Name = "textBoxTulajdonosNeve";
+            this.textBoxTulajdonosNeve.Size = new System.Drawing.Size(175, 20);
+            this.textBoxTulajdonosNeve.TabIndex = 21;
             // 
-            // label2
+            // textBoxSebessegvaltoTipusa
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Típus:";
+            this.textBoxSebessegvaltoTipusa.Location = new System.Drawing.Point(133, 261);
+            this.textBoxSebessegvaltoTipusa.Name = "textBoxSebessegvaltoTipusa";
+            this.textBoxSebessegvaltoTipusa.Size = new System.Drawing.Size(150, 20);
+            this.textBoxSebessegvaltoTipusa.TabIndex = 20;
             // 
-            // label3
+            // textBoxUzemanyag
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 68);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Gyártási év:";
+            this.textBoxUzemanyag.Location = new System.Drawing.Point(86, 233);
+            this.textBoxUzemanyag.Name = "textBoxUzemanyag";
+            this.textBoxUzemanyag.Size = new System.Drawing.Size(197, 20);
+            this.textBoxUzemanyag.TabIndex = 19;
             // 
-            // label4
+            // textBoxGepkocsiTipusa
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Vételár:";
+            this.textBoxGepkocsiTipusa.Location = new System.Drawing.Point(108, 205);
+            this.textBoxGepkocsiTipusa.Name = "textBoxGepkocsiTipusa";
+            this.textBoxGepkocsiTipusa.Size = new System.Drawing.Size(175, 20);
+            this.textBoxGepkocsiTipusa.TabIndex = 18;
             // 
-            // label5
+            // textBoxAlvazszam
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 124);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Rendszám:";
+            this.textBoxAlvazszam.Location = new System.Drawing.Point(80, 177);
+            this.textBoxAlvazszam.Name = "textBoxAlvazszam";
+            this.textBoxAlvazszam.Size = new System.Drawing.Size(203, 20);
+            this.textBoxAlvazszam.TabIndex = 17;
             // 
-            // label6
+            // textBoxKilometeroraAllas
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 152);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Kilóméteróra állás:";
+            this.textBoxKilometeroraAllas.Location = new System.Drawing.Point(112, 149);
+            this.textBoxKilometeroraAllas.Name = "textBoxKilometeroraAllas";
+            this.textBoxKilometeroraAllas.Size = new System.Drawing.Size(171, 20);
+            this.textBoxKilometeroraAllas.TabIndex = 16;
             // 
-            // label7
+            // textBoxRendszam
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 180);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 13);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Alvázszám:";
+            this.textBoxRendszam.Location = new System.Drawing.Point(81, 121);
+            this.textBoxRendszam.Name = "textBoxRendszam";
+            this.textBoxRendszam.Size = new System.Drawing.Size(202, 20);
+            this.textBoxRendszam.TabIndex = 15;
             // 
-            // label8
+            // textBoxVetelar
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 208);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 13);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Gépkocsi típusa:";
+            this.textBoxVetelar.Location = new System.Drawing.Point(64, 93);
+            this.textBoxVetelar.Name = "textBoxVetelar";
+            this.textBoxVetelar.Size = new System.Drawing.Size(219, 20);
+            this.textBoxVetelar.TabIndex = 14;
             // 
-            // label9
+            // dateTimePickerGyartasiEv
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(14, 236);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Üzemanyag:";
+            this.dateTimePickerGyartasiEv.Location = new System.Drawing.Point(83, 65);
+            this.dateTimePickerGyartasiEv.Name = "dateTimePickerGyartasiEv";
+            this.dateTimePickerGyartasiEv.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerGyartasiEv.TabIndex = 13;
             // 
-            // label10
+            // comboBoxMarka
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(14, 264);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(113, 13);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Sebességváltó típusa:";
+            this.comboBoxMarka.FormattingEnabled = true;
+            this.comboBoxMarka.Location = new System.Drawing.Point(60, 9);
+            this.comboBoxMarka.Name = "comboBoxMarka";
+            this.comboBoxMarka.Size = new System.Drawing.Size(223, 21);
+            this.comboBoxMarka.TabIndex = 12;
+            // 
+            // textBoxTipus
+            // 
+            this.textBoxTipus.Location = new System.Drawing.Point(60, 37);
+            this.textBoxTipus.Name = "textBoxTipus";
+            this.textBoxTipus.Size = new System.Drawing.Size(223, 20);
+            this.textBoxTipus.TabIndex = 11;
             // 
             // label11
             // 
@@ -345,101 +299,149 @@
             this.label11.TabIndex = 10;
             this.label11.Text = "Tulajdonos neve:";
             // 
-            // textBoxTipus
+            // label10
             // 
-            this.textBoxTipus.Location = new System.Drawing.Point(60, 37);
-            this.textBoxTipus.Name = "textBoxTipus";
-            this.textBoxTipus.Size = new System.Drawing.Size(223, 20);
-            this.textBoxTipus.TabIndex = 11;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(14, 264);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(113, 13);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Sebességváltó típusa:";
             // 
-            // comboBoxMarka
+            // label9
             // 
-            this.comboBoxMarka.FormattingEnabled = true;
-            this.comboBoxMarka.Location = new System.Drawing.Point(60, 9);
-            this.comboBoxMarka.Name = "comboBoxMarka";
-            this.comboBoxMarka.Size = new System.Drawing.Size(223, 21);
-            this.comboBoxMarka.TabIndex = 12;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(14, 236);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Üzemanyag:";
             // 
-            // dateTimePickerGyartasiEv
+            // label8
             // 
-            this.dateTimePickerGyartasiEv.Location = new System.Drawing.Point(83, 65);
-            this.dateTimePickerGyartasiEv.Name = "dateTimePickerGyartasiEv";
-            this.dateTimePickerGyartasiEv.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerGyartasiEv.TabIndex = 13;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(14, 208);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(88, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Gépkocsi típusa:";
             // 
-            // textBoxVetelar
+            // label7
             // 
-            this.textBoxVetelar.Location = new System.Drawing.Point(64, 93);
-            this.textBoxVetelar.Name = "textBoxVetelar";
-            this.textBoxVetelar.Size = new System.Drawing.Size(219, 20);
-            this.textBoxVetelar.TabIndex = 14;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(14, 180);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Alvázszám:";
             // 
-            // textBoxRendszam
+            // label6
             // 
-            this.textBoxRendszam.Location = new System.Drawing.Point(81, 121);
-            this.textBoxRendszam.Name = "textBoxRendszam";
-            this.textBoxRendszam.Size = new System.Drawing.Size(202, 20);
-            this.textBoxRendszam.TabIndex = 15;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(14, 152);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(92, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Kilóméteróra állás:";
             // 
-            // textBoxKilometeroraAllas
+            // label5
             // 
-            this.textBoxKilometeroraAllas.Location = new System.Drawing.Point(112, 149);
-            this.textBoxKilometeroraAllas.Name = "textBoxKilometeroraAllas";
-            this.textBoxKilometeroraAllas.Size = new System.Drawing.Size(171, 20);
-            this.textBoxKilometeroraAllas.TabIndex = 16;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(14, 124);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Rendszám:";
             // 
-            // textBoxAlvazszam
+            // label4
             // 
-            this.textBoxAlvazszam.Location = new System.Drawing.Point(80, 177);
-            this.textBoxAlvazszam.Name = "textBoxAlvazszam";
-            this.textBoxAlvazszam.Size = new System.Drawing.Size(203, 20);
-            this.textBoxAlvazszam.TabIndex = 17;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(15, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Vételár:";
             // 
-            // textBoxGepkocsiTipusa
+            // label3
             // 
-            this.textBoxGepkocsiTipusa.Location = new System.Drawing.Point(108, 205);
-            this.textBoxGepkocsiTipusa.Name = "textBoxGepkocsiTipusa";
-            this.textBoxGepkocsiTipusa.Size = new System.Drawing.Size(175, 20);
-            this.textBoxGepkocsiTipusa.TabIndex = 18;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Gyártási év:";
             // 
-            // textBoxUzemanyag
+            // label2
             // 
-            this.textBoxUzemanyag.Location = new System.Drawing.Point(86, 233);
-            this.textBoxUzemanyag.Name = "textBoxUzemanyag";
-            this.textBoxUzemanyag.Size = new System.Drawing.Size(197, 20);
-            this.textBoxUzemanyag.TabIndex = 19;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Típus:";
             // 
-            // textBoxSebessegvaltoTipusa
+            // label1
             // 
-            this.textBoxSebessegvaltoTipusa.Location = new System.Drawing.Point(133, 261);
-            this.textBoxSebessegvaltoTipusa.Name = "textBoxSebessegvaltoTipusa";
-            this.textBoxSebessegvaltoTipusa.Size = new System.Drawing.Size(150, 20);
-            this.textBoxSebessegvaltoTipusa.TabIndex = 20;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Márka:";
             // 
-            // textBoxTulajdonosNeve
+            // panelModositTorolGomb
             // 
-            this.textBoxTulajdonosNeve.Location = new System.Drawing.Point(108, 289);
-            this.textBoxTulajdonosNeve.Name = "textBoxTulajdonosNeve";
-            this.textBoxTulajdonosNeve.Size = new System.Drawing.Size(175, 20);
-            this.textBoxTulajdonosNeve.TabIndex = 21;
+            this.panelModositTorolGomb.Controls.Add(this.buttonTorol);
+            this.panelModositTorolGomb.Controls.Add(this.buttonModosit);
+            this.panelModositTorolGomb.Location = new System.Drawing.Point(634, 76);
+            this.panelModositTorolGomb.Name = "panelModositTorolGomb";
+            this.panelModositTorolGomb.Size = new System.Drawing.Size(325, 47);
+            this.panelModositTorolGomb.TabIndex = 2;
             // 
-            // buttonUjAuto
+            // buttonTorol
             // 
-            this.buttonUjAuto.Location = new System.Drawing.Point(660, 139);
-            this.buttonUjAuto.Name = "buttonUjAuto";
-            this.buttonUjAuto.Size = new System.Drawing.Size(93, 23);
-            this.buttonUjAuto.TabIndex = 4;
-            this.buttonUjAuto.Text = "Új";
-            this.buttonUjAuto.UseVisualStyleBackColor = true;
+            this.buttonTorol.Location = new System.Drawing.Point(197, 8);
+            this.buttonTorol.Name = "buttonTorol";
+            this.buttonTorol.Size = new System.Drawing.Size(93, 31);
+            this.buttonTorol.TabIndex = 1;
+            this.buttonTorol.Text = "Töröl";
+            this.buttonTorol.UseVisualStyleBackColor = true;
             // 
-            // buttonUjMentes
+            // buttonModosit
             // 
-            this.buttonUjMentes.Location = new System.Drawing.Point(831, 139);
-            this.buttonUjMentes.Name = "buttonUjMentes";
-            this.buttonUjMentes.Size = new System.Drawing.Size(86, 23);
-            this.buttonUjMentes.TabIndex = 5;
-            this.buttonUjMentes.Text = "Új Mentése";
-            this.buttonUjMentes.UseVisualStyleBackColor = true;
+            this.buttonModosit.Location = new System.Drawing.Point(26, 8);
+            this.buttonModosit.Name = "buttonModosit";
+            this.buttonModosit.Size = new System.Drawing.Size(93, 31);
+            this.buttonModosit.TabIndex = 0;
+            this.buttonModosit.Text = "Módosít";
+            this.buttonModosit.UseVisualStyleBackColor = true;
+            // 
+            // buttonAdatokBetoltese
+            // 
+            this.buttonAdatokBetoltese.Location = new System.Drawing.Point(660, 19);
+            this.buttonAdatokBetoltese.Name = "buttonAdatokBetoltese";
+            this.buttonAdatokBetoltese.Size = new System.Drawing.Size(264, 51);
+            this.buttonAdatokBetoltese.TabIndex = 1;
+            this.buttonAdatokBetoltese.Text = "Adatok betöltése";
+            this.buttonAdatokBetoltese.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 7);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(615, 532);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // tabPageTulajdonosok
+            // 
+            this.tabPageTulajdonosok.Location = new System.Drawing.Point(4, 22);
+            this.tabPageTulajdonosok.Name = "tabPageTulajdonosok";
+            this.tabPageTulajdonosok.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageTulajdonosok.Size = new System.Drawing.Size(965, 535);
+            this.tabPageTulajdonosok.TabIndex = 1;
+            this.tabPageTulajdonosok.Text = "Tulajdonosok";
+            this.tabPageTulajdonosok.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -451,15 +453,14 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            //this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPageAutok.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panelModositTorolGomb.ResumeLayout(false);
             this.panelAutok.ResumeLayout(false);
             this.panelAutok.PerformLayout();
+            this.panelModositTorolGomb.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

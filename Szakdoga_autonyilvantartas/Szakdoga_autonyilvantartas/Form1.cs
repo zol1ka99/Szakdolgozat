@@ -15,8 +15,8 @@ namespace Szakdoga_autonyilvantartas
 {
     public partial class Form1 : Form
     {
-
-        Repository repo = new Repository();
+        RepositoryDatabase rd = new RepositoryDatabase();
+        //Repository repo = new Repository();
 
         public Form1()
         {
@@ -24,7 +24,17 @@ namespace Szakdoga_autonyilvantartas
             InitializeComponent();
         }
 
-        
+        private void adatbázisLétrehozásaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rd.createDatabase();
+        }
+
+        private void törölAdatbázistToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rd.deleteDatabase();
+        }
+
+
         /*
         private void megjelenitAutot(Car h)
         {
