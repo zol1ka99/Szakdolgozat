@@ -14,7 +14,8 @@ using Szakdoga_autonyilvantartas.Repository;
 namespace Szakdoga_autonyilvantartas
 {
     public partial class Form1 : Form
-    {
+    
+
         RepositoryDatabase rd = new RepositoryDatabase();
         RepositoryDatabaseTableCar rdCar = new RepositoryDatabaseTableCar(); //RepositoryDatabaseTableCar, létre kell majd hozni
         //RepositoryDatabaseTableOwner rdOwner = new RepositoryDatabaseTableOwner(); //tulajdonosokhoz kell majd
