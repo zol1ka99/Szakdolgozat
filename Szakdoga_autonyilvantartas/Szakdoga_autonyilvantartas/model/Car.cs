@@ -146,5 +146,14 @@ namespace Szakdoga_autonyilvantartas.Model
         {
             return sebessegvalto_tipusa;
         }
+
+        public void setTulajdonosNeve(string tulajdonos_nev)
+        {
+            this.tulajdonos_nev = tulajdonos_nev;
+        }
+        public string getTulajdonosNeve()
+        {
+            return tulajdonos_nev;
+        }
     }
 }

@@ -15,24 +15,49 @@ namespace Szakdoga_autonyilvantartas
 {
     public partial class Form1 : Form
     {
-        RepositoryDatabase rd = new RepositoryDatabase();
-        //Repository repo = new Repository();
+        //RepositoryDatabase rd = new RepositoryDatabase();
+
+        Repository cars = new Repository();
 
         public Form1()
         {
             
             InitializeComponent();
+            beallitKezdoOldalt();
         }
 
-        private void adatbázisLétrehozásaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void beallitKezdoOldalt()
         {
-            rd.createDatabase();
+            this.Size = new Size(1014, 640);
+            this.Text = "Car Docker (Beta)";
         }
 
-        private void törölAdatbázistToolStripMenuItem_Click(object sender, EventArgs e)
+        
+
+        //Autók tab page
+        private void carsToolStripMenu_Item_Click(Object sender, EventArgs e)
         {
-            rd.deleteDatabase();
+            tabControlCarDocket.SelectTab("tabPageAutok");
         }
+
+        //Tulajdonosok tab page
+        private void ownersToolStripMenu_Item_Click(Object sender, EventArgs e)
+        {
+            tabControlCarDocket.SelectTab("tabPageTulajdonosok");
+        }
+
+        
+
+
+
+
+
+
+
+
+
+
+
 
 
         /*

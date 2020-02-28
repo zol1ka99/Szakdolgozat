@@ -36,11 +36,12 @@
             this.törölTesztadatokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.törölAdatbázistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kilépésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControlCarDocket = new System.Windows.Forms.TabControl();
             this.tabPageAutok = new System.Windows.Forms.TabPage();
             this.buttonUjMentes = new System.Windows.Forms.Button();
             this.buttonUjAuto = new System.Windows.Forms.Button();
             this.panelAutok = new System.Windows.Forms.Panel();
+            this.textBoxGyartasiEv = new System.Windows.Forms.TextBox();
             this.textBoxTulajdonosNeve = new System.Windows.Forms.TextBox();
             this.textBoxSebessegvaltoTipusa = new System.Windows.Forms.TextBox();
             this.textBoxUzemanyag = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.textBoxKilometeroraAllas = new System.Windows.Forms.TextBox();
             this.textBoxRendszam = new System.Windows.Forms.TextBox();
             this.textBoxVetelar = new System.Windows.Forms.TextBox();
-            this.dateTimePickerGyartasiEv = new System.Windows.Forms.DateTimePicker();
             this.comboBoxMarka = new System.Windows.Forms.ComboBox();
             this.textBoxTipus = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -67,14 +67,14 @@
             this.buttonTorol = new System.Windows.Forms.Button();
             this.buttonModosit = new System.Windows.Forms.Button();
             this.buttonAdatokBetoltese = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewAutok = new System.Windows.Forms.DataGridView();
             this.tabPageTulajdonosok = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabControlCarDocket.SuspendLayout();
             this.tabPageAutok.SuspendLayout();
             this.panelAutok.SuspendLayout();
             this.panelModositTorolGomb.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAutok)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -93,7 +93,7 @@
             this.tesztadatokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adatbázisToolStripMenuItem});
             this.tesztadatokToolStripMenuItem.Name = "tesztadatokToolStripMenuItem";
-            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.tesztadatokToolStripMenuItem.Text = "Tesztadatok";
             // 
             // adatbázisToolStripMenuItem
@@ -119,12 +119,14 @@
             this.feltöltésTesztadatokkalToolStripMenuItem.Name = "feltöltésTesztadatokkalToolStripMenuItem";
             this.feltöltésTesztadatokkalToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.feltöltésTesztadatokkalToolStripMenuItem.Text = "Feltöltés tesztadatokkal";
+            this.feltöltésTesztadatokkalToolStripMenuItem.Click += new System.EventHandler(this.feltöltésTesztadatokkalToolStripMenuItem_Click);
             // 
             // törölTesztadatokToolStripMenuItem
             // 
             this.törölTesztadatokToolStripMenuItem.Name = "törölTesztadatokToolStripMenuItem";
             this.törölTesztadatokToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.törölTesztadatokToolStripMenuItem.Text = "Töröl tesztadatok";
+            this.törölTesztadatokToolStripMenuItem.Click += new System.EventHandler(this.törölTesztadatokToolStripMenuItem_Click);
             // 
             // törölAdatbázistToolStripMenuItem
             // 
@@ -139,15 +141,15 @@
             this.kilépésToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.kilépésToolStripMenuItem.Text = "Kilépés";
             // 
-            // tabControl1
+            // tabControlCarDocket
             // 
-            this.tabControl1.Controls.Add(this.tabPageAutok);
-            this.tabControl1.Controls.Add(this.tabPageTulajdonosok);
-            this.tabControl1.Location = new System.Drawing.Point(13, 28);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(973, 561);
-            this.tabControl1.TabIndex = 16;
+            this.tabControlCarDocket.Controls.Add(this.tabPageAutok);
+            this.tabControlCarDocket.Controls.Add(this.tabPageTulajdonosok);
+            this.tabControlCarDocket.Location = new System.Drawing.Point(13, 28);
+            this.tabControlCarDocket.Name = "tabControlCarDocket";
+            this.tabControlCarDocket.SelectedIndex = 0;
+            this.tabControlCarDocket.Size = new System.Drawing.Size(973, 561);
+            this.tabControlCarDocket.TabIndex = 16;
             // 
             // tabPageAutok
             // 
@@ -156,7 +158,7 @@
             this.tabPageAutok.Controls.Add(this.panelAutok);
             this.tabPageAutok.Controls.Add(this.panelModositTorolGomb);
             this.tabPageAutok.Controls.Add(this.buttonAdatokBetoltese);
-            this.tabPageAutok.Controls.Add(this.dataGridView1);
+            this.tabPageAutok.Controls.Add(this.dataGridViewAutok);
             this.tabPageAutok.Location = new System.Drawing.Point(4, 22);
             this.tabPageAutok.Name = "tabPageAutok";
             this.tabPageAutok.Padding = new System.Windows.Forms.Padding(3);
@@ -185,6 +187,7 @@
             // 
             // panelAutok
             // 
+            this.panelAutok.Controls.Add(this.textBoxGyartasiEv);
             this.panelAutok.Controls.Add(this.textBoxTulajdonosNeve);
             this.panelAutok.Controls.Add(this.textBoxSebessegvaltoTipusa);
             this.panelAutok.Controls.Add(this.textBoxUzemanyag);
@@ -193,7 +196,6 @@
             this.panelAutok.Controls.Add(this.textBoxKilometeroraAllas);
             this.panelAutok.Controls.Add(this.textBoxRendszam);
             this.panelAutok.Controls.Add(this.textBoxVetelar);
-            this.panelAutok.Controls.Add(this.dateTimePickerGyartasiEv);
             this.panelAutok.Controls.Add(this.comboBoxMarka);
             this.panelAutok.Controls.Add(this.textBoxTipus);
             this.panelAutok.Controls.Add(this.label11);
@@ -211,6 +213,13 @@
             this.panelAutok.Name = "panelAutok";
             this.panelAutok.Size = new System.Drawing.Size(325, 318);
             this.panelAutok.TabIndex = 3;
+            // 
+            // textBoxGyartasiEv
+            // 
+            this.textBoxGyartasiEv.Location = new System.Drawing.Point(80, 65);
+            this.textBoxGyartasiEv.Name = "textBoxGyartasiEv";
+            this.textBoxGyartasiEv.Size = new System.Drawing.Size(203, 20);
+            this.textBoxGyartasiEv.TabIndex = 22;
             // 
             // textBoxTulajdonosNeve
             // 
@@ -267,13 +276,6 @@
             this.textBoxVetelar.Name = "textBoxVetelar";
             this.textBoxVetelar.Size = new System.Drawing.Size(219, 20);
             this.textBoxVetelar.TabIndex = 14;
-            // 
-            // dateTimePickerGyartasiEv
-            // 
-            this.dateTimePickerGyartasiEv.Location = new System.Drawing.Point(83, 65);
-            this.dateTimePickerGyartasiEv.Name = "dateTimePickerGyartasiEv";
-            this.dateTimePickerGyartasiEv.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerGyartasiEv.TabIndex = 13;
             // 
             // comboBoxMarka
             // 
@@ -406,6 +408,7 @@
             this.buttonTorol.TabIndex = 1;
             this.buttonTorol.Text = "Töröl";
             this.buttonTorol.UseVisualStyleBackColor = true;
+            this.buttonTorol.Click += new System.EventHandler(this.buttonTorol_Click);
             // 
             // buttonModosit
             // 
@@ -424,14 +427,15 @@
             this.buttonAdatokBetoltese.TabIndex = 1;
             this.buttonAdatokBetoltese.Text = "Adatok betöltése";
             this.buttonAdatokBetoltese.UseVisualStyleBackColor = true;
+            this.buttonAdatokBetoltese.Click += new System.EventHandler(this.buttonAdatokBetoltese_Click);
             // 
-            // dataGridView1
+            // dataGridViewAutok
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 7);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(615, 532);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewAutok.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAutok.Location = new System.Drawing.Point(0, 7);
+            this.dataGridViewAutok.Name = "dataGridViewAutok";
+            this.dataGridViewAutok.Size = new System.Drawing.Size(615, 532);
+            this.dataGridViewAutok.TabIndex = 0;
             // 
             // tabPageTulajdonosok
             // 
@@ -448,19 +452,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(998, 601);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControlCarDocket);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tabControlCarDocket.ResumeLayout(false);
             this.tabPageAutok.ResumeLayout(false);
             this.panelAutok.ResumeLayout(false);
             this.panelAutok.PerformLayout();
             this.panelModositTorolGomb.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAutok)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,7 +479,7 @@
         private System.Windows.Forms.ToolStripMenuItem törölTesztadatokToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem törölAdatbázistToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kilépésToolStripMenuItem;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControlCarDocket;
         private System.Windows.Forms.TabPage tabPageAutok;
         private System.Windows.Forms.Panel panelAutok;
         private System.Windows.Forms.TextBox textBoxTulajdonosNeve;
@@ -486,7 +490,6 @@
         private System.Windows.Forms.TextBox textBoxKilometeroraAllas;
         private System.Windows.Forms.TextBox textBoxRendszam;
         private System.Windows.Forms.TextBox textBoxVetelar;
-        private System.Windows.Forms.DateTimePicker dateTimePickerGyartasiEv;
         private System.Windows.Forms.ComboBox comboBoxMarka;
         private System.Windows.Forms.TextBox textBoxTipus;
         private System.Windows.Forms.Label label11;
@@ -504,10 +507,11 @@
         private System.Windows.Forms.Button buttonTorol;
         private System.Windows.Forms.Button buttonModosit;
         private System.Windows.Forms.Button buttonAdatokBetoltese;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewAutok;
         private System.Windows.Forms.TabPage tabPageTulajdonosok;
         private System.Windows.Forms.Button buttonUjAuto;
         private System.Windows.Forms.Button buttonUjMentes;
+        private System.Windows.Forms.TextBox textBoxGyartasiEv;
     }
 }
 
