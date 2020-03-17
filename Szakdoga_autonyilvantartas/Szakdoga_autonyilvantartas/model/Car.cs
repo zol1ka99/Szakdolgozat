@@ -12,7 +12,7 @@ namespace Szakdoga_autonyilvantartas.Model
         private int id;
         private string marka; //comboboxba be kell tölteni az adatokat
         private string tipus; //ide a felhasználó írhat
-        private int gyartasi_ev; //ezt ha lehet akkor datetimepicker-el kellene megcsinálni de majd még kiderül
+        private string gyartasi_ev; //ezt ha lehet akkor datetimepicker-el kellene megcsinálni de majd még kiderül
         private int vetelar; //3as tagolás beállítása
         private string rendszam; //későbbi fejlesztésben ki lehet választani egyes országok rendszám formátumát grafikus update
         private int kilometeroraallas; //+km tagot odarakni majd
@@ -22,7 +22,7 @@ namespace Szakdoga_autonyilvantartas.Model
         private string sebessegvalto_tipusa; //automata, manuális (később esetleg részletesebb ha szükséges)
         private string tulajdonos_nev;
 
-        public Car(int id, string marka, string tipus, int gyartasi_ev, int vetelar, string rendszam, int kilometeroraallas, string alvazszam, string gepkocsi_tipusa, string uzemanyag, string sebessegvalto_tipusa, string tulajdonos_nev)
+        public Car(int id, string marka, string tipus, string gyartasi_ev, int vetelar, string rendszam, int kilometeroraallas, string alvazszam, string gepkocsi_tipusa, string uzemanyag, string sebessegvalto_tipusa, string tulajdonos_nev)
         {
             this.id = id;
             this.marka = marka;
@@ -36,6 +36,22 @@ namespace Szakdoga_autonyilvantartas.Model
             this.uzemanyag = uzemanyag;
             this.sebessegvalto_tipusa = sebessegvalto_tipusa;
             this.tulajdonos_nev = tulajdonos_nev;
+        }
+
+
+        public void update(Car modified)
+        {
+            this.marka = modified.getMarka();
+            this.tipus = modified.getTipus();
+            this.gyartasi_ev = modified.getGyartasiev();
+            this.vetelar = modified.getVetelar();
+            this.rendszam = modified.getRendszam();
+            this.kilometeroraallas = modified.getKilometeroraallas();
+            this.alvazszam = modified.getAlvazszam();
+            this.gepkocsi_tipusa = modified.getGepkocsiTipusa();
+            this.uzemanyag = modified.getUzemanyag();
+            this.sebessegvalto_tipusa = modified.getSebessegvaltoTipusa();
+            this.tulajdonos_nev = modified.getTulajdonosNeve();
         }
 
         public void setId(int id)
@@ -68,11 +84,11 @@ namespace Szakdoga_autonyilvantartas.Model
         }
 
 
-        public void setGyartasiev(int gyartasi_ev)
+        public void setGyartasiev(string gyartasi_ev)
         {
             this.gyartasi_ev = gyartasi_ev;
         }
-        public int getGyartasiev()
+        public string getGyartasiev()
         {
             return gyartasi_ev;
         }

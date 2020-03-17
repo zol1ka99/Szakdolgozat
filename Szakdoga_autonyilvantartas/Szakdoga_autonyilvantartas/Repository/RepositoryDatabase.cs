@@ -47,7 +47,7 @@ namespace Szakdoga_autonyilvantartas.Repository
             {
                 connection.Close();
                 Debug.WriteLine(e.Message);
-                throw new ReposytoryException("Az adatbázis létrehozása nem sikerült vagy már létezik!");
+                throw new RepositoryException("Az adatbázis létrehozása nem sikerült vagy már létezik!");
             }
         }
 
@@ -68,7 +68,7 @@ namespace Szakdoga_autonyilvantartas.Repository
             {
                 connection.Close();
                 Debug.WriteLine(e.Message);
-                throw new ReposytoryException("Adatbázis törlése nem sikerült!");
+                throw new RepositoryException("Adatbázis törlése nem sikerült!");
             }
         }
 

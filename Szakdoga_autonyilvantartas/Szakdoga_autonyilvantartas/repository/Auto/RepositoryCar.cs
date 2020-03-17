@@ -18,6 +18,16 @@ namespace Szakdoga_autonyilvantartas.Repository
             return cars;
         }
 
+        public List<string> getCarsName()
+        {
+            List<string> carNames = new List<string>();
+            foreach (Car p in cars)
+            {
+                carNames.Add(p.getMarka());
+            }
+            return carNames;
+        }
+
         public void setAutok(List<Car> cars)
         {
             this.cars = cars;
@@ -29,7 +39,7 @@ namespace Szakdoga_autonyilvantartas.Repository
             carsDT.Columns.Add("id", typeof(int));
             carsDT.Columns.Add("marka", typeof(string));
             carsDT.Columns.Add("tipus", typeof(string));
-            carsDT.Columns.Add("gyartasi_ev", typeof(int));
+            carsDT.Columns.Add("gyartasi_ev", typeof(string));
             carsDT.Columns.Add("vetelar", typeof(int));
             carsDT.Columns.Add("rendszam", typeof(string));
             carsDT.Columns.Add("kilometeroraallas", typeof(int));
@@ -44,5 +54,66 @@ namespace Szakdoga_autonyilvantartas.Repository
             }
             return carsDT;
         }
+
+        public void deleteCarFromList(int id)
+        {
+            Car p = cars.Find(x => x.getId() == id);
+            if (p != null)
+            {
+                cars.Remove(p);
+            }else
+            {
+                throw new RepositoryExceptionCantDelete("Az autó törlése sikertelen");
+            }
+        }
+
+        public void updateCarInList(int id,Car modified)
+        {
+            Car p = cars.Find(x => x.getId() == id);
+            if (p != null)
+            {
+                p.update(modified);
+            }else
+            {
+                throw new RepositoryExceptionCantModified("Az autó módosítása sikertelen");
+            }
+        }
+
+        public void addCarToList(Car newCar)
+        {
+            try
+            {
+                cars.Add(newCar);
+            }
+            catch (Exception e)
+            {
+
+                throw new RepositoryExceptionCantAdd("A pizza hozzáadása nem sikerült");
+            }
+        }
+
+        public Car getCar(int id)
+        {
+            return cars.Find(x => x.getId() == id);
+        }
+
+        public int getNextCarId()
+        {
+            if (cars.Count == 0)
+            {
+                return 1;
+            }else
+            {
+                return cars.Max(x => x.getId()) + 1;
+            }
+        }
+
+        public void setTestData()
+        {
+            cars.Add(new Car(1, "Audi", "RS5", "2018-02-15", 15000000, "RDS-458", 15000, "AZR879874545R587T", "SzGK", "Benzin", "Automata", "Feles Elek"));
+            cars.Add(new Car(2, "Opel", "Vivaro", "2008-05-18", 1500000, "DRT-234", 140000, "AZR8787654987547T", "TGK", "Dízel", "Manuális", "Zuhany Rózsa"));
+            cars.Add(new Car(1, "Neoplan", "Starliner 5218", "2015-02-15", 50000000, "FDJ-987", 15000, "RTZ984845R587597T", "Busz", "Dízel-Hibrid", "Automata", "Kalapos József"));
+        }
+
     }
 }

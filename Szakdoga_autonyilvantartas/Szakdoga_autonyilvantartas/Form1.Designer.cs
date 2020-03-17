@@ -112,28 +112,24 @@
             this.adatbázisLétrehozásaToolStripMenuItem.Name = "adatbázisLétrehozásaToolStripMenuItem";
             this.adatbázisLétrehozásaToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.adatbázisLétrehozásaToolStripMenuItem.Text = "Adatbázis létrehozása";
-            this.adatbázisLétrehozásaToolStripMenuItem.Click += new System.EventHandler(this.adatbázisLétrehozásaToolStripMenuItem_Click);
             // 
             // feltöltésTesztadatokkalToolStripMenuItem
             // 
             this.feltöltésTesztadatokkalToolStripMenuItem.Name = "feltöltésTesztadatokkalToolStripMenuItem";
             this.feltöltésTesztadatokkalToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.feltöltésTesztadatokkalToolStripMenuItem.Text = "Feltöltés tesztadatokkal";
-            this.feltöltésTesztadatokkalToolStripMenuItem.Click += new System.EventHandler(this.feltöltésTesztadatokkalToolStripMenuItem_Click);
             // 
             // törölTesztadatokToolStripMenuItem
             // 
             this.törölTesztadatokToolStripMenuItem.Name = "törölTesztadatokToolStripMenuItem";
             this.törölTesztadatokToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.törölTesztadatokToolStripMenuItem.Text = "Töröl tesztadatok";
-            this.törölTesztadatokToolStripMenuItem.Click += new System.EventHandler(this.törölTesztadatokToolStripMenuItem_Click);
             // 
             // törölAdatbázistToolStripMenuItem
             // 
             this.törölAdatbázistToolStripMenuItem.Name = "törölAdatbázistToolStripMenuItem";
             this.törölAdatbázistToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.törölAdatbázistToolStripMenuItem.Text = "Töröl adatbázist";
-            this.törölAdatbázistToolStripMenuItem.Click += new System.EventHandler(this.törölAdatbázistToolStripMenuItem_Click);
             // 
             // kilépésToolStripMenuItem
             // 
