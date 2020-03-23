@@ -7,11 +7,11 @@ using Szakdoga_autonyilvantartas.Model;
 
 namespace Szakdoga_autonyilvantartas.Repository
 {
-    partial class Repository
+    partial class Tarolo
     {
-        public Repository()
+        public Tarolo()
         {
-            cars = new List<Cars>();
+            cars = new List<Car>();
 
         }
     }

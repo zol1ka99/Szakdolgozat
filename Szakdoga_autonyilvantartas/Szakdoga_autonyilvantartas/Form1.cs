@@ -17,7 +17,7 @@ namespace Szakdoga_autonyilvantartas
     {
         //RepositoryDatabase rd = new RepositoryDatabase();
 
-        Repository cars = new Repository();
+        Tarolo cars = new Tarolo();
 
         public Form1()
         {
@@ -47,6 +47,12 @@ namespace Szakdoga_autonyilvantartas
         }
 
         
+
+
+
+
+
+
 
 
 

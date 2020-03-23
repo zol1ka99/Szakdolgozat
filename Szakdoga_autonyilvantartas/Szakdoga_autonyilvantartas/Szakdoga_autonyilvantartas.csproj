@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1TestData.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormAutok.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,7 +70,7 @@
     <Compile Include="Exception\RepositoryExceptionCantModified.cs" />
     <Compile Include="repository\Auto\RepositoryDatabaseTableCar.cs" />
     <Compile Include="repository\Auto\RepositoryDatabaseTableCarTestData.cs" />
-    <Compile Include="repository\Repository.cs" />
+    <Compile Include="repository\Tarolo.cs" />
     <Compile Include="repository\RepositoryDatabase.cs" />
     <Compile Include="Exception\RepositoryException.cs" />
     <EmbeddedResource Include="Form1.resx">

@@ -9,7 +9,7 @@ using System.Data;
 
 namespace Szakdoga_autonyilvantartas.Repository
 {
-    partial class RepositoryCar
+    partial class Tarolo
     { 
         List<Car> cars;
 

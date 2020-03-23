@@ -6,24 +6,12 @@ using Szakdoga_autonyilvantartas.Repository;
 
 namespace Szakdoga_autonyilvantartas.repository.Auto
 {
-	partial class RepositoryDatabaseTableCarTestData
+	partial class RepositoryDatabaseTableCar
 	{
-		private readonly string connectionStringCreate;
-		private readonly string connectionString;
-
-		public RepositoryDatabaseTableCarTestData()
-		{
-			Connection cs = new Connection();
-			connectionStringCreate = cs.getCreateString();
-			connectionString = cs.getConnectionString();
-		}
 		public void fillCarsWithTestDataFromSQLCommand()
 		{
 
 
-			/*Connection con = new Connection();
-			MySqlConnection connection = new MySqlConnection(con.getConnectionString());
-			*/
 
 			MySqlConnection connection = new MySqlConnection(connectionString);
 

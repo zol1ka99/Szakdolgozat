@@ -93,7 +93,7 @@
             this.tesztadatokToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adatbázisToolStripMenuItem});
             this.tesztadatokToolStripMenuItem.Name = "tesztadatokToolStripMenuItem";
-            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.tesztadatokToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.tesztadatokToolStripMenuItem.Text = "Tesztadatok";
             // 
             // adatbázisToolStripMenuItem
@@ -118,18 +118,21 @@
             this.feltöltésTesztadatokkalToolStripMenuItem.Name = "feltöltésTesztadatokkalToolStripMenuItem";
             this.feltöltésTesztadatokkalToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.feltöltésTesztadatokkalToolStripMenuItem.Text = "Feltöltés tesztadatokkal";
+            this.feltöltésTesztadatokkalToolStripMenuItem.Click += new System.EventHandler(this.feltöltésTesztadatokkalToolStripMenuItem_Click);
             // 
             // törölTesztadatokToolStripMenuItem
             // 
             this.törölTesztadatokToolStripMenuItem.Name = "törölTesztadatokToolStripMenuItem";
             this.törölTesztadatokToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.törölTesztadatokToolStripMenuItem.Text = "Töröl tesztadatok";
+            this.törölTesztadatokToolStripMenuItem.Click += new System.EventHandler(this.törölTesztadatokToolStripMenuItem_Click);
             // 
             // törölAdatbázistToolStripMenuItem
             // 
             this.törölAdatbázistToolStripMenuItem.Name = "törölAdatbázistToolStripMenuItem";
             this.törölAdatbázistToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.törölAdatbázistToolStripMenuItem.Text = "Töröl adatbázist";
+            this.törölAdatbázistToolStripMenuItem.Click += new System.EventHandler(this.törölAdatbázistToolStripMenuItem_Click);
             // 
             // kilépésToolStripMenuItem
             // 

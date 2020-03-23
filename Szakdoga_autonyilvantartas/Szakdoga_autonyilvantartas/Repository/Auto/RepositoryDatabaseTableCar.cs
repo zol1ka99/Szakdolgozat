@@ -23,7 +23,7 @@ namespace Szakdoga_autonyilvantartas.repository.Auto
         }
         public void createTableCar()
         {
-            string queryUSE = "USER autonyilvantartas";
+            string queryUSE = "USE autonyilvantartas";
             string queryCreateTable =
                 "CREATE TABLE `cars` ( " +
                 "`id` INT NOT NULL AUTO_INCREMENT , " +
