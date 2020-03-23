@@ -68,6 +68,7 @@
     <Compile Include="Exception\RepositoryExceptionCantAdd.cs" />
     <Compile Include="Exception\RepositoryExceptionCantDelete.cs" />
     <Compile Include="Exception\RepositoryExceptionCantModified.cs" />
+    <Compile Include="repository\Auto\RepositoryDatabaseTableCarSQL.cs" />
     <Compile Include="repository\Auto\RepositoryDatabaseTableCar.cs" />
     <Compile Include="repository\Auto\RepositoryDatabaseTableCarTestData.cs" />
     <Compile Include="repository\Tarolo.cs" />

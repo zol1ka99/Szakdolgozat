@@ -68,9 +68,9 @@ namespace Szakdoga_autonyilvantartas
                 {
                     rdtc.deleteCarFromDatabase(id); //ezt is meg kell majd írni
                 }
-                catch (Exception ex)
+                catch (RepositoryException ex)
                 {
-                    kiirHibauzenetet(); //ezt is meg kell majd írni
+                    kiirHibauzenetet(ex.Message); //ezt is meg kell majd írni
                 }
 
                 if (dataGridViewAutok.SelectedRows.Count <= 0)

@@ -21,7 +21,6 @@ namespace Szakdoga_autonyilvantartas
 
         public Form1()
         {
-            
             InitializeComponent();
             beallitKezdoOldalt();
         }

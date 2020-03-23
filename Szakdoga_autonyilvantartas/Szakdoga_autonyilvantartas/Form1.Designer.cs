@@ -104,7 +104,7 @@
             this.törölTesztadatokToolStripMenuItem,
             this.törölAdatbázistToolStripMenuItem});
             this.adatbázisToolStripMenuItem.Name = "adatbázisToolStripMenuItem";
-            this.adatbázisToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adatbázisToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.adatbázisToolStripMenuItem.Text = "Adatbázis";
             // 
             // adatbázisLétrehozásaToolStripMenuItem
@@ -278,6 +278,7 @@
             // 
             // comboBoxMarka
             // 
+            this.comboBoxMarka.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMarka.FormattingEnabled = true;
             this.comboBoxMarka.Location = new System.Drawing.Point(60, 9);
             this.comboBoxMarka.Name = "comboBoxMarka";

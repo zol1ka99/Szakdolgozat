@@ -69,7 +69,7 @@ namespace Szakdoga_autonyilvantartas
                 rdCar.fillCarsWithTestDataFromSQLCommand();
 
                 //adatbázisból listák feltöltése
-                cars.setAutok(rdCar.getCarsFromDatabaseTable());
+                cars.setAutok(rdCar.getCarsFromDatabase());
             }
             catch (Exception ex)
             {
