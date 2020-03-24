@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using Szakdoga_autonyilvantartas.Model;
 using Szakdoga_autonyilvantartas.Repository;
+using Szakdoga_autonyilvantartas.repository.Auto;
 
 namespace Szakdoga_autonyilvantartas
 {
@@ -62,7 +63,7 @@ namespace Szakdoga_autonyilvantartas
                     Debug.WriteLine("Az autó törlés nem sikerült, nincs a listában!");
                 }
 
-                RepositoryDatabaseTableCars rdtc = new RepositoryDatabaseTableCars(); //ezt is meg kell majd írni
+                RepositoryDatabaseTableCar rdtc = new RepositoryDatabaseTableCar(); //ezt is meg kell majd írni
                 
                 try
                 {
@@ -77,7 +78,9 @@ namespace Szakdoga_autonyilvantartas
                 {
                     buttonUjAuto.Visible = true;
                 }
+
                 beallitCarsDataGridViewt();
+                frissitAdatokkalDataGridViewt();
 
             }
 
@@ -97,17 +100,17 @@ namespace Szakdoga_autonyilvantartas
                 panelModositTorolGomb.Visible = true;
                 buttonUjAuto.Visible = true;
 
-                comboBoxMarka.Text = dataGridViewAutok.SelectedRows[0].Cells[0].Value.ToString();
-                textBoxTipus.Text = dataGridViewAutok.SelectedRows[0].Cells[1].Value.ToString();
-                textBoxGyartasiEv.Text = dataGridViewAutok.SelectedRows[0].Cells[2].Value.ToString();
-                textBoxVetelar.Text = dataGridViewAutok.SelectedRows[0].Cells[3].Value.ToString();
-                textBoxRendszam.Text = dataGridViewAutok.SelectedRows[0].Cells[4].Value.ToString();
-                textBoxKilometeroraAllas.Text = dataGridViewAutok.SelectedRows[5].Cells[1].Value.ToString();
-                textBoxAlvazszam.Text = dataGridViewAutok.SelectedRows[0].Cells[6].Value.ToString();
-                textBoxGepkocsiTipusa.Text = dataGridViewAutok.SelectedRows[0].Cells[7].Value.ToString();
-                textBoxUzemanyag.Text = dataGridViewAutok.SelectedRows[0].Cells[8].Value.ToString();
-                textBoxSebessegvaltoTipusa.Text = dataGridViewAutok.SelectedRows[0].Cells[9].Value.ToString();
-                textBoxTulajdonosNeve.Text = dataGridViewAutok.SelectedRows[0].Cells[10].Value.ToString();
+                comboBoxMarka.Text = dataGridViewAutok.SelectedRows[0].Cells[1].Value.ToString();
+                textBoxTipus.Text = dataGridViewAutok.SelectedRows[0].Cells[2].Value.ToString();
+                textBoxGyartasiEv.Text = dataGridViewAutok.SelectedRows[0].Cells[3].Value.ToString();
+                textBoxVetelar.Text = dataGridViewAutok.SelectedRows[0].Cells[4].Value.ToString();
+                textBoxRendszam.Text = dataGridViewAutok.SelectedRows[0].Cells[5].Value.ToString();
+                textBoxKilometeroraAllas.Text = dataGridViewAutok.SelectedRows[0].Cells[6].Value.ToString();
+                textBoxAlvazszam.Text = dataGridViewAutok.SelectedRows[0].Cells[7].Value.ToString();
+                textBoxGepkocsiTipusa.Text = dataGridViewAutok.SelectedRows[0].Cells[8].Value.ToString();
+                textBoxUzemanyag.Text = dataGridViewAutok.SelectedRows[0].Cells[9].Value.ToString();
+                textBoxSebessegvaltoTipusa.Text = dataGridViewAutok.SelectedRows[0].Cells[10].Value.ToString();
+                textBoxTulajdonosNeve.Text = dataGridViewAutok.SelectedRows[0].Cells[11].Value.ToString();
             }
             else
             {
@@ -164,14 +167,12 @@ namespace Szakdoga_autonyilvantartas
             carsDT.Columns[7].Caption = "Autó alvázszáma";
             carsDT.Columns[8].ColumnName = "Gépkocsi típusa";
             carsDT.Columns[8].Caption = "Gépkocsi típusa";
-            carsDT.Columns[9].ColumnName = "Gépkocsi típusa";
-            carsDT.Columns[9].Caption = "Gépkocsi típusa";
-            carsDT.Columns[10].ColumnName = "Üzemanyag";
-            carsDT.Columns[10].Caption = "Üzemanyag";
-            carsDT.Columns[11].ColumnName = "Sebességváltó";
-            carsDT.Columns[11].Caption = "Sebességváltó típusa";
-            carsDT.Columns[12].ColumnName = "Tulajdonos név";
-            carsDT.Columns[12].Caption = "Autó tulajdonosa";
+            carsDT.Columns[9].ColumnName = "Üzemanyag";
+            carsDT.Columns[9].Caption = "Üzemanyag";
+            carsDT.Columns[10].ColumnName = "Sebességváltó";
+            carsDT.Columns[10].Caption = "Sebességváltó típusa";
+            carsDT.Columns[11].ColumnName = "Tulajdonos név";
+            carsDT.Columns[11].Caption = "Autó tulajdonosa";
 
             dataGridViewAutok.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewAutok.ReadOnly = true;

@@ -45,7 +45,7 @@ namespace Szakdoga_autonyilvantartas
             tabControlCarDocket.SelectTab("tabPageTulajdonosok");
         }
 
-        
+
 
 
 

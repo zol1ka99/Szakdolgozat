@@ -112,6 +112,7 @@
             this.adatbázisLétrehozásaToolStripMenuItem.Name = "adatbázisLétrehozásaToolStripMenuItem";
             this.adatbázisLétrehozásaToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.adatbázisLétrehozásaToolStripMenuItem.Text = "Adatbázis létrehozása";
+            this.adatbázisLétrehozásaToolStripMenuItem.Click += new System.EventHandler(this.adatbázisLétrehozásaToolStripMenuItem_Click);
             // 
             // feltöltésTesztadatokkalToolStripMenuItem
             // 
@@ -280,6 +281,60 @@
             // 
             this.comboBoxMarka.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMarka.FormattingEnabled = true;
+            this.comboBoxMarka.Items.AddRange(new object[] {
+            "Acura",
+            "Alfa Romeo",
+            "Aston Martin",
+            "Audi",
+            "Bentley",
+            "BMW",
+            "Bugatti",
+            "Cadillac",
+            "Chevrolet",
+            "Chrysler",
+            "Citroen",
+            "Dacia",
+            "Daihatsu",
+            "Dodge",
+            "DS",
+            "Ferrari",
+            "Fiat",
+            "Ford",
+            "Honda",
+            "Hyundai",
+            "Infiniti",
+            "Jaguar",
+            "Jeep",
+            "Kia",
+            "Lamborghini",
+            "Lancia",
+            "Land Rover",
+            "Lexus",
+            "Lotus",
+            "Maserati",
+            "Mazda",
+            "McLaren",
+            "Mercedes",
+            "Mini",
+            "Mitsubishi",
+            "Nissan",
+            "Opel",
+            "Peugeot",
+            "Porsche",
+            "Renault",
+            "Rolls Royce",
+            "Rover",
+            "Saab",
+            "Seat",
+            "Skoda",
+            "Smart",
+            "Subaru",
+            "Suzuki",
+            "Tesla",
+            "Toyota",
+            "Vauxhall",
+            "Volkswagen",
+            "Volvo"});
             this.comboBoxMarka.Location = new System.Drawing.Point(60, 9);
             this.comboBoxMarka.Name = "comboBoxMarka";
             this.comboBoxMarka.Size = new System.Drawing.Size(223, 21);
