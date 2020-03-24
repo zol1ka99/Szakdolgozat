@@ -88,6 +88,8 @@ namespace Szakdoga_autonyilvantartas
 
 
 
+
+
         private void DataGridViewCars_SelectionChanged(object sender, EventArgs e)
         {
             if (ujAdatfelvitel)

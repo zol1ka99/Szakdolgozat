@@ -65,7 +65,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panelModositTorolGomb = new System.Windows.Forms.Panel();
             this.buttonTorol = new System.Windows.Forms.Button();
-            this.buttonModosit = new System.Windows.Forms.Button();
+            this.buttonModositAuto = new System.Windows.Forms.Button();
             this.buttonAdatokBetoltese = new System.Windows.Forms.Button();
             this.dataGridViewAutok = new System.Windows.Forms.DataGridView();
             this.tabPageTulajdonosok = new System.Windows.Forms.TabPage();
@@ -184,6 +184,7 @@
             this.buttonUjAuto.TabIndex = 4;
             this.buttonUjAuto.Text = "Új";
             this.buttonUjAuto.UseVisualStyleBackColor = true;
+            this.buttonUjAuto.Click += new System.EventHandler(this.buttonUjAuto_Click);
             // 
             // panelAutok
             // 
@@ -449,7 +450,7 @@
             // panelModositTorolGomb
             // 
             this.panelModositTorolGomb.Controls.Add(this.buttonTorol);
-            this.panelModositTorolGomb.Controls.Add(this.buttonModosit);
+            this.panelModositTorolGomb.Controls.Add(this.buttonModositAuto);
             this.panelModositTorolGomb.Location = new System.Drawing.Point(634, 76);
             this.panelModositTorolGomb.Name = "panelModositTorolGomb";
             this.panelModositTorolGomb.Size = new System.Drawing.Size(325, 47);
@@ -465,14 +466,14 @@
             this.buttonTorol.UseVisualStyleBackColor = true;
             this.buttonTorol.Click += new System.EventHandler(this.buttonTorol_Click);
             // 
-            // buttonModosit
+            // buttonModositAuto
             // 
-            this.buttonModosit.Location = new System.Drawing.Point(26, 8);
-            this.buttonModosit.Name = "buttonModosit";
-            this.buttonModosit.Size = new System.Drawing.Size(93, 31);
-            this.buttonModosit.TabIndex = 0;
-            this.buttonModosit.Text = "Módosít";
-            this.buttonModosit.UseVisualStyleBackColor = true;
+            this.buttonModositAuto.Location = new System.Drawing.Point(26, 8);
+            this.buttonModositAuto.Name = "buttonModositAuto";
+            this.buttonModositAuto.Size = new System.Drawing.Size(93, 31);
+            this.buttonModositAuto.TabIndex = 0;
+            this.buttonModositAuto.Text = "Módosít";
+            this.buttonModositAuto.UseVisualStyleBackColor = true;
             // 
             // buttonAdatokBetoltese
             // 
@@ -560,7 +561,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelModositTorolGomb;
         private System.Windows.Forms.Button buttonTorol;
-        private System.Windows.Forms.Button buttonModosit;
+        private System.Windows.Forms.Button buttonModositAuto;
         private System.Windows.Forms.Button buttonAdatokBetoltese;
         private System.Windows.Forms.DataGridView dataGridViewAutok;
         private System.Windows.Forms.TabPage tabPageTulajdonosok;
