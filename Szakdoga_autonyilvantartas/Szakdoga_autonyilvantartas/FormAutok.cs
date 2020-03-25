@@ -205,7 +205,7 @@ namespace Szakdoga_autonyilvantartas
 
 
                 try
-                
+            {
                 Car modosult = new Car(
                     Convert.ToInt32(textBoxAzonosito.Text),
                     comboBoxMarka.Text,
