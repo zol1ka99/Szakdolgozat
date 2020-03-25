@@ -45,10 +45,9 @@ namespace Szakdoga_autonyilvantartas
             tabControlCarDocket.SelectTab("tabPageTulajdonosok");
         }
 
-        private void buttonUjAuto_Click(object sender, EventArgs e)
-        {
 
-        }
+
+
 
 
 

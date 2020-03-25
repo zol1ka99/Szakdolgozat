@@ -21,14 +21,14 @@ namespace Szakdoga_autonyilvantartas
 
         private void torolHibauzenetet()
         {
-            //toolStripLabelHibauzenet.ForeColor = Color.Black;
-            //toolStripLabelHibauzenet.Text = "";
+            toolStripLabelHibauzenet.ForeColor = Color.Black;
+            toolStripLabelHibauzenet.Text = "";
         }
 
         private void kiirHibauzenetet(string hibauzenet)
         {
-            //toolStripLabelHibauzenet.ForeColor = Color.Red;  //toolstrip label oldalaljára odarakni
-            //toolStripLabelHibauzenet.Text = hibauzenet;
+            toolStripLabelHibauzenet.ForeColor = Color.Red;  //toolstrip label oldalaljára odarakni
+            toolStripLabelHibauzenet.Text = hibauzenet;
         }
         private void adatbázisLétrehozásaToolStripMenuItem_Click(object sender, EventArgs e)
         {

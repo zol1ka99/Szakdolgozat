@@ -86,8 +86,76 @@ namespace Szakdoga_autonyilvantartas
 
         }
 
+        private void buttonModositAuto_Click(object sender, EventArgs e)
+        {
+            torolHibauzenetet();
+            errorProviderAutoAzonosito.Clear();
+            errorProviderAutoMarka.Clear();
+            errorProviderAutoTipus.Clear();
+            errorProviderAutoGyartasiEv.Clear();
+            errorProviderAutoVetelar.Clear();
+            errorProviderAutoRendszam.Clear();
+            errorProviderAutoKilometeroraallas.Clear();
+            errorProviderAutoAlvazszam.Clear();
+            errorProviderAutoGepkocsiTipusa.Clear();
+            errorProviderAutoUzemanyag.Clear();
+            errorProviderAutoSebessegvaltoTipusa.Clear();
+            errorProviderAutoTulajdonosNev.Clear();
 
+            try
+            {
+                Car modosult = new Car(
+                    Convert.ToInt32(textBoxAzonosito.Text),
+                    comboBoxMarka.Text,
+                    textBoxTipus.Text,
+                    textBoxGyartasiEv.Text,
+                    Convert.ToInt32(textBoxVetelar.Text),
+                    textBoxRendszam.Text,
+                    Convert.ToInt32(textBoxKilometeroraAllas.Text),
+                    textBoxAlvazszam.Text,
+                    textBoxGepkocsiTipusa.Text,
+                    textBoxUzemanyag.Text,
+                    textBoxSebessegvaltoTipusa.Text,
+                    textBoxTulajdonosNeve.Text
+                    );
+                int azonosito = Convert.ToInt32(textBoxAzonosito.Text);
+                //1. módosítani a listába
+                try
+                {
+                    cars.updateCarInList(azonosito, modosult);
+                }
+                catch (Exception ex)
+                {
+                    kiirHibauzenetet(ex.Message);
+                    return;
+                }
+                //2. Módosítani az adatbázisba
+                RepositoryDatabaseTableCar rdtc = new RepositoryDatabaseTableCar();
+                try
+                {
+                    rdtc.updateCarInDatabase(azonosito, modosult);
+                }
+                catch (Exception ex)
+                {
+                    kiirHibauzenetet(ex.Message);
+                }
+                //3. Módosítani a DataGridViewban
+                frissitAdatokkalDataGridViewt();
+            }
+            catch (Exception ex)
+            {
+                kiirHibauzenetet(ex.Message);
+                Debug.WriteLine("A módosítás nem sikerült mert nincs pizza a listában!");
+            }
+        }
 
+        private void buttonUjAuto_Click(object sender, EventArgs e)
+        {
+            ujAdatfelvitel = true;
+            beallitGombokatTextboxokatUjAutonal();
+            int ujAutoAzonosito = cars.getNextCarId();
+            textBoxAzonosito.Text = ujAutoAzonosito.ToString();
+        }
 
 
         private void DataGridViewCars_SelectionChanged(object sender, EventArgs e)
@@ -101,6 +169,7 @@ namespace Szakdoga_autonyilvantartas
                 panelAutok.Visible = true;
                 panelModositTorolGomb.Visible = true;
                 buttonUjAuto.Visible = true;
+
 
                 comboBoxMarka.Text = dataGridViewAutok.SelectedRows[0].Cells[1].Value.ToString();
                 textBoxTipus.Text = dataGridViewAutok.SelectedRows[0].Cells[2].Value.ToString();
@@ -122,7 +191,25 @@ namespace Szakdoga_autonyilvantartas
             }
         }
 
+        private void beallitGombokatTextboxokatUjAutonal()
+        {
+            panelAutok.Visible = true;
+            panelModositTorolGomb.Visible = false;
 
+            textBoxAzonosito.Text = "";
+            comboBoxMarka.Text = "";
+            textBoxTipus.Text = "";
+            textBoxGyartasiEv.Text= "";
+            textBoxVetelar.Text = "";
+            textBoxRendszam.Text = "";
+            textBoxKilometeroraAllas.Text = "";
+            textBoxAlvazszam.Text = "";
+            textBoxGepkocsiTipusa.Text = "";
+            textBoxUzemanyag.Text = "";
+            textBoxSebessegvaltoTipusa.Text = "";
+            textBoxTulajdonosNeve.Text = "";
+
+        }
 
         private void beallitGombokatKattintaskor()
         {
