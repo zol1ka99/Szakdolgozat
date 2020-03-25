@@ -26,7 +26,7 @@ namespace Szakdoga_autonyilvantartas.repository.Auto
             string queryUSE = "USE autonyilvantartas";
             string queryCreateTable =
                 "CREATE TABLE IF NOT EXISTS `cars` ( " +
-                "`id` INT NOT NULL AUTO_INCREMENT , " +
+                "`id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT , " +
                 "`marka` VARCHAR(20) NOT NULL , " +
                 "`tipus` VARCHAR(30) NOT NULL , " +
                 "`gyartasi_ev` VARCHAR(15) NOT NULL , " +
@@ -36,9 +36,8 @@ namespace Szakdoga_autonyilvantartas.repository.Auto
                 "`alvazszam` VARCHAR(20) NOT NULL , " +
                 "`gepkocsi_tipusa` VARCHAR(5) NOT NULL , " +
                 "`uzemanyag` VARCHAR(15) NOT NULL , " +
-                "`sebessegvalto_tipusa` VARCHAR(10) NOT NULL , " +
-                "`tulajdonos_nev` VARCHAR(50) NOT NULL , " +
-                "PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+                "`sebessegvalto_tipusa` VARCHAR(10) NOT NULL ," +
+                "`tulid` INT NOT NULL)";
 
             MySqlConnection connection = new MySqlConnection(connectionString);
 

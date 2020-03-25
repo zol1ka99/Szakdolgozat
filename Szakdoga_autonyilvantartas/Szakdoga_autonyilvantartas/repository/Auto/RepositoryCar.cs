@@ -33,7 +33,7 @@ namespace Szakdoga_autonyilvantartas.Repository
             this.cars = cars;
         }
 
-        public DataTable getCarDataTableFromList()
+        public DataTable getCarDataTableFromListgetCarDataTableFromList()
         {
             DataTable carsDT = new DataTable();
             carsDT.Columns.Add("id", typeof(int));

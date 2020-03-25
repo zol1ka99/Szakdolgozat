@@ -203,8 +203,7 @@ namespace Szakdoga_autonyilvantartas
 
 
 
-
-                try
+            try
             {
                 Car modosult = new Car(
                     Convert.ToInt32(textBoxAzonosito.Text),
@@ -381,7 +380,7 @@ namespace Szakdoga_autonyilvantartas
         private void frissitAdatokkalDataGridViewt()
         {
             //Feltölti az adattáblát a repository auto listából
-            carsDT = cars.getCarDataTableFromList();
+            carsDT = cars.getCarDataTableFromListgetCarDataTableFromList();
             dataGridViewAutok.DataSource = null;
             dataGridViewAutok.DataSource = carsDT;
         }

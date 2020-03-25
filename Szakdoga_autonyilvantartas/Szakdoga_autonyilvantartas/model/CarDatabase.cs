@@ -17,8 +17,7 @@ namespace Szakdoga_autonyilvantartas.Model
 
         public string getUpdate(int id)
         {
-            return
-                "UPDATE `cars` SET `marka` = '"+getMarka()+"', `tipus` = '"+getTipus()+"', `gyartasi_ev` = '"+getGyartasiev()+"', `vetelar` = '"+getVetelar()+"', `rendszam` = '"+getRendszam()+"', `kilometeroraallas` = '"+getKilometeroraallas()+"', `alvazszam` = '"+getAlvazszam()+"', `gepkocsi_tipusa` = '"+getGepkocsiTipusa()+"', `uzemanyag` = '"+getUzemanyag()+"', `sebessegvalto_tipusa` = '"+getSebessegvaltoTipusa()+"', `tulajdonos_nev` = '"+getTulajdonosNeve()+"' WHERE `cars`.`id` = " + id;
+            return "UPDATE `cars` SET `marka` = '"+getMarka()+"', `tipus` = '"+getTipus()+"', `gyartasi_ev` = '"+getGyartasiev()+"', `vetelar` = '"+getVetelar()+"', `rendszam` = '"+getRendszam()+"', `kilometeroraallas` = '"+getKilometeroraallas()+"', `alvazszam` = '"+getAlvazszam()+"', `gepkocsi_tipusa` = '"+getGepkocsiTipusa()+"', `uzemanyag` = '"+getUzemanyag()+"', `sebessegvalto_tipusa` = '"+getSebessegvaltoTipusa()+"', `tulajdonos_nev` = '"+getTulajdonosNeve()+"' WHERE `cars`.`id` = " + id;
         }
 
         public static string getSQLCommandDeleteAllRecord()
@@ -28,7 +27,7 @@ namespace Szakdoga_autonyilvantartas.Model
 
         public static string getSQLCommandGetAllRecord()
         {
-            return "SELECT * FROM cars";
+            return "SELECT * FROM cars INNER JOIN tulajdonosok ON cars.tulid = tulajdonosok.tulid";
         }
     }
 }
