@@ -27,7 +27,7 @@ namespace Szakdoga_autonyilvantartas
 
         private void beallitKezdoOldalt()
         {
-            this.Size = new Size(1014, 640);
+            this.Size = new Size(1200, 700);
             this.Text = "Car Docker (Beta)";
         }
 
@@ -44,6 +44,12 @@ namespace Szakdoga_autonyilvantartas
         {
             tabControlCarDocket.SelectTab("tabPageTulajdonosok");
         }
+
+
+
+
+
+
 
 
 

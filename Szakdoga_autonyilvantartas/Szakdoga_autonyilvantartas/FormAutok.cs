@@ -86,7 +86,7 @@ namespace Szakdoga_autonyilvantartas
 
         }
 
-        private void buttonModositAuto_Click(object sender, EventArgs e)
+        private void buttonUjMentes_Click(object sender, EventArgs e)
         {
             torolHibauzenetet();
             errorProviderAutoAzonosito.Clear();
@@ -104,6 +104,108 @@ namespace Szakdoga_autonyilvantartas
 
             try
             {
+                Car ujCar = new Car(
+                    Convert.ToInt32(textBoxAzonosito.Text),
+                    comboBoxMarka.Text,
+                    textBoxTipus.Text,
+                    textBoxGyartasiEv.Text,
+                    Convert.ToInt32(textBoxVetelar.Text),
+                    textBoxRendszam.Text,
+                    Convert.ToInt32(textBoxKilometeroraAllas.Text),
+                    textBoxAlvazszam.Text,
+                    textBoxGepkocsiTipusa.Text,
+                    textBoxUzemanyag.Text,
+                    textBoxSebessegvaltoTipusa.Text,
+                    textBoxTulajdonosNeve.Text
+                    );
+                int azonosito = Convert.ToInt32(textBoxAzonosito.Text);
+                //1.Hozzáadni a listához
+                try
+                {
+                    cars.addCarToList(ujCar);
+                }
+                catch (Exception ex)
+                {
+                    kiirHibauzenetet(ex.Message);
+                    return;
+                }
+                //2. hozzáadni az adatbázishoz
+                RepositoryDatabaseTableCar rdtc = new RepositoryDatabaseTableCar();
+                try
+                {
+                    rdtc.insertCarToDatabase(ujCar);
+                }
+                catch (Exception ex)
+                {
+                    kiirHibauzenetet(ex.Message);
+                }
+                //3. Frissíteni a DataGridVieww-t
+                beallitGombokatUjCarMegsemEsMentes();
+                frissitAdatokkalDataGridViewt();
+                if (dataGridViewAutok.SelectedRows.Count == 1)
+                {
+                    beallitCarsDataGridViewt();
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void buttonMegsem_Click(object sender, EventArgs e)
+        {
+            beallitGombokatUjCarMegsemEsMentes();
+        }
+
+        private void beallitGombokatUjCarMegsemEsMentes()
+        {
+            if ((dataGridViewAutok.Rows != null) &&
+                (dataGridViewAutok.Rows.Count > 0))
+            {
+                dataGridViewAutok.Rows[0].Selected = true;
+                buttonUjMentes.Visible = false;
+                buttonMegsem.Visible = false;
+                panelModositTorolGomb.Visible = true;
+                ujAdatfelvitel = false;
+
+                textBoxAzonosito.Text = "";
+                comboBoxMarka.Text = "";
+                textBoxTipus.Text = "";
+                textBoxGyartasiEv.Text = "";
+                textBoxVetelar.Text = "";
+                textBoxRendszam.Text = "";
+                textBoxKilometeroraAllas.Text = "";
+                textBoxAlvazszam.Text = "";
+                textBoxGepkocsiTipusa.Text = "";
+                textBoxUzemanyag.Text = "";
+                textBoxSebessegvaltoTipusa.Text = "";
+                textBoxTulajdonosNeve.Text = "";
+            }
+        }
+
+        private void buttonModositAuto_Click(object sender, EventArgs e)
+        {
+            torolHibauzenetet();
+            errorProviderAutoAzonosito.Clear();
+            errorProviderAutoMarka.Clear();
+            errorProviderAutoTipus.Clear();
+            errorProviderAutoGyartasiEv.Clear();
+            errorProviderAutoVetelar.Clear();
+            errorProviderAutoRendszam.Clear();
+            errorProviderAutoKilometeroraallas.Clear();
+            errorProviderAutoAlvazszam.Clear();
+            errorProviderAutoGepkocsiTipusa.Clear();
+            errorProviderAutoUzemanyag.Clear();
+            errorProviderAutoSebessegvaltoTipusa.Clear();
+            errorProviderAutoTulajdonosNev.Clear();
+
+
+
+
+                try
+                
                 Car modosult = new Car(
                     Convert.ToInt32(textBoxAzonosito.Text),
                     comboBoxMarka.Text,
@@ -145,7 +247,7 @@ namespace Szakdoga_autonyilvantartas
             catch (Exception ex)
             {
                 kiirHibauzenetet(ex.Message);
-                Debug.WriteLine("A módosítás nem sikerült mert nincs pizza a listában!");
+                Debug.WriteLine("A módosítás nem sikerült mert nincs autó a listában!");
             }
         }
 
@@ -170,7 +272,7 @@ namespace Szakdoga_autonyilvantartas
                 panelModositTorolGomb.Visible = true;
                 buttonUjAuto.Visible = true;
 
-
+                textBoxAzonosito.Text = dataGridViewAutok.SelectedRows[0].Cells[0].Value.ToString();
                 comboBoxMarka.Text = dataGridViewAutok.SelectedRows[0].Cells[1].Value.ToString();
                 textBoxTipus.Text = dataGridViewAutok.SelectedRows[0].Cells[2].Value.ToString();
                 textBoxGyartasiEv.Text = dataGridViewAutok.SelectedRows[0].Cells[3].Value.ToString();

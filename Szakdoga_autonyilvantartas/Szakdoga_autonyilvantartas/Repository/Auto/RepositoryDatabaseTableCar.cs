@@ -25,7 +25,7 @@ namespace Szakdoga_autonyilvantartas.repository.Auto
         {
             string queryUSE = "USE autonyilvantartas";
             string queryCreateTable =
-                "CREATE TABLE `cars` ( " +
+                "CREATE TABLE IF NOT EXISTS `cars` ( " +
                 "`id` INT NOT NULL AUTO_INCREMENT , " +
                 "`marka` VARCHAR(20) NOT NULL , " +
                 "`tipus` VARCHAR(30) NOT NULL , " +

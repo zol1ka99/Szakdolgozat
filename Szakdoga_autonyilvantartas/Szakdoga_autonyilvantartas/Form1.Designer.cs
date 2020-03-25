@@ -42,6 +42,8 @@
             this.buttonUjMentes = new System.Windows.Forms.Button();
             this.buttonUjAuto = new System.Windows.Forms.Button();
             this.panelAutok = new System.Windows.Forms.Panel();
+            this.textBoxAzonosito = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.textBoxGyartasiEv = new System.Windows.Forms.TextBox();
             this.textBoxTulajdonosNeve = new System.Windows.Forms.TextBox();
             this.textBoxSebessegvaltoTipusa = new System.Windows.Forms.TextBox();
@@ -70,8 +72,6 @@
             this.buttonAdatokBetoltese = new System.Windows.Forms.Button();
             this.dataGridViewAutok = new System.Windows.Forms.DataGridView();
             this.tabPageTulajdonosok = new System.Windows.Forms.TabPage();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBoxAzonosito = new System.Windows.Forms.TextBox();
             this.errorProviderAutoAzonosito = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderAutoMarka = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderAutoTipus = new System.Windows.Forms.ErrorProvider(this.components);
@@ -84,6 +84,9 @@
             this.errorProviderAutoUzemanyag = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderAutoSebessegvaltoTipusa = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderAutoTulajdonosNev = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabelHibauzenet = new System.Windows.Forms.ToolStripLabel();
+            this.buttonMegsem = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControlCarDocket.SuspendLayout();
             this.tabPageAutok.SuspendLayout();
@@ -102,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoUzemanyag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoSebessegvaltoTipusa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoTulajdonosNev)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -172,7 +176,7 @@
             // 
             this.tabControlCarDocket.Controls.Add(this.tabPageAutok);
             this.tabControlCarDocket.Controls.Add(this.tabPageTulajdonosok);
-            this.tabControlCarDocket.Location = new System.Drawing.Point(13, 28);
+            this.tabControlCarDocket.Location = new System.Drawing.Point(12, 58);
             this.tabControlCarDocket.Name = "tabControlCarDocket";
             this.tabControlCarDocket.SelectedIndex = 0;
             this.tabControlCarDocket.Size = new System.Drawing.Size(1116, 561);
@@ -180,6 +184,7 @@
             // 
             // tabPageAutok
             // 
+            this.tabPageAutok.Controls.Add(this.buttonMegsem);
             this.tabPageAutok.Controls.Add(this.buttonUjMentes);
             this.tabPageAutok.Controls.Add(this.buttonUjAuto);
             this.tabPageAutok.Controls.Add(this.panelAutok);
@@ -196,16 +201,17 @@
             // 
             // buttonUjMentes
             // 
-            this.buttonUjMentes.Location = new System.Drawing.Point(974, 139);
+            this.buttonUjMentes.Location = new System.Drawing.Point(1004, 139);
             this.buttonUjMentes.Name = "buttonUjMentes";
             this.buttonUjMentes.Size = new System.Drawing.Size(86, 23);
             this.buttonUjMentes.TabIndex = 5;
             this.buttonUjMentes.Text = "Új Mentése";
             this.buttonUjMentes.UseVisualStyleBackColor = true;
+            this.buttonUjMentes.Click += new System.EventHandler(this.buttonUjMentes_Click);
             // 
             // buttonUjAuto
             // 
-            this.buttonUjAuto.Location = new System.Drawing.Point(803, 139);
+            this.buttonUjAuto.Location = new System.Drawing.Point(779, 139);
             this.buttonUjAuto.Name = "buttonUjAuto";
             this.buttonUjAuto.Size = new System.Drawing.Size(93, 23);
             this.buttonUjAuto.TabIndex = 4;
@@ -243,6 +249,24 @@
             this.panelAutok.Name = "panelAutok";
             this.panelAutok.Size = new System.Drawing.Size(338, 361);
             this.panelAutok.TabIndex = 3;
+            // 
+            // textBoxAzonosito
+            // 
+            this.textBoxAzonosito.Location = new System.Drawing.Point(155, 21);
+            this.textBoxAzonosito.Name = "textBoxAzonosito";
+            this.textBoxAzonosito.ReadOnly = true;
+            this.textBoxAzonosito.Size = new System.Drawing.Size(175, 20);
+            this.textBoxAzonosito.TabIndex = 24;
+            this.textBoxAzonosito.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(62, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 13);
+            this.label12.TabIndex = 23;
+            this.label12.Text = "Autó Azonosítója:";
             // 
             // textBoxGyartasiEv
             // 
@@ -528,28 +552,10 @@
             this.tabPageTulajdonosok.Location = new System.Drawing.Point(4, 22);
             this.tabPageTulajdonosok.Name = "tabPageTulajdonosok";
             this.tabPageTulajdonosok.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageTulajdonosok.Size = new System.Drawing.Size(965, 535);
+            this.tabPageTulajdonosok.Size = new System.Drawing.Size(1108, 535);
             this.tabPageTulajdonosok.TabIndex = 1;
             this.tabPageTulajdonosok.Text = "Tulajdonosok";
             this.tabPageTulajdonosok.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(62, 21);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 13);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "Autó Azonosítója:";
-            // 
-            // textBoxAzonosito
-            // 
-            this.textBoxAzonosito.Location = new System.Drawing.Point(155, 21);
-            this.textBoxAzonosito.Name = "textBoxAzonosito";
-            this.textBoxAzonosito.ReadOnly = true;
-            this.textBoxAzonosito.Size = new System.Drawing.Size(175, 20);
-            this.textBoxAzonosito.TabIndex = 24;
-            this.textBoxAzonosito.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // errorProviderAutoAzonosito
             // 
@@ -599,11 +605,37 @@
             // 
             this.errorProviderAutoTulajdonosNev.ContainerControl = this;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabelHibauzenet});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1167, 25);
+            this.toolStrip1.TabIndex = 17;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripLabelHibauzenet
+            // 
+            this.toolStripLabelHibauzenet.Name = "toolStripLabelHibauzenet";
+            this.toolStripLabelHibauzenet.Size = new System.Drawing.Size(0, 22);
+            // 
+            // buttonMegsem
+            // 
+            this.buttonMegsem.Location = new System.Drawing.Point(897, 139);
+            this.buttonMegsem.Name = "buttonMegsem";
+            this.buttonMegsem.Size = new System.Drawing.Size(89, 23);
+            this.buttonMegsem.TabIndex = 6;
+            this.buttonMegsem.Text = "Mégsem";
+            this.buttonMegsem.UseVisualStyleBackColor = true;
+            this.buttonMegsem.Click += new System.EventHandler(this.buttonMegsem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 601);
+            this.ClientSize = new System.Drawing.Size(1167, 631);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.tabControlCarDocket);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -629,6 +661,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoUzemanyag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoSebessegvaltoTipusa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoTulajdonosNev)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -690,6 +724,9 @@
         private System.Windows.Forms.ErrorProvider errorProviderAutoUzemanyag;
         private System.Windows.Forms.ErrorProvider errorProviderAutoSebessegvaltoTipusa;
         private System.Windows.Forms.ErrorProvider errorProviderAutoTulajdonosNev;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabelHibauzenet;
+        private System.Windows.Forms.Button buttonMegsem;
     }
 }
 
