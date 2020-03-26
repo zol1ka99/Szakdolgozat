@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Szakdoga_autonyilvantartas.model
+namespace Szakdoga_autonyilvantartas.Model
 {
     partial class Tulajdonos
     {
@@ -29,7 +29,7 @@ namespace Szakdoga_autonyilvantartas.model
 
         public void updateTulajdonos(Tulajdonos modified)
         {
-            this.tulid = modified.getId();
+            //this.tulid = modified.getId();
             this.tulajdonos_nev = modified.getTulajdonosnev();
             this.tulajdonos_szemelyiigszam = modified.getTulajdonosszemelyiigszam();
             this.jogositvany_azon = modified.getJogositvanyazon();
@@ -39,11 +39,11 @@ namespace Szakdoga_autonyilvantartas.model
         }
 
 
-        public void setId(int tulid)
+        public void setTulId(int tulid)
         {
             this.tulid = tulid;
         }
-        public int getId()
+        public int getTulId()
         {
             return tulid;
         }

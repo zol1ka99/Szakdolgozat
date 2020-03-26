@@ -51,7 +51,7 @@ namespace Szakdoga_autonyilvantartas.Model
             this.gepkocsi_tipusa = modified.getGepkocsiTipusa();
             this.uzemanyag = modified.getUzemanyag();
             this.sebessegvalto_tipusa = modified.getSebessegvaltoTipusa();
-            this.tulajdonos_nev = modified.getTulajdonosNeve();
+            this.tulajdonos_nev = modified.getTulajdonosNev();
         }
 
         public void setId(int id)
@@ -163,11 +163,11 @@ namespace Szakdoga_autonyilvantartas.Model
             return sebessegvalto_tipusa;
         }
 
-        public void setTulajdonosNeve(string tulajdonos_nev)
+        public void setTulajdonosNev(string tulajdonos_nev)
         {
             this.tulajdonos_nev = tulajdonos_nev;
         }
-        public string getTulajdonosNeve()
+        public string getTulajdonosNev()
         {
             return tulajdonos_nev;
         }

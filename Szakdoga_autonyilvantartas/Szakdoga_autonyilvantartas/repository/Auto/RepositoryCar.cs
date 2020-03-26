@@ -50,7 +50,7 @@ namespace Szakdoga_autonyilvantartas.Repository
             carsDT.Columns.Add("tulajdonos_nev", typeof(string));
             foreach (Car c in cars)
             {
-                carsDT.Rows.Add(c.getId(), c.getMarka(), c.getTipus(), c.getGyartasiev(), c.getVetelar(), c.getRendszam(), c.getKilometeroraallas(), c.getAlvazszam(), c.getGepkocsiTipusa(), c.getUzemanyag(), c.getSebessegvaltoTipusa(), c.getTulajdonosNeve());
+                carsDT.Rows.Add(c.getId(), c.getMarka(), c.getTipus(), c.getGyartasiev(), c.getVetelar(), c.getRendszam(), c.getKilometeroraallas(), c.getAlvazszam(), c.getGepkocsiTipusa(), c.getUzemanyag(), c.getSebessegvaltoTipusa(), c.getTulajdonosNev());
             }
             return carsDT;
         }

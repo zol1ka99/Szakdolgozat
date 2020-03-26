@@ -61,6 +61,8 @@
     </Compile>
     <Compile Include="model\Car.cs" />
     <Compile Include="model\CarDatabase.cs" />
+    <Compile Include="model\Ceg.cs" />
+    <Compile Include="model\CegDatabase.cs" />
     <Compile Include="model\Connection.cs" />
     <Compile Include="model\Tulajdonos.cs" />
     <Compile Include="model\TulajdonosDatabase.cs" />
@@ -73,6 +75,7 @@
     <Compile Include="repository\Auto\RepositoryDatabaseTableCarSQL.cs" />
     <Compile Include="repository\Auto\RepositoryDatabaseTableCar.cs" />
     <Compile Include="repository\Auto\RepositoryDatabaseTableCarTestData.cs" />
+    <Compile Include="repository\Ceg\RepositoryCeg.cs" />
     <Compile Include="repository\Tarolo.cs" />
     <Compile Include="repository\RepositoryDatabase.cs" />
     <Compile Include="Exception\RepositoryException.cs" />

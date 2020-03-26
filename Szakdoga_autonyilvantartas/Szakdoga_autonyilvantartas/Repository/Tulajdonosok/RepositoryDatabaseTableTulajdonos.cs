@@ -5,9 +5,8 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Szakdoga_autonyilvantartas.Model;
 using Szakdoga_autonyilvantartas.Repository;
-using Szakdoga_autonyilvantartas.model;
+using Szakdoga_autonyilvantartas.Model;
 
 namespace Szakdoga_autonyilvantartas.repository.Tulajdonosok
 {

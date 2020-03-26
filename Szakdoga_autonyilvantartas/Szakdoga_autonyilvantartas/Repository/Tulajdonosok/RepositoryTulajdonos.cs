@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Szakdoga_autonyilvantartas.model;
+using Szakdoga_autonyilvantartas.Model;
 
 namespace Szakdoga_autonyilvantartas.Repository
 {
@@ -44,14 +44,14 @@ namespace Szakdoga_autonyilvantartas.Repository
             tulajdonosDT.Columns.Add("cegnev", typeof(string));
             foreach (Tulajdonos c in tulajdonosok)
             {
-                tulajdonosDT.Rows.Add(c.getId(), c.getTulajdonosnev(), c.getTulajdonosszemelyiigszam(), c.getJogositvanyazon(), c.getEmailcim(), c.getTelefonszam(), c.getCegnev());
+                tulajdonosDT.Rows.Add(c.getTulId(), c.getTulajdonosnev(), c.getTulajdonosszemelyiigszam(), c.getJogositvanyazon(), c.getEmailcim(), c.getTelefonszam(), c.getCegnev());
             }
             return tulajdonosDT;
         }
 
         public void deleteTulajdonosFromList(int tulid)
         {
-            Tulajdonos p = tulajdonosok.Find(x => x.getId() == tulid);
+            Tulajdonos p = tulajdonosok.Find(x => x.getTulId() == tulid);
             if (p != null)
             {
                 tulajdonosok.Remove(p);
@@ -63,7 +63,7 @@ namespace Szakdoga_autonyilvantartas.Repository
 
         public void updateTulajdonosInList(int tulid, Tulajdonos modified)
         {
-            Tulajdonos p = tulajdonosok.Find(x => x.getId() == tulid);
+            Tulajdonos p = tulajdonosok.Find(x => x.getTulId() == tulid);
             if (p != null)
             {
                 p.updateTulajdonos(modified);
@@ -87,7 +87,7 @@ namespace Szakdoga_autonyilvantartas.Repository
 
         public Tulajdonos getTulajdonos(int tulid)
         {
-            return tulajdonosok.Find(x => x.getId() == tulid);
+            return tulajdonosok.Find(x => x.getTulId() == tulid);
         }
 
         public int getNextTulajdonosId()
@@ -97,7 +97,7 @@ namespace Szakdoga_autonyilvantartas.Repository
                 return 1;
             }else
             {
-                return tulajdonosok.Max(x => x.getId()) + 1;
+                return tulajdonosok.Max(x => x.getTulId()) + 1;
             }
         }
 

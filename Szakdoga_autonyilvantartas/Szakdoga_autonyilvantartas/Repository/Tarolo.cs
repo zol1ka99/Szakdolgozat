@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Szakdoga_autonyilvantartas.model;
 using Szakdoga_autonyilvantartas.Model;
 
 namespace Szakdoga_autonyilvantartas.Repository
@@ -14,6 +13,7 @@ namespace Szakdoga_autonyilvantartas.Repository
         {
             cars = new List<Car>();
             tulajdonosok = new List<Tulajdonos>();
+            cegek = new List<Ceg>();
 
         }
     }
