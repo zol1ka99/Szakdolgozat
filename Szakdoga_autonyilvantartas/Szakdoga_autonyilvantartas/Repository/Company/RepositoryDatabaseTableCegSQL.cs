@@ -48,5 +48,65 @@ namespace Szakdoga_autonyilvantartas.repository.Company
             }
             return cegek;
         }
+
+        public void deleteCegFromDatabase(int cegid)
+        {
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            try
+            {
+                connection.Open();
+                string query = "DELETE FROM cegek WHERE id=" + cegid;
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception e)
+            {
+                connection.Close();
+                Debug.WriteLine(e.Message);
+                Debug.WriteLine(cegid + "azonosító jelű cég törlése nem sikerült!");
+                throw new RepositoryException("Sikertelen törlés az adatbázisból!");
+            }
+        }
+
+        public void updateCegInDatabase(int cegid,Ceg modified)
+        {
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            try
+            {
+                connection.Open();
+                string query = modified.getUpdate(cegid);
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception e)
+            {
+                connection.Close();
+                Debug.WriteLine(e.Message);
+                Debug.WriteLine(cegid + "azonosító jelű cég módosítása nem sikerült!");
+                throw new RepositoryException("Sikertelen módosítás az adatbázisban!");
+            }
+        }
+
+        public void insertCegToDatabase(Ceg ujCeg)
+        {
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            try
+            {
+                connection.Open();
+                string query = ujCeg.getInsert();
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception e)
+            {
+                connection.Close();
+                Debug.WriteLine(e.Message);
+                Debug.WriteLine(ujCeg + "cég hozzáadása az adatbázishoz nem sikerült!");
+                throw new RepositoryException("Sikertelen beszúrás az adatbázisba!");
+            }
+        }
     }
 }

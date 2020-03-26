@@ -21,6 +21,8 @@ namespace Szakdoga_autonyilvantartas.repository.Tulajdonosok
 
                 string query =
                     "";
+
+
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();
