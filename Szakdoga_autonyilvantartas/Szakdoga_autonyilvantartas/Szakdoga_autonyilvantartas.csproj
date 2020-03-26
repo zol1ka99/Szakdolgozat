@@ -75,7 +75,9 @@
     <Compile Include="repository\Auto\RepositoryDatabaseTableCarSQL.cs" />
     <Compile Include="repository\Auto\RepositoryDatabaseTableCar.cs" />
     <Compile Include="repository\Auto\RepositoryDatabaseTableCarTestData.cs" />
-    <Compile Include="repository\Ceg\RepositoryCeg.cs" />
+    <Compile Include="repository\Company\RepositoryCeg.cs" />
+    <Compile Include="repository\Company\RepositoryDatabaseTableCeg.cs" />
+    <Compile Include="repository\Company\RepositoryDatabaseTableCegSQL.cs" />
     <Compile Include="repository\Tarolo.cs" />
     <Compile Include="repository\RepositoryDatabase.cs" />
     <Compile Include="Exception\RepositoryException.cs" />

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Szakdoga_autonyilvantartas.model
+namespace Szakdoga_autonyilvantartas.Model
 {
     partial class Ceg
     {
@@ -18,7 +18,7 @@ namespace Szakdoga_autonyilvantartas.model
 
         }
 
-        public static string getSQLCommandDeleteALlRecord()
+        public static string getSQLCommandDeleteAllRecord()
         {
             return "DELETE FROM cegek";
         }
