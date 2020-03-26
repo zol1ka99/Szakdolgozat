@@ -77,7 +77,7 @@ namespace Szakdoga_autonyilvantartas.repository.Auto
             {
                 connection.Close();
                 Debug.WriteLine(e.Message);
-                throw new RepositoryException("Tábla törlése nem járt sikerrel!");
+                throw new RepositoryExceptionCantDelete("Tábla törlése nem járt sikerrel!");
             }
         }
 

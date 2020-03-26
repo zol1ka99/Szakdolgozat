@@ -35,7 +35,7 @@ namespace Szakdoga_autonyilvantartas.Repository
         public DataTable getTulajdonosDataTableFromList()
         {
             DataTable tulajdonosDT = new DataTable();
-            tulajdonosDT.Columns.Add("id", typeof(int));
+            tulajdonosDT.Columns.Add("tulid", typeof(int));
             tulajdonosDT.Columns.Add("tulajdonos_nev", typeof(string));
             tulajdonosDT.Columns.Add("tulajdonos_szemelyiigszam", typeof(string));
             tulajdonosDT.Columns.Add("jogositvany_azon", typeof(int));
@@ -49,9 +49,9 @@ namespace Szakdoga_autonyilvantartas.Repository
             return tulajdonosDT;
         }
 
-        public void deleteTulajdonosFromList(int id)
+        public void deleteTulajdonosFromList(int tulid)
         {
-            Tulajdonos p = tulajdonosok.Find(x => x.getId() == id);
+            Tulajdonos p = tulajdonosok.Find(x => x.getId() == tulid);
             if (p != null)
             {
                 tulajdonosok.Remove(p);
@@ -61,9 +61,9 @@ namespace Szakdoga_autonyilvantartas.Repository
             }
         }
 
-        public void updateTulajdonosInList(int id, Tulajdonos modified)
+        public void updateTulajdonosInList(int tulid, Tulajdonos modified)
         {
-            Tulajdonos p = tulajdonosok.Find(x => x.getId() == id);
+            Tulajdonos p = tulajdonosok.Find(x => x.getId() == tulid);
             if (p != null)
             {
                 p.updateTulajdonos(modified);
@@ -85,9 +85,9 @@ namespace Szakdoga_autonyilvantartas.Repository
             }
         }
 
-        public Tulajdonos getTulajdonos(int id)
+        public Tulajdonos getTulajdonos(int tulid)
         {
-            return tulajdonosok.Find(x => x.getId() == id);
+            return tulajdonosok.Find(x => x.getId() == tulid);
         }
 
         public int getNextTulajdonosId()

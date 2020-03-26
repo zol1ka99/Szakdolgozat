@@ -8,7 +8,7 @@ namespace Szakdoga_autonyilvantartas.model
 {
     partial class Tulajdonos
     {
-        private int id;
+        private int tulid;
         private string tulajdonos_nev;
         private string tulajdonos_szemelyiigszam;
         private int jogositvany_azon;
@@ -16,9 +16,9 @@ namespace Szakdoga_autonyilvantartas.model
         private int telefonszam;
         private string cegnev; //ennek az sql része lesz probléma mert uganúgy kell mint az autónál a tulid-vel, inner joinnal
 
-        public Tulajdonos(int id, string tulajdonos_nev, string tulajdonos_szemelyiigszam, int jogositvany_azon, string email_cim, int telefonszam, string cegnev)
+        public Tulajdonos(int tulid, string tulajdonos_nev, string tulajdonos_szemelyiigszam, int jogositvany_azon, string email_cim, int telefonszam, string cegnev)
         {
-            this.id = id;
+            this.tulid = tulid;
             this.tulajdonos_nev = tulajdonos_nev;
             this.tulajdonos_szemelyiigszam = tulajdonos_szemelyiigszam;
             this.jogositvany_azon = jogositvany_azon;
@@ -29,7 +29,7 @@ namespace Szakdoga_autonyilvantartas.model
 
         public void updateTulajdonos(Tulajdonos modified)
         {
-            this.id = modified.getId();
+            this.tulid = modified.getId();
             this.tulajdonos_nev = modified.getTulajdonosnev();
             this.tulajdonos_szemelyiigszam = modified.getTulajdonosszemelyiigszam();
             this.jogositvany_azon = modified.getJogositvanyazon();
@@ -39,13 +39,13 @@ namespace Szakdoga_autonyilvantartas.model
         }
 
 
-        public void setId(int id)
+        public void setId(int tulid)
         {
-            this.id = id;
+            this.tulid = tulid;
         }
         public int getId()
         {
-            return id;
+            return tulid;
         }
 
         public void setTulajdonosnev(string tulajdonos_nev)

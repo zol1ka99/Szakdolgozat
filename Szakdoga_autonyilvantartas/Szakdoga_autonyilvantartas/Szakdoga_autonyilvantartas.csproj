@@ -77,6 +77,8 @@
     <Compile Include="repository\RepositoryDatabase.cs" />
     <Compile Include="Exception\RepositoryException.cs" />
     <Compile Include="repository\Tulajdonosok\RepositoryDatabaseTableTulajdonos.cs" />
+    <Compile Include="repository\Tulajdonosok\RepositoryDatabaseTableTulajdonosSQL.cs" />
+    <Compile Include="repository\Tulajdonosok\RepositoryDatabaseTableTulajdonosTestData.cs" />
     <Compile Include="repository\Tulajdonosok\RepositoryTulajdonos.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

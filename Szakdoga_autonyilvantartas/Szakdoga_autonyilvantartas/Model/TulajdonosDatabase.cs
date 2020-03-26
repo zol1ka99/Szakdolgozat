@@ -8,6 +8,16 @@ namespace Szakdoga_autonyilvantartas.model
 {
     partial class Tulajdonos
     {
+        public string getInsert()
+        {
+
+        }
+
+        public string getUpdate(int tulid)
+        {
+
+        }
+
         public static string getSQLCommandDeleteAllRecord()
         {
             return "DELETE FROM tulajdonosok";
