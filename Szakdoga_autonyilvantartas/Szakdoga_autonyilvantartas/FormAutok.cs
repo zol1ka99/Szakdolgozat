@@ -380,7 +380,7 @@ namespace Szakdoga_autonyilvantartas
         private void frissitAdatokkalDataGridViewt()
         {
             //Feltölti az adattáblát a repository auto listából
-            carsDT = cars.getCarDataTableFromListgetCarDataTableFromList();
+            carsDT = cars.getCarDataTableFromList();
             dataGridViewAutok.DataSource = null;
             dataGridViewAutok.DataSource = carsDT;
         }

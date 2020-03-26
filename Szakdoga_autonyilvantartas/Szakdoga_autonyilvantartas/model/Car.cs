@@ -39,7 +39,7 @@ namespace Szakdoga_autonyilvantartas.Model
         }
 
 
-        public void update(Car modified)
+        public void updateCar(Car modified)
         {
             this.marka = modified.getMarka();
             this.tipus = modified.getTipus();

@@ -33,7 +33,7 @@ namespace Szakdoga_autonyilvantartas.Repository
             this.cars = cars;
         }
 
-        public DataTable getCarDataTableFromListgetCarDataTableFromList()
+        public DataTable getCarDataTableFromList()
         {
             DataTable carsDT = new DataTable();
             carsDT.Columns.Add("id", typeof(int));
@@ -72,7 +72,7 @@ namespace Szakdoga_autonyilvantartas.Repository
             Car p = cars.Find(x => x.getId() == id);
             if (p != null)
             {
-                p.update(modified);
+                p.updateCar(modified);
             }else
             {
                 throw new RepositoryExceptionCantModified("Az autó módosítása sikertelen");
