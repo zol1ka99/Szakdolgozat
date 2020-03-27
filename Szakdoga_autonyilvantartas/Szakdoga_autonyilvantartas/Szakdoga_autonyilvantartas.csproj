@@ -50,6 +50,9 @@
     <Compile Include="Form1TestData.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormTulajdonosok.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormAutok.cs">
       <SubType>Form</SubType>
     </Compile>

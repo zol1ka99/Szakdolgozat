@@ -24,22 +24,22 @@ namespace Szakdoga_autonyilvantartas.repository.Company
 
         public void createTableCeg()
         {
-            string queryUSE = "USE autonyilvantartas";
+            string queryUSE = "USE autonyilvantartas;";
             string queryCreateTable =
-                "CREATE TABLE `autonyilvantartas`.`cegek` ( " +
+                "CREATE TABLE IF NOT EXISTS `autonyilvantartas`.`cegek` ( " +
                 "`cegid` INT NOT NULL PRIMARY KEY AUTO_INCREMENT , " +
                 "`cegnev` INT(50) NOT NULL , " +
                 "`adoszam` INT(13) NOT NULL , " +
                 "`varos` VARCHAR(50) NOT NULL , " +
                 "`utca` VARCHAR(30) NOT NULL , " +
                 "`szam` VARCHAR(7) NOT NULL , " +
-                "`ceg_email_cim` VARCHAR(40) NOT NULL";
+                "`ceg_email_cim` VARCHAR(40) NOT NULL)";
 
             MySqlConnection connection = new MySqlConnection(connectionString);
 
             try
             {
-                connection.Close();
+                connection.Open();
                 MySqlCommand cmdUSE = new MySqlCommand(queryUSE, connection);
                 cmdUSE.ExecuteNonQuery();
                 MySqlCommand cmdCreateTable = new MySqlCommand(queryCreateTable, connection);

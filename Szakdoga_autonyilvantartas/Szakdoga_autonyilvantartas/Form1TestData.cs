@@ -68,17 +68,19 @@ namespace Szakdoga_autonyilvantartas
 
                 //táblák létrehozása
                 rdCar.createTableCar();
-                rdCeg.createTableCeg();
+                
                 rdTulajdonos.createTableTulajdonos();
+                rdCeg.createTableCeg();
 
                 //tesztadatok feltöltése adatbázisba
                 rdCar.fillCarsWithTestDataFromSQLCommand();
-                rdCeg.fillCegekWithTestDataFromSQLCommand();
+                
                 rdTulajdonos.fillTulajdonosokWithTestDataFromSQLCommand();
+                //rdCeg.fillCegekWithTestDataFromSQLCommand();
 
                 //adatbázisból listák feltöltése
                 cars.setAutok(rdCar.getCarsFromDatabase());
-                cegek.setCegek(rdCeg.getCegekFromDatabase());
+                //cegek.setCegek(rdCeg.getCegekFromDatabase());
                 tulajdonosok.setTulajdonosok(rdTulajdonos.getTulajdonosokFromDatabase());
                 
             }

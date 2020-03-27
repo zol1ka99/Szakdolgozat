@@ -74,6 +74,12 @@
             this.dataGridViewAutok = new System.Windows.Forms.DataGridView();
             this.tabPageTulajdonosok = new System.Windows.Forms.TabPage();
             this.panelTulajdonosAdatok = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBoxTulCegnev = new System.Windows.Forms.TextBox();
+            this.textBoxTelefonszam = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBoxEmailcim = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.textBoxJogositvanyAzon = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -89,7 +95,7 @@
             this.buttonTorolTulajdonos = new System.Windows.Forms.Button();
             this.buttonModositTulajdonos = new System.Windows.Forms.Button();
             this.buttonTulajdonosAdatokBetoltese = new System.Windows.Forms.Button();
-            this.dataGridViewTulajdonos = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTulajdonosok = new System.Windows.Forms.DataGridView();
             this.tabPageCegek = new System.Windows.Forms.TabPage();
             this.errorProviderAutoAzonosito = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderAutoMarka = new System.Windows.Forms.ErrorProvider(this.components);
@@ -105,12 +111,13 @@
             this.errorProviderAutoTulajdonosNev = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelHibauzenet = new System.Windows.Forms.ToolStripLabel();
-            this.textBoxEmailcim = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBoxTelefonszam = new System.Windows.Forms.TextBox();
-            this.textBoxCegnev = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
+            this.errorProviderTulajdonosAzonosito = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderTulajdonosName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderSzemelyiigszam = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderEmailcim = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderJogositvanyAzon = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderTelefonszam = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderTulajCegnev = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControlCarDocket.SuspendLayout();
             this.tabPageAutok.SuspendLayout();
@@ -120,7 +127,7 @@
             this.tabPageTulajdonosok.SuspendLayout();
             this.panelTulajdonosAdatok.SuspendLayout();
             this.panelModositTorolTulajdonos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTulajdonos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTulajdonosok)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoAzonosito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoMarka)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoTipus)).BeginInit();
@@ -134,6 +141,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoSebessegvaltoTipusa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoTulajdonosNev)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTulajdonosAzonosito)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTulajdonosName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderSzemelyiigszam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderEmailcim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderJogositvanyAzon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTelefonszam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTulajCegnev)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -594,7 +608,7 @@
             this.tabPageTulajdonosok.Controls.Add(this.buttonUjTulajdonos);
             this.tabPageTulajdonosok.Controls.Add(this.panelModositTorolTulajdonos);
             this.tabPageTulajdonosok.Controls.Add(this.buttonTulajdonosAdatokBetoltese);
-            this.tabPageTulajdonosok.Controls.Add(this.dataGridViewTulajdonos);
+            this.tabPageTulajdonosok.Controls.Add(this.dataGridViewTulajdonosok);
             this.tabPageTulajdonosok.Location = new System.Drawing.Point(4, 22);
             this.tabPageTulajdonosok.Name = "tabPageTulajdonosok";
             this.tabPageTulajdonosok.Padding = new System.Windows.Forms.Padding(3);
@@ -606,7 +620,7 @@
             // panelTulajdonosAdatok
             // 
             this.panelTulajdonosAdatok.Controls.Add(this.label19);
-            this.panelTulajdonosAdatok.Controls.Add(this.textBoxCegnev);
+            this.panelTulajdonosAdatok.Controls.Add(this.textBoxTulCegnev);
             this.panelTulajdonosAdatok.Controls.Add(this.textBoxTelefonszam);
             this.panelTulajdonosAdatok.Controls.Add(this.label18);
             this.panelTulajdonosAdatok.Controls.Add(this.label17);
@@ -619,15 +633,63 @@
             this.panelTulajdonosAdatok.Controls.Add(this.label14);
             this.panelTulajdonosAdatok.Controls.Add(this.textBoxTulAzonosito);
             this.panelTulajdonosAdatok.Controls.Add(this.label13);
-            this.panelTulajdonosAdatok.Location = new System.Drawing.Point(743, 185);
+            this.panelTulajdonosAdatok.Location = new System.Drawing.Point(709, 185);
             this.panelTulajdonosAdatok.Name = "panelTulajdonosAdatok";
-            this.panelTulajdonosAdatok.Size = new System.Drawing.Size(359, 217);
+            this.panelTulajdonosAdatok.Size = new System.Drawing.Size(393, 217);
             this.panelTulajdonosAdatok.TabIndex = 10;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(76, 184);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(47, 13);
+            this.label19.TabIndex = 14;
+            this.label19.Text = "Cégnév:";
+            // 
+            // textBoxTulCegnev
+            // 
+            this.textBoxTulCegnev.Location = new System.Drawing.Point(129, 182);
+            this.textBoxTulCegnev.Name = "textBoxTulCegnev";
+            this.textBoxTulCegnev.Size = new System.Drawing.Size(249, 20);
+            this.textBoxTulCegnev.TabIndex = 13;
+            // 
+            // textBoxTelefonszam
+            // 
+            this.textBoxTelefonszam.Location = new System.Drawing.Point(153, 154);
+            this.textBoxTelefonszam.Name = "textBoxTelefonszam";
+            this.textBoxTelefonszam.Size = new System.Drawing.Size(225, 20);
+            this.textBoxTelefonszam.TabIndex = 12;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(76, 156);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(70, 13);
+            this.label18.TabIndex = 11;
+            this.label18.Text = "Telefonszám:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(76, 128);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(56, 13);
+            this.label17.TabIndex = 10;
+            this.label17.Text = "Email cím:";
+            // 
+            // textBoxEmailcim
+            // 
+            this.textBoxEmailcim.Location = new System.Drawing.Point(141, 126);
+            this.textBoxEmailcim.Name = "textBoxEmailcim";
+            this.textBoxEmailcim.Size = new System.Drawing.Size(237, 20);
+            this.textBoxEmailcim.TabIndex = 9;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(23, 100);
+            this.label16.Location = new System.Drawing.Point(76, 100);
             this.label16.Name = "label16";
             this.label16.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label16.Size = new System.Drawing.Size(116, 13);
@@ -636,7 +698,7 @@
             // 
             // textBoxJogositvanyAzon
             // 
-            this.textBoxJogositvanyAzon.Location = new System.Drawing.Point(148, 98);
+            this.textBoxJogositvanyAzon.Location = new System.Drawing.Point(201, 98);
             this.textBoxJogositvanyAzon.Name = "textBoxJogositvanyAzon";
             this.textBoxJogositvanyAzon.Size = new System.Drawing.Size(177, 20);
             this.textBoxJogositvanyAzon.TabIndex = 7;
@@ -644,7 +706,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(23, 72);
+            this.label15.Location = new System.Drawing.Point(76, 72);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(128, 13);
             this.label15.TabIndex = 6;
@@ -652,14 +714,14 @@
             // 
             // textBoxTulajdonosSzemelyiigszam
             // 
-            this.textBoxTulajdonosSzemelyiigszam.Location = new System.Drawing.Point(157, 70);
+            this.textBoxTulajdonosSzemelyiigszam.Location = new System.Drawing.Point(210, 70);
             this.textBoxTulajdonosSzemelyiigszam.Name = "textBoxTulajdonosSzemelyiigszam";
             this.textBoxTulajdonosSzemelyiigszam.Size = new System.Drawing.Size(168, 20);
             this.textBoxTulajdonosSzemelyiigszam.TabIndex = 5;
             // 
             // textBoxTulajdonosName
             // 
-            this.textBoxTulajdonosName.Location = new System.Drawing.Point(118, 42);
+            this.textBoxTulajdonosName.Location = new System.Drawing.Point(171, 42);
             this.textBoxTulajdonosName.Name = "textBoxTulajdonosName";
             this.textBoxTulajdonosName.Size = new System.Drawing.Size(207, 20);
             this.textBoxTulajdonosName.TabIndex = 4;
@@ -667,7 +729,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(23, 44);
+            this.label14.Location = new System.Drawing.Point(76, 44);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(89, 13);
             this.label14.TabIndex = 3;
@@ -675,7 +737,7 @@
             // 
             // textBoxTulAzonosito
             // 
-            this.textBoxTulAzonosito.Location = new System.Drawing.Point(149, 14);
+            this.textBoxTulAzonosito.Location = new System.Drawing.Point(202, 14);
             this.textBoxTulAzonosito.Name = "textBoxTulAzonosito";
             this.textBoxTulAzonosito.ReadOnly = true;
             this.textBoxTulAzonosito.Size = new System.Drawing.Size(176, 20);
@@ -684,7 +746,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(23, 16);
+            this.label13.Location = new System.Drawing.Point(76, 16);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(120, 13);
             this.label13.TabIndex = 0;
@@ -698,6 +760,7 @@
             this.buttonMegsemTulajdonos.TabIndex = 9;
             this.buttonMegsemTulajdonos.Text = "Mégsem";
             this.buttonMegsemTulajdonos.UseVisualStyleBackColor = true;
+            this.buttonMegsemTulajdonos.Click += new System.EventHandler(this.buttonMegsemTulajdonos_Click);
             // 
             // buttonUjMentesTulajdonos
             // 
@@ -707,6 +770,7 @@
             this.buttonUjMentesTulajdonos.TabIndex = 8;
             this.buttonUjMentesTulajdonos.Text = "Új Mentése";
             this.buttonUjMentesTulajdonos.UseVisualStyleBackColor = true;
+            this.buttonUjMentesTulajdonos.Click += new System.EventHandler(this.buttonUjMentesTulajdonos_Click);
             // 
             // buttonUjTulajdonos
             // 
@@ -734,6 +798,7 @@
             this.buttonTorolTulajdonos.TabIndex = 1;
             this.buttonTorolTulajdonos.Text = "Töröl";
             this.buttonTorolTulajdonos.UseVisualStyleBackColor = true;
+            this.buttonTorolTulajdonos.Click += new System.EventHandler(this.buttonTorolTulajdonos_Click);
             // 
             // buttonModositTulajdonos
             // 
@@ -743,6 +808,7 @@
             this.buttonModositTulajdonos.TabIndex = 0;
             this.buttonModositTulajdonos.Text = "Módosít";
             this.buttonModositTulajdonos.UseVisualStyleBackColor = true;
+            this.buttonModositTulajdonos.Click += new System.EventHandler(this.buttonModositTulajdonos_Click);
             // 
             // buttonTulajdonosAdatokBetoltese
             // 
@@ -752,14 +818,15 @@
             this.buttonTulajdonosAdatokBetoltese.TabIndex = 1;
             this.buttonTulajdonosAdatokBetoltese.Text = "Adatok betöltése";
             this.buttonTulajdonosAdatokBetoltese.UseVisualStyleBackColor = true;
+            this.buttonTulajdonosAdatokBetoltese.Click += new System.EventHandler(this.buttonTulajdonosAdatokBetoltese_Click);
             // 
-            // dataGridViewTulajdonos
+            // dataGridViewTulajdonosok
             // 
-            this.dataGridViewTulajdonos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTulajdonos.Location = new System.Drawing.Point(3, 6);
-            this.dataGridViewTulajdonos.Name = "dataGridViewTulajdonos";
-            this.dataGridViewTulajdonos.Size = new System.Drawing.Size(720, 529);
-            this.dataGridViewTulajdonos.TabIndex = 0;
+            this.dataGridViewTulajdonosok.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTulajdonosok.Location = new System.Drawing.Point(3, 6);
+            this.dataGridViewTulajdonosok.Name = "dataGridViewTulajdonosok";
+            this.dataGridViewTulajdonosok.Size = new System.Drawing.Size(634, 529);
+            this.dataGridViewTulajdonosok.TabIndex = 0;
             // 
             // tabPageCegek
             // 
@@ -834,53 +901,33 @@
             this.toolStripLabelHibauzenet.Name = "toolStripLabelHibauzenet";
             this.toolStripLabelHibauzenet.Size = new System.Drawing.Size(0, 22);
             // 
-            // textBoxEmailcim
+            // errorProviderTulajdonosAzonosito
             // 
-            this.textBoxEmailcim.Location = new System.Drawing.Point(88, 126);
-            this.textBoxEmailcim.Name = "textBoxEmailcim";
-            this.textBoxEmailcim.Size = new System.Drawing.Size(237, 20);
-            this.textBoxEmailcim.TabIndex = 9;
+            this.errorProviderTulajdonosAzonosito.ContainerControl = this;
             // 
-            // label17
+            // errorProviderTulajdonosName
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(23, 128);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(56, 13);
-            this.label17.TabIndex = 10;
-            this.label17.Text = "Email cím:";
+            this.errorProviderTulajdonosName.ContainerControl = this;
             // 
-            // label18
+            // errorProviderSzemelyiigszam
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(23, 156);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(70, 13);
-            this.label18.TabIndex = 11;
-            this.label18.Text = "Telefonszám:";
+            this.errorProviderSzemelyiigszam.ContainerControl = this;
             // 
-            // textBoxTelefonszam
+            // errorProviderEmailcim
             // 
-            this.textBoxTelefonszam.Location = new System.Drawing.Point(100, 154);
-            this.textBoxTelefonszam.Name = "textBoxTelefonszam";
-            this.textBoxTelefonszam.Size = new System.Drawing.Size(225, 20);
-            this.textBoxTelefonszam.TabIndex = 12;
+            this.errorProviderEmailcim.ContainerControl = this;
             // 
-            // textBoxCegnev
+            // errorProviderJogositvanyAzon
             // 
-            this.textBoxCegnev.Location = new System.Drawing.Point(76, 182);
-            this.textBoxCegnev.Name = "textBoxCegnev";
-            this.textBoxCegnev.Size = new System.Drawing.Size(249, 20);
-            this.textBoxCegnev.TabIndex = 13;
+            this.errorProviderJogositvanyAzon.ContainerControl = this;
             // 
-            // label19
+            // errorProviderTelefonszam
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(23, 184);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(47, 13);
-            this.label19.TabIndex = 14;
-            this.label19.Text = "Cégnév:";
+            this.errorProviderTelefonszam.ContainerControl = this;
+            // 
+            // errorProviderTulajCegnev
+            // 
+            this.errorProviderTulajCegnev.ContainerControl = this;
             // 
             // Form1
             // 
@@ -905,7 +952,7 @@
             this.panelTulajdonosAdatok.ResumeLayout(false);
             this.panelTulajdonosAdatok.PerformLayout();
             this.panelModositTorolTulajdonos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTulajdonos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTulajdonosok)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoAzonosito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoMarka)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoTipus)).EndInit();
@@ -920,6 +967,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoTulajdonosNev)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTulajdonosAzonosito)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTulajdonosName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderSzemelyiigszam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderEmailcim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderJogositvanyAzon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTelefonszam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTulajCegnev)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -985,7 +1039,7 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabelHibauzenet;
         private System.Windows.Forms.Button buttonMegsem;
         private System.Windows.Forms.TabPage tabPageCegek;
-        private System.Windows.Forms.DataGridView dataGridViewTulajdonos;
+        private System.Windows.Forms.DataGridView dataGridViewTulajdonosok;
         private System.Windows.Forms.Button buttonMegsemTulajdonos;
         private System.Windows.Forms.Button buttonUjMentesTulajdonos;
         private System.Windows.Forms.Button buttonUjTulajdonos;
@@ -1003,11 +1057,18 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBoxJogositvanyAzon;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBoxCegnev;
+        private System.Windows.Forms.TextBox textBoxTulCegnev;
         private System.Windows.Forms.TextBox textBoxTelefonszam;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBoxEmailcim;
+        private System.Windows.Forms.ErrorProvider errorProviderTulajdonosAzonosito;
+        private System.Windows.Forms.ErrorProvider errorProviderTulajdonosName;
+        private System.Windows.Forms.ErrorProvider errorProviderSzemelyiigszam;
+        private System.Windows.Forms.ErrorProvider errorProviderEmailcim;
+        private System.Windows.Forms.ErrorProvider errorProviderJogositvanyAzon;
+        private System.Windows.Forms.ErrorProvider errorProviderTelefonszam;
+        private System.Windows.Forms.ErrorProvider errorProviderTulajCegnev;
     }
 }
 

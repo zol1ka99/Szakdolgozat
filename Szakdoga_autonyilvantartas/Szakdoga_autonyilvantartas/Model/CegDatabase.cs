@@ -10,12 +10,12 @@ namespace Szakdoga_autonyilvantartas.Model
     {
         public string getInsert()
         {
-
+            return"";
         }
 
         public string getUpdate(int cegid)
         {
-
+            return"";
         }
 
         public static string getSQLCommandDeleteAllRecord()

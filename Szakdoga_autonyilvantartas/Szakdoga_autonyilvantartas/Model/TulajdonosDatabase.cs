@@ -10,12 +10,13 @@ namespace Szakdoga_autonyilvantartas.Model
     {
         public string getInsert()
         {
-
+            return "INSERT INTO `tulajdonosok` (`tulid`, `tulajdonos_nev`, `tulajdonos_szemilyiigszam`, `jogositvany_azon`, `email_cim`, `telefonszam`, `cegid`) " +
+                " VALUES('" + getTulId() + "', '" + getTulajdonosnev() + "', '" + getTulajdonosszemelyiigszam() + "', '" + getJogositvanyazon() + "', '" + getEmailcim() + "', '" + getTelefonszam() + "', (SELECT cegid FROM cegek WHERE cegek.cegnev ='" + getCegnev()+"'));";
         }
 
         public string getUpdate(int tulid)
         {
-
+            return "UPDATE `tulajdonosok` SET `tulajdonos_nev` = '" + getTulajdonosnev() + "', `tulajdonos_szemilyiigszam` = '" + getTulajdonosszemelyiigszam() + "', `jogositvany_azon` = '" + getJogositvanyazon() + "', `email_cim` = '" + getEmailcim() + "', `telefonszam` = '" + getTelefonszam() + "', cegid=(SELECT cegid FROM cegek WHERE cegek.cegnev ='" + getCegnev() + "') WHERE `tulajdonosok`.`tulid` = '" + getTulId()+"';";
         }
 
         public static string getSQLCommandDeleteAllRecord()
@@ -24,7 +25,7 @@ namespace Szakdoga_autonyilvantartas.Model
         }
         public static string getSQLCommandGetAllRecord()
         {
-            return "SELECT * FROM tulajdonosok INNER JOIN cegek ON tulajdonosok.cegid = cegek.cegid";
+            return "SELECT `tulid`,`tulajdonos_nev`,`tulajdonos_szemilyiigszam`,`jogositvany_azon`,`email_cim`,`telefonszam`, cegek.cegnev FROM tulajdonosok INNER JOIN cegek ON tulajdonosok.cegid = cegek.cegid";
         }
     }
 }

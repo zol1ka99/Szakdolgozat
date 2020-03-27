@@ -86,6 +86,18 @@ namespace Szakdoga_autonyilvantartas
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
         /*
         private void megjelenitAutot(Car h)
         {
