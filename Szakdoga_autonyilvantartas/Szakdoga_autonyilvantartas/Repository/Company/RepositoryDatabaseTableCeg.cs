@@ -30,8 +30,8 @@ namespace Szakdoga_autonyilvantartas.repository.Company
                 "`cegid` INT NOT NULL PRIMARY KEY AUTO_INCREMENT , " +
                 "`cegnev` INT(50) NOT NULL , " +
                 "`adoszam` INT(13) NOT NULL , " +
-                "`varos` VARCHAR(20) NOT NULL , " +
-                "`utca` VARCHAR(20) NOT NULL , " +
+                "`varos` VARCHAR(50) NOT NULL , " +
+                "`utca` VARCHAR(30) NOT NULL , " +
                 "`szam` VARCHAR(7) NOT NULL , " +
                 "`ceg_email_cim` VARCHAR(40) NOT NULL";
 
