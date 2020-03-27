@@ -39,6 +39,7 @@
             this.kilépésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlCarDocket = new System.Windows.Forms.TabControl();
             this.tabPageAutok = new System.Windows.Forms.TabPage();
+            this.buttonMegsem = new System.Windows.Forms.Button();
             this.buttonUjMentes = new System.Windows.Forms.Button();
             this.buttonUjAuto = new System.Windows.Forms.Button();
             this.panelAutok = new System.Windows.Forms.Panel();
@@ -72,6 +73,7 @@
             this.buttonAdatokBetoltese = new System.Windows.Forms.Button();
             this.dataGridViewAutok = new System.Windows.Forms.DataGridView();
             this.tabPageTulajdonosok = new System.Windows.Forms.TabPage();
+            this.tabPageCegek = new System.Windows.Forms.TabPage();
             this.errorProviderAutoAzonosito = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderAutoMarka = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderAutoTipus = new System.Windows.Forms.ErrorProvider(this.components);
@@ -86,13 +88,14 @@
             this.errorProviderAutoTulajdonosNev = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabelHibauzenet = new System.Windows.Forms.ToolStripLabel();
-            this.buttonMegsem = new System.Windows.Forms.Button();
+            this.dataGridViewTulajdonos = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             this.tabControlCarDocket.SuspendLayout();
             this.tabPageAutok.SuspendLayout();
             this.panelAutok.SuspendLayout();
             this.panelModositTorolGomb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAutok)).BeginInit();
+            this.tabPageTulajdonosok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoAzonosito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoMarka)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoTipus)).BeginInit();
@@ -106,6 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoSebessegvaltoTipusa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoTulajdonosNev)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTulajdonos)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -176,6 +180,7 @@
             // 
             this.tabControlCarDocket.Controls.Add(this.tabPageAutok);
             this.tabControlCarDocket.Controls.Add(this.tabPageTulajdonosok);
+            this.tabControlCarDocket.Controls.Add(this.tabPageCegek);
             this.tabControlCarDocket.Location = new System.Drawing.Point(12, 58);
             this.tabControlCarDocket.Name = "tabControlCarDocket";
             this.tabControlCarDocket.SelectedIndex = 0;
@@ -198,6 +203,16 @@
             this.tabPageAutok.TabIndex = 0;
             this.tabPageAutok.Text = "Autók";
             this.tabPageAutok.UseVisualStyleBackColor = true;
+            // 
+            // buttonMegsem
+            // 
+            this.buttonMegsem.Location = new System.Drawing.Point(897, 139);
+            this.buttonMegsem.Name = "buttonMegsem";
+            this.buttonMegsem.Size = new System.Drawing.Size(89, 23);
+            this.buttonMegsem.TabIndex = 6;
+            this.buttonMegsem.Text = "Mégsem";
+            this.buttonMegsem.UseVisualStyleBackColor = true;
+            this.buttonMegsem.Click += new System.EventHandler(this.buttonMegsem_Click);
             // 
             // buttonUjMentes
             // 
@@ -549,6 +564,7 @@
             // 
             // tabPageTulajdonosok
             // 
+            this.tabPageTulajdonosok.Controls.Add(this.dataGridViewTulajdonos);
             this.tabPageTulajdonosok.Location = new System.Drawing.Point(4, 22);
             this.tabPageTulajdonosok.Name = "tabPageTulajdonosok";
             this.tabPageTulajdonosok.Padding = new System.Windows.Forms.Padding(3);
@@ -556,6 +572,16 @@
             this.tabPageTulajdonosok.TabIndex = 1;
             this.tabPageTulajdonosok.Text = "Tulajdonosok";
             this.tabPageTulajdonosok.UseVisualStyleBackColor = true;
+            // 
+            // tabPageCegek
+            // 
+            this.tabPageCegek.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCegek.Name = "tabPageCegek";
+            this.tabPageCegek.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCegek.Size = new System.Drawing.Size(1108, 535);
+            this.tabPageCegek.TabIndex = 2;
+            this.tabPageCegek.Text = "Cégek";
+            this.tabPageCegek.UseVisualStyleBackColor = true;
             // 
             // errorProviderAutoAzonosito
             // 
@@ -620,15 +646,13 @@
             this.toolStripLabelHibauzenet.Name = "toolStripLabelHibauzenet";
             this.toolStripLabelHibauzenet.Size = new System.Drawing.Size(0, 22);
             // 
-            // buttonMegsem
+            // dataGridViewTulajdonos
             // 
-            this.buttonMegsem.Location = new System.Drawing.Point(897, 139);
-            this.buttonMegsem.Name = "buttonMegsem";
-            this.buttonMegsem.Size = new System.Drawing.Size(89, 23);
-            this.buttonMegsem.TabIndex = 6;
-            this.buttonMegsem.Text = "Mégsem";
-            this.buttonMegsem.UseVisualStyleBackColor = true;
-            this.buttonMegsem.Click += new System.EventHandler(this.buttonMegsem_Click);
+            this.dataGridViewTulajdonos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTulajdonos.Location = new System.Drawing.Point(3, 6);
+            this.dataGridViewTulajdonos.Name = "dataGridViewTulajdonos";
+            this.dataGridViewTulajdonos.Size = new System.Drawing.Size(731, 523);
+            this.dataGridViewTulajdonos.TabIndex = 0;
             // 
             // Form1
             // 
@@ -649,6 +673,7 @@
             this.panelAutok.PerformLayout();
             this.panelModositTorolGomb.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAutok)).EndInit();
+            this.tabPageTulajdonosok.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoAzonosito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoMarka)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoTipus)).EndInit();
@@ -663,6 +688,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoTulajdonosNev)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTulajdonos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -727,6 +753,8 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabelHibauzenet;
         private System.Windows.Forms.Button buttonMegsem;
+        private System.Windows.Forms.TabPage tabPageCegek;
+        private System.Windows.Forms.DataGridView dataGridViewTulajdonos;
     }
 }
 

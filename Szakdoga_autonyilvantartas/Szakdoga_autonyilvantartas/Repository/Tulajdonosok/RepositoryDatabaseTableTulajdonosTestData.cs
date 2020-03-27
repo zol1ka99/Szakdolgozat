@@ -11,7 +11,7 @@ namespace Szakdoga_autonyilvantartas.repository.Tulajdonosok
 {
     partial class RepositoryDatabaseTableTulajdonos
     {
-        public void fullTulajdonosokWithTestDataFromSQLCommand()
+        public void fillTulajdonosokWithTestDataFromSQLCommand()
         {
             MySqlConnection connection = new MySqlConnection(connectionString);
 

@@ -18,6 +18,8 @@ namespace Szakdoga_autonyilvantartas
         //RepositoryDatabase rd = new RepositoryDatabase();
 
         Tarolo cars = new Tarolo();
+        Tarolo cegek = new Tarolo();
+        Tarolo tulajdonosok = new Tarolo();
 
         public Form1()
         {
@@ -28,7 +30,7 @@ namespace Szakdoga_autonyilvantartas
         private void beallitKezdoOldalt()
         {
             this.Size = new Size(1200, 700);
-            this.Text = "Car Docker (Beta)";
+            this.Text = "Car Docket (Beta)";
         }
 
         
@@ -45,6 +47,10 @@ namespace Szakdoga_autonyilvantartas
             tabControlCarDocket.SelectTab("tabPageTulajdonosok");
         }
 
+        private void companysToolStripMenu_Item_Click(Object sender, EventArgs e)
+        {
+            tabControlCarDocket.SelectTab("tabPageCegek");
+        }
 
 
 
