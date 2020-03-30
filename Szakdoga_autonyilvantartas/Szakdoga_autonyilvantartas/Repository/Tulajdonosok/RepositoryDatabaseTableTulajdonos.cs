@@ -29,7 +29,7 @@ namespace Szakdoga_autonyilvantartas.repository.Tulajdonosok
                 "CREATE TABLE IF NOT EXISTS `autonyilvantartas`.`tulajdonosok` (" +
                 " `tulid` INT NOT NULL PRIMARY KEY AUTO_INCREMENT , " +
                 "`tulajdonos_nev` VARCHAR(50) NOT NULL , " +
-                "`tulajdonos_szemilyiigszam` VARCHAR(8) NOT NULL , " +
+                "`tulajdonos_szemelyiigszam` VARCHAR(8) NOT NULL , " +
                 "`jogositvany_azon` INT NOT NULL , " +
                 "`email_cim` VARCHAR(40) NOT NULL , " +
                 "`telefonszam` INT NOT NULL," +

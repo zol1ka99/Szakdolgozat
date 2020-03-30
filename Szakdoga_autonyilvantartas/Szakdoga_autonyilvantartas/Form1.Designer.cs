@@ -98,6 +98,12 @@
             this.dataGridViewTulajdonosok = new System.Windows.Forms.DataGridView();
             this.tabPageCegek = new System.Windows.Forms.TabPage();
             this.panelCegAdatok = new System.Windows.Forms.Panel();
+            this.textBoxCegEmailCim = new System.Windows.Forms.TextBox();
+            this.textBoxCegSzam = new System.Windows.Forms.TextBox();
+            this.textBoxCegUtca = new System.Windows.Forms.TextBox();
+            this.comboBoxVaros = new System.Windows.Forms.ComboBox();
+            this.textBoxAdoszam = new System.Windows.Forms.TextBox();
+            this.textBoxCegNev = new System.Windows.Forms.TextBox();
             this.textBoxCegAzonosito = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -113,7 +119,7 @@
             this.buttonTorolCeg = new System.Windows.Forms.Button();
             this.buttonModositCeg = new System.Windows.Forms.Button();
             this.buttonCegAdatokBetoltese = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCeg = new System.Windows.Forms.DataGridView();
             this.errorProviderAutoAzonosito = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderAutoMarka = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderAutoTipus = new System.Windows.Forms.ErrorProvider(this.components);
@@ -135,12 +141,13 @@
             this.errorProviderJogositvanyAzon = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderTelefonszam = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderTulajCegnev = new System.Windows.Forms.ErrorProvider(this.components);
-            this.textBoxCegNev = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBoxCegUtca = new System.Windows.Forms.TextBox();
-            this.textBoxCegSzam = new System.Windows.Forms.TextBox();
-            this.textBoxCegEmailCim = new System.Windows.Forms.TextBox();
+            this.errorProviderCegAzonosito = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CegFormerrorProviderCegnev = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderAdoszam = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderVaros = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderUtca = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderSzam = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CegFormerrorProviderEmailCim = new System.Windows.Forms.ErrorProvider(this.components);
             this.menuStrip1.SuspendLayout();
             this.tabControlCarDocket.SuspendLayout();
             this.tabPageAutok.SuspendLayout();
@@ -154,7 +161,7 @@
             this.tabPageCegek.SuspendLayout();
             this.panelCegAdatok.SuspendLayout();
             this.panelModositTorolGombokCeg.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCeg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoAzonosito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoMarka)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoTipus)).BeginInit();
@@ -175,6 +182,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderJogositvanyAzon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTelefonszam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTulajCegnev)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCegAzonosito)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CegFormerrorProviderCegnev)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAdoszam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderVaros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderUtca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderSzam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CegFormerrorProviderEmailCim)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -807,6 +821,7 @@
             this.buttonUjTulajdonos.TabIndex = 7;
             this.buttonUjTulajdonos.Text = "Új";
             this.buttonUjTulajdonos.UseVisualStyleBackColor = true;
+            this.buttonUjTulajdonos.Click += new System.EventHandler(this.buttonUjTulajdonos_Click);
             // 
             // panelModositTorolTulajdonos
             // 
@@ -863,7 +878,7 @@
             this.tabPageCegek.Controls.Add(this.buttonUjCeg);
             this.tabPageCegek.Controls.Add(this.panelModositTorolGombokCeg);
             this.tabPageCegek.Controls.Add(this.buttonCegAdatokBetoltese);
-            this.tabPageCegek.Controls.Add(this.dataGridView1);
+            this.tabPageCegek.Controls.Add(this.dataGridViewCeg);
             this.tabPageCegek.Location = new System.Drawing.Point(4, 22);
             this.tabPageCegek.Name = "tabPageCegek";
             this.tabPageCegek.Padding = new System.Windows.Forms.Padding(3);
@@ -877,8 +892,8 @@
             this.panelCegAdatok.Controls.Add(this.textBoxCegEmailCim);
             this.panelCegAdatok.Controls.Add(this.textBoxCegSzam);
             this.panelCegAdatok.Controls.Add(this.textBoxCegUtca);
-            this.panelCegAdatok.Controls.Add(this.comboBox1);
-            this.panelCegAdatok.Controls.Add(this.textBox1);
+            this.panelCegAdatok.Controls.Add(this.comboBoxVaros);
+            this.panelCegAdatok.Controls.Add(this.textBoxAdoszam);
             this.panelCegAdatok.Controls.Add(this.textBoxCegNev);
             this.panelCegAdatok.Controls.Add(this.textBoxCegAzonosito);
             this.panelCegAdatok.Controls.Add(this.label26);
@@ -893,9 +908,53 @@
             this.panelCegAdatok.Size = new System.Drawing.Size(325, 212);
             this.panelCegAdatok.TabIndex = 6;
             // 
+            // textBoxCegEmailCim
+            // 
+            this.textBoxCegEmailCim.Location = new System.Drawing.Point(105, 179);
+            this.textBoxCegEmailCim.Name = "textBoxCegEmailCim";
+            this.textBoxCegEmailCim.Size = new System.Drawing.Size(212, 20);
+            this.textBoxCegEmailCim.TabIndex = 20;
+            // 
+            // textBoxCegSzam
+            // 
+            this.textBoxCegSzam.Location = new System.Drawing.Point(89, 151);
+            this.textBoxCegSzam.Name = "textBoxCegSzam";
+            this.textBoxCegSzam.Size = new System.Drawing.Size(228, 20);
+            this.textBoxCegSzam.TabIndex = 19;
+            // 
+            // textBoxCegUtca
+            // 
+            this.textBoxCegUtca.Location = new System.Drawing.Point(85, 123);
+            this.textBoxCegUtca.Name = "textBoxCegUtca";
+            this.textBoxCegUtca.Size = new System.Drawing.Size(232, 20);
+            this.textBoxCegUtca.TabIndex = 18;
+            // 
+            // comboBoxVaros
+            // 
+            this.comboBoxVaros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxVaros.FormattingEnabled = true;
+            this.comboBoxVaros.Location = new System.Drawing.Point(89, 95);
+            this.comboBoxVaros.Name = "comboBoxVaros";
+            this.comboBoxVaros.Size = new System.Drawing.Size(228, 21);
+            this.comboBoxVaros.TabIndex = 17;
+            // 
+            // textBoxAdoszam
+            // 
+            this.textBoxAdoszam.Location = new System.Drawing.Point(105, 67);
+            this.textBoxAdoszam.Name = "textBoxAdoszam";
+            this.textBoxAdoszam.Size = new System.Drawing.Size(212, 20);
+            this.textBoxAdoszam.TabIndex = 16;
+            // 
+            // textBoxCegNev
+            // 
+            this.textBoxCegNev.Location = new System.Drawing.Point(108, 39);
+            this.textBoxCegNev.Name = "textBoxCegNev";
+            this.textBoxCegNev.Size = new System.Drawing.Size(209, 20);
+            this.textBoxCegNev.TabIndex = 15;
+            // 
             // textBoxCegAzonosito
             // 
-            this.textBoxCegAzonosito.Location = new System.Drawing.Point(116, 11);
+            this.textBoxCegAzonosito.Location = new System.Drawing.Point(139, 11);
             this.textBoxCegAzonosito.Name = "textBoxCegAzonosito";
             this.textBoxCegAzonosito.ReadOnly = true;
             this.textBoxCegAzonosito.Size = new System.Drawing.Size(178, 20);
@@ -904,7 +963,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(23, 183);
+            this.label26.Location = new System.Drawing.Point(46, 183);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(56, 13);
             this.label26.TabIndex = 13;
@@ -913,7 +972,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(23, 155);
+            this.label25.Location = new System.Drawing.Point(46, 155);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(36, 13);
             this.label25.TabIndex = 12;
@@ -922,7 +981,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(23, 127);
+            this.label24.Location = new System.Drawing.Point(46, 127);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(33, 13);
             this.label24.TabIndex = 11;
@@ -931,7 +990,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(23, 99);
+            this.label23.Location = new System.Drawing.Point(46, 99);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(37, 13);
             this.label23.TabIndex = 10;
@@ -940,7 +999,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(23, 71);
+            this.label22.Location = new System.Drawing.Point(46, 71);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(53, 13);
             this.label22.TabIndex = 9;
@@ -949,7 +1008,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(23, 43);
+            this.label21.Location = new System.Drawing.Point(46, 43);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(56, 13);
             this.label21.TabIndex = 8;
@@ -958,7 +1017,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(23, 15);
+            this.label20.Location = new System.Drawing.Point(46, 15);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(87, 13);
             this.label20.TabIndex = 7;
@@ -972,6 +1031,7 @@
             this.buttonUjMentesCeg.TabIndex = 5;
             this.buttonUjMentesCeg.Text = "Új mentése";
             this.buttonUjMentesCeg.UseVisualStyleBackColor = true;
+            this.buttonUjMentesCeg.Click += new System.EventHandler(this.buttonUjMentesCeg_Click);
             // 
             // buttonMegsemCeg
             // 
@@ -981,6 +1041,7 @@
             this.buttonMegsemCeg.TabIndex = 4;
             this.buttonMegsemCeg.Text = "Mégsem";
             this.buttonMegsemCeg.UseVisualStyleBackColor = true;
+            this.buttonMegsemCeg.Click += new System.EventHandler(this.buttonMegsemCeg_Click);
             // 
             // buttonUjCeg
             // 
@@ -990,6 +1051,7 @@
             this.buttonUjCeg.TabIndex = 3;
             this.buttonUjCeg.Text = "Új";
             this.buttonUjCeg.UseVisualStyleBackColor = true;
+            this.buttonUjCeg.Click += new System.EventHandler(this.buttonUjCeg_Click);
             // 
             // panelModositTorolGombokCeg
             // 
@@ -1008,6 +1070,7 @@
             this.buttonTorolCeg.TabIndex = 1;
             this.buttonTorolCeg.Text = "Töröl";
             this.buttonTorolCeg.UseVisualStyleBackColor = true;
+            this.buttonTorolCeg.Click += new System.EventHandler(this.buttonTorolCeg_Click);
             // 
             // buttonModositCeg
             // 
@@ -1017,6 +1080,7 @@
             this.buttonModositCeg.TabIndex = 0;
             this.buttonModositCeg.Text = "Módosít";
             this.buttonModositCeg.UseVisualStyleBackColor = true;
+            this.buttonModositCeg.Click += new System.EventHandler(this.buttonModositCeg_Click);
             // 
             // buttonCegAdatokBetoltese
             // 
@@ -1026,14 +1090,15 @@
             this.buttonCegAdatokBetoltese.TabIndex = 1;
             this.buttonCegAdatokBetoltese.Text = "Adatok betöltése";
             this.buttonCegAdatokBetoltese.UseVisualStyleBackColor = true;
+            this.buttonCegAdatokBetoltese.Click += new System.EventHandler(this.buttonCegAdatokBetoltese_Click);
             // 
-            // dataGridView1
+            // dataGridViewCeg
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 7);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(701, 525);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewCeg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCeg.Location = new System.Drawing.Point(0, 7);
+            this.dataGridViewCeg.Name = "dataGridViewCeg";
+            this.dataGridViewCeg.Size = new System.Drawing.Size(701, 525);
+            this.dataGridViewCeg.TabIndex = 0;
             // 
             // errorProviderAutoAzonosito
             // 
@@ -1126,49 +1191,33 @@
             // 
             this.errorProviderTulajCegnev.ContainerControl = this;
             // 
-            // textBoxCegNev
+            // errorProviderCegAzonosito
             // 
-            this.textBoxCegNev.Location = new System.Drawing.Point(85, 39);
-            this.textBoxCegNev.Name = "textBoxCegNev";
-            this.textBoxCegNev.Size = new System.Drawing.Size(209, 20);
-            this.textBoxCegNev.TabIndex = 15;
+            this.errorProviderCegAzonosito.ContainerControl = this;
             // 
-            // textBox1
+            // CegFormerrorProviderCegnev
             // 
-            this.textBox1.Location = new System.Drawing.Point(82, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 20);
-            this.textBox1.TabIndex = 16;
+            this.CegFormerrorProviderCegnev.ContainerControl = this;
             // 
-            // comboBox1
+            // errorProviderAdoszam
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(66, 95);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(228, 21);
-            this.comboBox1.TabIndex = 17;
+            this.errorProviderAdoszam.ContainerControl = this;
             // 
-            // textBoxCegUtca
+            // errorProviderVaros
             // 
-            this.textBoxCegUtca.Location = new System.Drawing.Point(62, 123);
-            this.textBoxCegUtca.Name = "textBoxCegUtca";
-            this.textBoxCegUtca.Size = new System.Drawing.Size(232, 20);
-            this.textBoxCegUtca.TabIndex = 18;
+            this.errorProviderVaros.ContainerControl = this;
             // 
-            // textBoxCegSzam
+            // errorProviderUtca
             // 
-            this.textBoxCegSzam.Location = new System.Drawing.Point(66, 151);
-            this.textBoxCegSzam.Name = "textBoxCegSzam";
-            this.textBoxCegSzam.Size = new System.Drawing.Size(228, 20);
-            this.textBoxCegSzam.TabIndex = 19;
+            this.errorProviderUtca.ContainerControl = this;
             // 
-            // textBoxCegEmailCim
+            // errorProviderSzam
             // 
-            this.textBoxCegEmailCim.Location = new System.Drawing.Point(82, 179);
-            this.textBoxCegEmailCim.Name = "textBoxCegEmailCim";
-            this.textBoxCegEmailCim.Size = new System.Drawing.Size(212, 20);
-            this.textBoxCegEmailCim.TabIndex = 20;
+            this.errorProviderSzam.ContainerControl = this;
+            // 
+            // CegFormerrorProviderEmailCim
+            // 
+            this.CegFormerrorProviderEmailCim.ContainerControl = this;
             // 
             // Form1
             // 
@@ -1198,7 +1247,7 @@
             this.panelCegAdatok.ResumeLayout(false);
             this.panelCegAdatok.PerformLayout();
             this.panelModositTorolGombokCeg.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCeg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoAzonosito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoMarka)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoTipus)).EndInit();
@@ -1220,6 +1269,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderJogositvanyAzon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTelefonszam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTulajCegnev)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderCegAzonosito)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CegFormerrorProviderCegnev)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAdoszam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderVaros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderUtca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderSzam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CegFormerrorProviderEmailCim)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1315,7 +1371,7 @@
         private System.Windows.Forms.ErrorProvider errorProviderJogositvanyAzon;
         private System.Windows.Forms.ErrorProvider errorProviderTelefonszam;
         private System.Windows.Forms.ErrorProvider errorProviderTulajCegnev;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewCeg;
         private System.Windows.Forms.Button buttonCegAdatokBetoltese;
         private System.Windows.Forms.Panel panelModositTorolGombokCeg;
         private System.Windows.Forms.Button buttonTorolCeg;
@@ -1336,8 +1392,15 @@
         private System.Windows.Forms.TextBox textBoxCegEmailCim;
         private System.Windows.Forms.TextBox textBoxCegSzam;
         private System.Windows.Forms.TextBox textBoxCegUtca;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBoxVaros;
+        private System.Windows.Forms.TextBox textBoxAdoszam;
+        private System.Windows.Forms.ErrorProvider errorProviderCegAzonosito;
+        private System.Windows.Forms.ErrorProvider CegFormerrorProviderCegnev;
+        private System.Windows.Forms.ErrorProvider errorProviderAdoszam;
+        private System.Windows.Forms.ErrorProvider errorProviderVaros;
+        private System.Windows.Forms.ErrorProvider errorProviderUtca;
+        private System.Windows.Forms.ErrorProvider errorProviderSzam;
+        private System.Windows.Forms.ErrorProvider CegFormerrorProviderEmailCim;
     }
 }
 

@@ -13,6 +13,7 @@ using Szakdoga_autonyilvantartas.Repository;
 using Szakdoga_autonyilvantartas.repository.Auto;
 using Szakdoga_autonyilvantartas.repository.Company;
 using Szakdoga_autonyilvantartas.repository.Tulajdonosok;
+using Szakdoga_autonyilvantartas.repository;
 
 namespace Szakdoga_autonyilvantartas
 {
@@ -22,6 +23,7 @@ namespace Szakdoga_autonyilvantartas
         RepositoryDatabaseTableCar rdCar = new RepositoryDatabaseTableCar();
         RepositoryDatabaseTableCeg rdCeg = new RepositoryDatabaseTableCeg();
         RepositoryDatabaseTableTulajdonos rdTulajdonos = new RepositoryDatabaseTableTulajdonos();
+        AlterTableSQL rdAlterTable = new AlterTableSQL();
 
         private void torolHibauzenetet()
         {
@@ -60,6 +62,7 @@ namespace Szakdoga_autonyilvantartas
             }
         }
 
+
         private void feltöltésTesztadatokkalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -68,21 +71,24 @@ namespace Szakdoga_autonyilvantartas
 
                 //táblák létrehozása
                 rdCar.createTableCar();
-                
                 rdTulajdonos.createTableTulajdonos();
                 rdCeg.createTableCeg();
 
+
+
                 //tesztadatok feltöltése adatbázisba
                 rdCar.fillCarsWithTestDataFromSQLCommand();
-                
                 rdTulajdonos.fillTulajdonosokWithTestDataFromSQLCommand();
-                //rdCeg.fillCegekWithTestDataFromSQLCommand();
+                rdCeg.fillCegekWithTestDataFromSQLCommand();
 
                 //adatbázisból listák feltöltése
                 cars.setAutok(rdCar.getCarsFromDatabase());
-                //cegek.setCegek(rdCeg.getCegekFromDatabase());
                 tulajdonosok.setTulajdonosok(rdTulajdonos.getTulajdonosokFromDatabase());
-                
+                cegek.setCegek(rdCeg.getCegekFromDatabase());
+
+                //alter table
+                rdAlterTable.createAlterTable();
+
             }
             catch (Exception ex)
             {

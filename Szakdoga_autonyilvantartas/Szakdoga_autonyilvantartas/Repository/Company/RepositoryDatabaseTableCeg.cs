@@ -28,7 +28,7 @@ namespace Szakdoga_autonyilvantartas.repository.Company
             string queryCreateTable =
                 "CREATE TABLE IF NOT EXISTS `autonyilvantartas`.`cegek` ( " +
                 "`cegid` INT NOT NULL PRIMARY KEY AUTO_INCREMENT , " +
-                "`cegnev` INT(50) NOT NULL , " +
+                "`cegnev` VARCHAR(50) NOT NULL , " +
                 "`adoszam` INT(13) NOT NULL , " +
                 "`varos` VARCHAR(50) NOT NULL , " +
                 "`utca` VARCHAR(30) NOT NULL , " +

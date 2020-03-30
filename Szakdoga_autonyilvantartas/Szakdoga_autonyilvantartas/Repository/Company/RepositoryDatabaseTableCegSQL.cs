@@ -19,7 +19,7 @@ namespace Szakdoga_autonyilvantartas.repository.Company
             try
             {
                 connection.Open();
-                string query = Car.getSQLCommandGetAllRecord();
+                string query = Ceg.getSQLCommandGetAllRecord();
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlDataReader dr;
                 dr = cmd.ExecuteReader();
