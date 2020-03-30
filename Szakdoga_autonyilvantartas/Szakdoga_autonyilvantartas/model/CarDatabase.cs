@@ -17,7 +17,7 @@ namespace Szakdoga_autonyilvantartas.Model
 
         public string getUpdate(int id)
         {
-            return "UPDATE `cars` SET `marka` = '"+getMarka()+"', `tipus` = '"+getTipus()+"', `gyartasi_ev` = '"+getGyartasiev()+"', `vetelar` = '"+getVetelar()+"', `rendszam` = '"+getRendszam()+"', `kilometeroraallas` = '"+getKilometeroraallas()+"', `alvazszam` = '"+getAlvazszam()+"', `gepkocsi_tipusa` = '"+getGepkocsiTipusa()+"', `uzemanyag` = '"+getUzemanyag()+"', `sebessegvalto_tipusa` = '"+getSebessegvaltoTipusa()+"', `tulajdonos_nev` = '"+getTulajdonosNev()+"' WHERE `cars`.`id` = " + id;
+            return "UPDATE `cars` SET `marka` = '"+getMarka()+"', `tipus` = '"+getTipus()+"', `gyartasi_ev` = '"+getGyartasiev()+"', `vetelar` = '"+getVetelar()+"', `rendszam` = '"+getRendszam()+"', `kilometeroraallas` = '"+getKilometeroraallas()+"', `alvazszam` = '"+getAlvazszam()+"', `gepkocsi_tipusa` = '"+getGepkocsiTipusa()+"', `uzemanyag` = '"+getUzemanyag()+"', `sebessegvalto_tipusa` = '"+getSebessegvaltoTipusa()+"', tulid=(SELECT tulid FROM tulajdonosok WHERE tulajdonosok.tulajdonos_nev ='"+getTulajdonosNev()+"') WHERE `cars`.`id` = " + id;
         }
 
         public static string getSQLCommandDeleteAllRecord()

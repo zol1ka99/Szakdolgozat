@@ -148,6 +148,12 @@
             this.errorProviderUtca = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderSzam = new System.Windows.Forms.ErrorProvider(this.components);
             this.CegFormerrorProviderEmailCim = new System.Windows.Forms.ErrorProvider(this.components);
+            this.comboboxautoDataSet = new Szakdoga_autonyilvantartas.comboboxautoDataSet();
+            this.autokBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.autokTableAdapter = new Szakdoga_autonyilvantartas.comboboxautoDataSetTableAdapters.autokTableAdapter();
+            this.comboboxvarosokDataSet = new Szakdoga_autonyilvantartas.comboboxvarosokDataSet();
+            this.varosokBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.varosokTableAdapter = new Szakdoga_autonyilvantartas.comboboxvarosokDataSetTableAdapters.varosokTableAdapter();
             this.menuStrip1.SuspendLayout();
             this.tabControlCarDocket.SuspendLayout();
             this.tabPageAutok.SuspendLayout();
@@ -189,6 +195,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderUtca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSzam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CegFormerrorProviderEmailCim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboboxautoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autokBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboboxvarosokDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.varosokBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -427,66 +437,15 @@
             // 
             // comboBoxMarka
             // 
+            this.comboBoxMarka.DataSource = this.autokBindingSource;
+            this.comboBoxMarka.DisplayMember = "automarkak";
             this.comboBoxMarka.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMarka.FormattingEnabled = true;
-            this.comboBoxMarka.Items.AddRange(new object[] {
-            "Acura",
-            "Alfa Romeo",
-            "Aston Martin",
-            "Audi",
-            "Bentley",
-            "BMW",
-            "Bugatti",
-            "Cadillac",
-            "Chevrolet",
-            "Chrysler",
-            "Citroen",
-            "Dacia",
-            "Daihatsu",
-            "Dodge",
-            "DS",
-            "Ferrari",
-            "Fiat",
-            "Ford",
-            "Honda",
-            "Hyundai",
-            "Infiniti",
-            "Jaguar",
-            "Jeep",
-            "Kia",
-            "Lamborghini",
-            "Lancia",
-            "Land Rover",
-            "Lexus",
-            "Lotus",
-            "Maserati",
-            "Mazda",
-            "McLaren",
-            "Mercedes",
-            "Mini",
-            "Mitsubishi",
-            "Nissan",
-            "Opel",
-            "Peugeot",
-            "Porsche",
-            "Renault",
-            "Rolls Royce",
-            "Rover",
-            "Saab",
-            "Seat",
-            "Skoda",
-            "Smart",
-            "Subaru",
-            "Suzuki",
-            "Tesla",
-            "Toyota",
-            "Vauxhall",
-            "Volkswagen",
-            "Volvo"});
             this.comboBoxMarka.Location = new System.Drawing.Point(107, 46);
             this.comboBoxMarka.Name = "comboBoxMarka";
             this.comboBoxMarka.Size = new System.Drawing.Size(223, 21);
             this.comboBoxMarka.TabIndex = 12;
+            this.comboBoxMarka.ValueMember = "automarkak";
             // 
             // textBoxTipus
             // 
@@ -931,12 +890,16 @@
             // 
             // comboBoxVaros
             // 
-            this.comboBoxVaros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxVaros.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.comboBoxVaros.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxVaros.DataSource = this.varosokBindingSource;
+            this.comboBoxVaros.DisplayMember = "telepulesnevek";
             this.comboBoxVaros.FormattingEnabled = true;
             this.comboBoxVaros.Location = new System.Drawing.Point(89, 95);
             this.comboBoxVaros.Name = "comboBoxVaros";
             this.comboBoxVaros.Size = new System.Drawing.Size(228, 21);
             this.comboBoxVaros.TabIndex = 17;
+            this.comboBoxVaros.ValueMember = "telepulesnevek";
             // 
             // textBoxAdoszam
             // 
@@ -1219,6 +1182,34 @@
             // 
             this.CegFormerrorProviderEmailCim.ContainerControl = this;
             // 
+            // comboboxautoDataSet
+            // 
+            this.comboboxautoDataSet.DataSetName = "comboboxautoDataSet";
+            this.comboboxautoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // autokBindingSource
+            // 
+            this.autokBindingSource.DataMember = "autok";
+            this.autokBindingSource.DataSource = this.comboboxautoDataSet;
+            // 
+            // autokTableAdapter
+            // 
+            this.autokTableAdapter.ClearBeforeFill = true;
+            // 
+            // comboboxvarosokDataSet
+            // 
+            this.comboboxvarosokDataSet.DataSetName = "comboboxvarosokDataSet";
+            this.comboboxvarosokDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // varosokBindingSource
+            // 
+            this.varosokBindingSource.DataMember = "varosok";
+            this.varosokBindingSource.DataSource = this.comboboxvarosokDataSet;
+            // 
+            // varosokTableAdapter
+            // 
+            this.varosokTableAdapter.ClearBeforeFill = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1230,6 +1221,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControlCarDocket.ResumeLayout(false);
@@ -1276,6 +1268,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderUtca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSzam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CegFormerrorProviderEmailCim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboboxautoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.autokBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboboxvarosokDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.varosokBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1401,6 +1397,12 @@
         private System.Windows.Forms.ErrorProvider errorProviderUtca;
         private System.Windows.Forms.ErrorProvider errorProviderSzam;
         private System.Windows.Forms.ErrorProvider CegFormerrorProviderEmailCim;
+        private comboboxautoDataSet comboboxautoDataSet;
+        private System.Windows.Forms.BindingSource autokBindingSource;
+        private comboboxautoDataSetTableAdapters.autokTableAdapter autokTableAdapter;
+        private comboboxvarosokDataSet comboboxvarosokDataSet;
+        private System.Windows.Forms.BindingSource varosokBindingSource;
+        private comboboxvarosokDataSetTableAdapters.varosokTableAdapter varosokTableAdapter;
     }
 }
 

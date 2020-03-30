@@ -47,6 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="comboboxautoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>comboboxautoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="comboboxvarosokDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>comboboxvarosokDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1TestData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +115,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="comboboxautoDataSet.xsc">
+      <DependentUpon>comboboxautoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="comboboxautoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>comboboxautoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="comboboxautoDataSet.xss">
+      <DependentUpon>comboboxautoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="comboboxvarosokDataSet.xsc">
+      <DependentUpon>comboboxvarosokDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="comboboxvarosokDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>comboboxvarosokDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="comboboxvarosokDataSet.xss">
+      <DependentUpon>comboboxvarosokDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,6 +150,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="comboboxauto.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="comboboxvarosok.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,12 +10,13 @@ namespace Szakdoga_autonyilvantartas.Model
     {
         public string getInsert()
         {
-            return"";
+            return "INSERT INTO `cegek` (`cegid`, `cegnev`, `adoszam`, `varos`, `utca`, `szam`, `ceg_email_cim`) " +
+                " VALUES ('"+getCegId()+"', '"+getCegnev()+"', '"+getAdoszam()+"', '"+getVaros()+"', '"+getUtca()+"', '"+getSzam()+"', '"+getCegEmailCim()+"');";
         }
 
         public string getUpdate(int cegid)
         {
-            return"";
+            return "UPDATE `cegek` SET `cegnev` = '"+getCegnev()+"', `adoszam` = '"+getAdoszam()+"', `varos` = '"+getVaros()+"', `utca` = '"+getUtca()+"', `szam` = '"+getSzam()+"' WHERE `cegek`.`cegid` = " + cegid;
         }
 
         public static string getSQLCommandDeleteAllRecord()
