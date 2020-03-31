@@ -11,8 +11,8 @@ namespace Szakdoga_autonyilvantartas.Model
         public string getInsert()
         {
             return
-                "INSERT INTO `cars` (`id`, `marka`, `tipus`, `gyartasi_ev`, `vetelar`, `rendszam`, `kilometeroraallas`, `alvazszam`, `gepkocsi_tipusa`, `uzemanyag`, `sebessegvalto_tipusa`, `tulajdonos_nev`) " +
-                "VALUES ('"+getId()+"', '"+getMarka()+"', '"+getTipus()+"', '"+getGyartasiev()+"', '"+getVetelar()+"', '"+getRendszam()+"', '"+getKilometeroraallas()+"', '"+getAlvazszam()+"', '"+getGepkocsiTipusa()+"', '"+getUzemanyag()+"', '"+getSebessegvaltoTipusa()+"', '"+getTulajdonosNev()+"');";
+                "INSERT INTO `cars` (`id`, `marka`, `tipus`, `gyartasi_ev`, `vetelar`, `rendszam`, `kilometeroraallas`, `alvazszam`, `gepkocsi_tipusa`, `uzemanyag`, `sebessegvalto_tipusa`, `tulid`)" +
+                "VALUES ('"+getId()+"', '"+getMarka()+"', '"+getTipus()+"', '"+getGyartasiev()+"', '"+getVetelar()+"', '"+getRendszam()+"', '"+getKilometeroraallas()+"', '"+getAlvazszam()+"', '"+getGepkocsiTipusa()+"', '"+getUzemanyag()+"', '"+getSebessegvaltoTipusa()+"', (SELECT tulid FROM tulajdonosok WHERE tulajdonosok.tulajdonos_nev = '"+getTulajdonosNev()+"'))";
         }
 
         public string getUpdate(int id)

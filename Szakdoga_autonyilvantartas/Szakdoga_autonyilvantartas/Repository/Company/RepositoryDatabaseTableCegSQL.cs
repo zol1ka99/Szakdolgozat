@@ -55,7 +55,7 @@ namespace Szakdoga_autonyilvantartas.repository.Company
             try
             {
                 connection.Open();
-                string query = "DELETE FROM cegek WHERE id=" + cegid;
+                string query = "DELETE FROM cegek WHERE cegid=" + cegid;
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();

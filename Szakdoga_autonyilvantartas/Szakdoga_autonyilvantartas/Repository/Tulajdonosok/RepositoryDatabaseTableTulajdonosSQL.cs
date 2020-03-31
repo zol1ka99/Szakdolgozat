@@ -52,7 +52,7 @@ namespace Szakdoga_autonyilvantartas.repository.Tulajdonosok
             try
             {
                 connection.Open();
-                string query = "DELETE FROM tulajdonosok WHERE=" + tulid;
+                string query = "DELETE FROM tulajdonosok WHERE tulid=" + tulid;
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();
