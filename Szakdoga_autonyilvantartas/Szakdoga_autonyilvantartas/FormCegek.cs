@@ -75,8 +75,9 @@ namespace Szakdoga_autonyilvantartas
                     buttonUjCeg.Visible = true;
                 }
 
-                beallitCegekDataGridViewt();
                 frissitAdatokkalDatGridViewtCeg();
+                beallitCegekDataGridViewt();
+                
             }
         }
 
@@ -277,6 +278,8 @@ namespace Szakdoga_autonyilvantartas
         {
             panelCegAdatok.Visible = false;
             panelModositTorolGombokCeg.Visible = false;
+            buttonMegsemCeg.Visible = false;
+            buttonUjMentesCeg.Visible = false;
             if (dataGridViewCeg.SelectedRows.Count != 0)
             {
                 buttonUjCeg.Visible = false;

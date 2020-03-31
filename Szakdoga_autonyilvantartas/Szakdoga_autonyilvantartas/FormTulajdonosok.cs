@@ -74,8 +74,9 @@ namespace Szakdoga_autonyilvantartas
                     buttonUjTulajdonos.Visible = true;
                 }
 
-                beallitTulajdonosokDataGridViewt();
                 frissitAdatokkalDataGridViewtTulajdonos();
+                beallitTulajdonosokDataGridViewt();
+                
             }
         }
 
@@ -281,6 +282,8 @@ namespace Szakdoga_autonyilvantartas
         {
             panelTulajdonosAdatok.Visible = false;
             panelModositTorolTulajdonos.Visible = false;
+            buttonMegsemTulajdonos.Visible = false;
+            buttonUjMentesTulajdonos.Visible = false;
             if (dataGridViewTulajdonosok.SelectedRows.Count != 0)
             {
                 buttonUjTulajdonos.Visible = false;

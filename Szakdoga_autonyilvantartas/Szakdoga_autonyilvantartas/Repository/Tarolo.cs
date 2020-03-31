@@ -14,6 +14,7 @@ namespace Szakdoga_autonyilvantartas.Repository
             cars = new List<Car>();
             tulajdonosok = new List<Tulajdonos>();
             cegek = new List<Ceg>();
+            //felhasznalok = new List<Felhasznalo>();
 
         }
     }

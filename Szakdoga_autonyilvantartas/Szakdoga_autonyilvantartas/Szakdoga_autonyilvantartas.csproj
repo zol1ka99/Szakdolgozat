@@ -57,6 +57,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>comboboxvarosokDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Form1Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1Login.Designer.cs">
+      <DependentUpon>Form1Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1TestData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,7 @@
     <Compile Include="model\TulajdonosDatabase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryTableFelhasznalok.cs" />
     <Compile Include="repository\AlterTableSQL.cs" />
     <Compile Include="repository\Auto\RepositoryCar.cs" />
     <Compile Include="Exception\RepositoryExceptionCantAdd.cs" />
@@ -105,6 +112,9 @@
     <Compile Include="repository\Tulajdonosok\RepositoryTulajdonos.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1Login.resx">
+      <DependentUpon>Form1Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

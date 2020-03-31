@@ -53,8 +53,11 @@ namespace Szakdoga_autonyilvantartas
         {
             try
             {
-                torolHibauzenetet();
-                rd.deleteDatabase();
+                if (MessageBox.Show("Biztosan törölni szeretné az adatbázist?","Adatbázis törlése",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    torolHibauzenetet();
+                    rd.deleteDatabase();
+                }
             }
             catch (Exception ex)
             {
@@ -100,10 +103,13 @@ namespace Szakdoga_autonyilvantartas
         {
             try
             {
-                torolHibauzenetet();
-                rdCar.deleteTableCar();
-                rdCeg.deleteTableCeg();
-                rdTulajdonos.deleteTableTulajdonos();
+                if (MessageBox.Show("Biztosan törli a tesztadatokat?","Tesztadatok törlése",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    torolHibauzenetet();
+                    rdCar.deleteTableCar();
+                    rdCeg.deleteTableCeg();
+                    rdTulajdonos.deleteTableTulajdonos();
+                }
             }
             catch (Exception ex)
             {

@@ -36,7 +36,8 @@
             this.feltöltésTesztadatokkalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.törölTesztadatokToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.törölAdatbázistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kilépésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kijelentkezestoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bezarasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlCarDocket = new System.Windows.Forms.TabControl();
             this.tabPageAutok = new System.Windows.Forms.TabPage();
             this.buttonMegsem = new System.Windows.Forms.Button();
@@ -55,6 +56,8 @@
             this.textBoxRendszam = new System.Windows.Forms.TextBox();
             this.textBoxVetelar = new System.Windows.Forms.TextBox();
             this.comboBoxMarka = new System.Windows.Forms.ComboBox();
+            this.autokBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboboxautoDataSet = new Szakdoga_autonyilvantartas.comboboxautoDataSet();
             this.textBoxTipus = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -102,6 +105,8 @@
             this.textBoxCegSzam = new System.Windows.Forms.TextBox();
             this.textBoxCegUtca = new System.Windows.Forms.TextBox();
             this.comboBoxVaros = new System.Windows.Forms.ComboBox();
+            this.varosokBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboboxvarosokDataSet = new Szakdoga_autonyilvantartas.comboboxvarosokDataSet();
             this.textBoxAdoszam = new System.Windows.Forms.TextBox();
             this.textBoxCegNev = new System.Windows.Forms.TextBox();
             this.textBoxCegAzonosito = new System.Windows.Forms.TextBox();
@@ -148,16 +153,14 @@
             this.errorProviderUtca = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderSzam = new System.Windows.Forms.ErrorProvider(this.components);
             this.CegFormerrorProviderEmailCim = new System.Windows.Forms.ErrorProvider(this.components);
-            this.comboboxautoDataSet = new Szakdoga_autonyilvantartas.comboboxautoDataSet();
-            this.autokBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.autokTableAdapter = new Szakdoga_autonyilvantartas.comboboxautoDataSetTableAdapters.autokTableAdapter();
-            this.comboboxvarosokDataSet = new Szakdoga_autonyilvantartas.comboboxvarosokDataSet();
-            this.varosokBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.varosokTableAdapter = new Szakdoga_autonyilvantartas.comboboxvarosokDataSetTableAdapters.varosokTableAdapter();
             this.menuStrip1.SuspendLayout();
             this.tabControlCarDocket.SuspendLayout();
             this.tabPageAutok.SuspendLayout();
             this.panelAutok.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.autokBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboboxautoDataSet)).BeginInit();
             this.panelModositTorolGomb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAutok)).BeginInit();
             this.tabPageTulajdonosok.SuspendLayout();
@@ -166,6 +169,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTulajdonosok)).BeginInit();
             this.tabPageCegek.SuspendLayout();
             this.panelCegAdatok.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.varosokBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboboxvarosokDataSet)).BeginInit();
             this.panelModositTorolGombokCeg.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCeg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoAzonosito)).BeginInit();
@@ -195,17 +200,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderUtca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSzam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CegFormerrorProviderEmailCim)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboboxautoDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autokBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboboxvarosokDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.varosokBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tesztadatokToolStripMenuItem,
-            this.kilépésToolStripMenuItem});
+            this.kijelentkezestoolStripMenuItem,
+            this.bezarasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1167, 24);
@@ -259,11 +261,19 @@
             this.törölAdatbázistToolStripMenuItem.Text = "Töröl adatbázist";
             this.törölAdatbázistToolStripMenuItem.Click += new System.EventHandler(this.törölAdatbázistToolStripMenuItem_Click);
             // 
-            // kilépésToolStripMenuItem
+            // kijelentkezestoolStripMenuItem
             // 
-            this.kilépésToolStripMenuItem.Name = "kilépésToolStripMenuItem";
-            this.kilépésToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.kilépésToolStripMenuItem.Text = "Kilépés";
+            this.kijelentkezestoolStripMenuItem.Name = "kijelentkezestoolStripMenuItem";
+            this.kijelentkezestoolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.kijelentkezestoolStripMenuItem.Text = "Kijelentkezés";
+            this.kijelentkezestoolStripMenuItem.Click += new System.EventHandler(this.kijelentkezestoolStripMenuItem_Click);
+            // 
+            // bezarasToolStripMenuItem
+            // 
+            this.bezarasToolStripMenuItem.Name = "bezarasToolStripMenuItem";
+            this.bezarasToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.bezarasToolStripMenuItem.Text = "Kilépés";
+            this.bezarasToolStripMenuItem.Click += new System.EventHandler(this.bezarasToolStripMenuItem_Click);
             // 
             // tabControlCarDocket
             // 
@@ -446,6 +456,16 @@
             this.comboBoxMarka.Size = new System.Drawing.Size(223, 21);
             this.comboBoxMarka.TabIndex = 12;
             this.comboBoxMarka.ValueMember = "automarkak";
+            // 
+            // autokBindingSource
+            // 
+            this.autokBindingSource.DataMember = "autok";
+            this.autokBindingSource.DataSource = this.comboboxautoDataSet;
+            // 
+            // comboboxautoDataSet
+            // 
+            this.comboboxautoDataSet.DataSetName = "comboboxautoDataSet";
+            this.comboboxautoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBoxTipus
             // 
@@ -894,12 +914,23 @@
             this.comboBoxVaros.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.comboBoxVaros.DataSource = this.varosokBindingSource;
             this.comboBoxVaros.DisplayMember = "telepulesnevek";
+            this.comboBoxVaros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxVaros.FormattingEnabled = true;
             this.comboBoxVaros.Location = new System.Drawing.Point(89, 95);
             this.comboBoxVaros.Name = "comboBoxVaros";
             this.comboBoxVaros.Size = new System.Drawing.Size(228, 21);
             this.comboBoxVaros.TabIndex = 17;
             this.comboBoxVaros.ValueMember = "telepulesnevek";
+            // 
+            // varosokBindingSource
+            // 
+            this.varosokBindingSource.DataMember = "varosok";
+            this.varosokBindingSource.DataSource = this.comboboxvarosokDataSet;
+            // 
+            // comboboxvarosokDataSet
+            // 
+            this.comboboxvarosokDataSet.DataSetName = "comboboxvarosokDataSet";
+            this.comboboxvarosokDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBoxAdoszam
             // 
@@ -1182,29 +1213,9 @@
             // 
             this.CegFormerrorProviderEmailCim.ContainerControl = this;
             // 
-            // comboboxautoDataSet
-            // 
-            this.comboboxautoDataSet.DataSetName = "comboboxautoDataSet";
-            this.comboboxautoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // autokBindingSource
-            // 
-            this.autokBindingSource.DataMember = "autok";
-            this.autokBindingSource.DataSource = this.comboboxautoDataSet;
-            // 
             // autokTableAdapter
             // 
             this.autokTableAdapter.ClearBeforeFill = true;
-            // 
-            // comboboxvarosokDataSet
-            // 
-            this.comboboxvarosokDataSet.DataSetName = "comboboxvarosokDataSet";
-            this.comboboxvarosokDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // varosokBindingSource
-            // 
-            this.varosokBindingSource.DataMember = "varosok";
-            this.varosokBindingSource.DataSource = this.comboboxvarosokDataSet;
             // 
             // varosokTableAdapter
             // 
@@ -1228,6 +1239,8 @@
             this.tabPageAutok.ResumeLayout(false);
             this.panelAutok.ResumeLayout(false);
             this.panelAutok.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.autokBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboboxautoDataSet)).EndInit();
             this.panelModositTorolGomb.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAutok)).EndInit();
             this.tabPageTulajdonosok.ResumeLayout(false);
@@ -1238,6 +1251,8 @@
             this.tabPageCegek.ResumeLayout(false);
             this.panelCegAdatok.ResumeLayout(false);
             this.panelCegAdatok.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.varosokBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboboxvarosokDataSet)).EndInit();
             this.panelModositTorolGombokCeg.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCeg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAutoAzonosito)).EndInit();
@@ -1268,10 +1283,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderUtca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSzam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CegFormerrorProviderEmailCim)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboboxautoDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.autokBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboboxvarosokDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.varosokBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1285,7 +1296,7 @@
         private System.Windows.Forms.ToolStripMenuItem feltöltésTesztadatokkalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem törölTesztadatokToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem törölAdatbázistToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kilépésToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bezarasToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControlCarDocket;
         private System.Windows.Forms.TabPage tabPageAutok;
         private System.Windows.Forms.Panel panelAutok;
@@ -1403,6 +1414,7 @@
         private comboboxvarosokDataSet comboboxvarosokDataSet;
         private System.Windows.Forms.BindingSource varosokBindingSource;
         private comboboxvarosokDataSetTableAdapters.varosokTableAdapter varosokTableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem kijelentkezestoolStripMenuItem;
     }
 }
 

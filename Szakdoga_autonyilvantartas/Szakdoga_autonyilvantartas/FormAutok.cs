@@ -79,8 +79,9 @@ namespace Szakdoga_autonyilvantartas
                     buttonUjAuto.Visible = true;
                 }
 
-                beallitCarsDataGridViewt();
                 frissitAdatokkalDataGridViewt();
+                beallitCarsDataGridViewt();
+                
 
             }
 
@@ -324,6 +325,8 @@ namespace Szakdoga_autonyilvantartas
         {
             panelAutok.Visible = false;
             panelModositTorolGomb.Visible = false;
+            buttonMegsem.Visible = false;
+            buttonUjMentes.Visible = false;
             if (dataGridViewAutok.SelectedRows.Count != 0)
             {
                 buttonUjAuto.Visible = false;

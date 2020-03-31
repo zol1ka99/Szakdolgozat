@@ -20,6 +20,7 @@ namespace Szakdoga_autonyilvantartas
         Tarolo cars = new Tarolo();
         Tarolo cegek = new Tarolo();
         Tarolo tulajdonosok = new Tarolo();
+        
 
         public Form1()
         {
@@ -59,6 +60,25 @@ namespace Szakdoga_autonyilvantartas
             // TODO: This line of code loads data into the 'comboboxautoDataSet.autok' table. You can move, or remove it, as needed.
             this.autokTableAdapter.Fill(this.comboboxautoDataSet.autok);
 
+        }
+
+        private void kijelentkezestoolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Biztosan ki akar jelentkezni?  \nAz el nem mentett adatok el fognak veszni!", "Kijelentkezés", MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                Form1Login form1Login = new Form1Login();
+                form1Login.Show();
+                this.Close();
+            }
+
+        }
+
+        private void bezarasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Biztosan ki akar lépni a programoból? \nAz el nem mentett adatok el fognak veszni!", "Kilépés", MessageBoxButtons.OKCancel,MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                Application.Exit();
+            }
         }
 
 
