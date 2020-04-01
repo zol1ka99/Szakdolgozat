@@ -28,7 +28,8 @@ namespace Szakdoga_autonyilvantartas
                 "CREATE TABLE IF NOT EXISTS `felhasznalok` ( " +
                 "`id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT , " +
                 "`felhasznalonev` VARCHAR(30) NOT NULL , " +
-                "`jelszo` VARCHAR(30) NOT NULL) ";
+                "`jelszo` VARCHAR(30) NOT NULL, " +
+                "`emailcimfelhasznalo` VARCHAR(30) NOT NULL)";
 
             MySqlConnection connection = new MySqlConnection(connectionString);
 
@@ -61,11 +62,11 @@ namespace Szakdoga_autonyilvantartas
                 connection.Open();
 
                 string query =
-                    "INSERT IGNORE INTO `felhasznalok` (`id`, `felhasznalonev`, `jelszo`) VALUES " +
-                                        "(1, 'admin', 'admin')," +
-                                        "(2, 'Teszt1', '1234')," +
-                                        "(3, 'Teszt2', '1234')," +
-                                        "(4, 'Teszt3', '1234')";
+                    "INSERT IGNORE INTO `felhasznalok` (`id`, `felhasznalonev`, `jelszo`, `emailcimfelhasznalo`) VALUES " +
+                                        "(1, 'admin', 'admin', 'proba1@gmail.com')," +
+                                        "(2, 'Teszt1', '1234', 'proba2@gmail.com')," +
+                                        "(3, 'Teszt2', '1234', 'proba3@gmail.com')," +
+                                        "(4, 'Teszt3', '1234', 'proba4@gmail.com')";
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();

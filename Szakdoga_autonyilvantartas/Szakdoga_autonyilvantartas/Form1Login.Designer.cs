@@ -70,6 +70,7 @@
             // 
             this.textBoxJelszo.Location = new System.Drawing.Point(334, 130);
             this.textBoxJelszo.Name = "textBoxJelszo";
+            this.textBoxJelszo.PasswordChar = '*';
             this.textBoxJelszo.Size = new System.Drawing.Size(156, 20);
             this.textBoxJelszo.TabIndex = 3;
             // 
@@ -120,6 +121,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 361);
+            this.ControlBox = false;
             this.Controls.Add(this.buttonKilepes);
             this.Controls.Add(this.labelHibauzenet);
             this.Controls.Add(this.label3);

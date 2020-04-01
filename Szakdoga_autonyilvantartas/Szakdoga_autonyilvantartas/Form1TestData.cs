@@ -73,9 +73,9 @@ namespace Szakdoga_autonyilvantartas
                 torolHibauzenetet();
 
                 //táblák létrehozása
-                rdCar.createTableCar();
+                /*rdCar.createTableCar();
                 rdTulajdonos.createTableTulajdonos();
-                rdCeg.createTableCeg();
+                rdCeg.createTableCeg();*/
 
 
 
@@ -109,6 +109,7 @@ namespace Szakdoga_autonyilvantartas
                     rdCar.deleteTableCar();
                     rdCeg.deleteTableCeg();
                     rdTulajdonos.deleteTableTulajdonos();
+                    //felhasznalok eldobásaide irni
                 }
             }
             catch (Exception ex)

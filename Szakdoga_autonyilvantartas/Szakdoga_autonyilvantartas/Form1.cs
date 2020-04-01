@@ -59,7 +59,9 @@ namespace Szakdoga_autonyilvantartas
             this.varosokTableAdapter.Fill(this.comboboxvarosokDataSet.varosok);
             // TODO: This line of code loads data into the 'comboboxautoDataSet.autok' table. You can move, or remove it, as needed.
             this.autokTableAdapter.Fill(this.comboboxautoDataSet.autok);
-
+            rdCar.createTableCar();
+            rdTulajdonos.createTableTulajdonos();
+            rdCeg.createTableCeg();
         }
 
         private void kijelentkezestoolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,6 +79,11 @@ namespace Szakdoga_autonyilvantartas
         {
             if (MessageBox.Show("Biztosan ki akar lépni a programoból? \nAz el nem mentett adatok el fognak veszni!", "Kilépés", MessageBoxButtons.OKCancel,MessageBoxIcon.Warning) == DialogResult.OK)
             {
+                torolHibauzenetet();
+                rdCar.deleteTableCar();
+                rdTulajdonos.deleteTableTulajdonos();
+                rdCeg.deleteTableCeg();
+                rd.deleteDatabase();
                 Application.Exit();
             }
         }

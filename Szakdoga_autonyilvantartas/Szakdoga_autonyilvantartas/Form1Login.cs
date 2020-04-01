@@ -74,6 +74,7 @@ namespace Szakdoga_autonyilvantartas
         {
             if (MessageBox.Show("Biztosan bezárja a programot?","Bezárás",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.Yes)
             {
+
                 Application.Exit();
             }
         }
