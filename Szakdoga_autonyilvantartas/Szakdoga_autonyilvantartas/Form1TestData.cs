@@ -107,9 +107,10 @@ namespace Szakdoga_autonyilvantartas
                 {
                     torolHibauzenetet();
                     rdCar.deleteTableCar();
-                    rdCeg.deleteTableCeg();
                     rdTulajdonos.deleteTableTulajdonos();
+                    rdCeg.deleteTableCeg();
                     //felhasznalok eldobásaide irni
+
                 }
             }
             catch (Exception ex)
