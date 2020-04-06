@@ -30,6 +30,7 @@ namespace Szakdoga_autonyilvantartas.repository.Company
 										"(7, 'Test7 kft', 878496, 'Szeged', 'Valami3 utca', 20, 'test7@gmail.com')," +
 										"(8, 'Test8 kft', 878496, 'Budapest', 'Valami3 utca', 20, 'test8@gmail.com')";
 
+
 				MySqlCommand cmd = new MySqlCommand(query, connection);
 				cmd.ExecuteNonQuery();
 				connection.Close();
