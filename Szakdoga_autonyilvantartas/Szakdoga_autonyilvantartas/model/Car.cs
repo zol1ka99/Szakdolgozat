@@ -171,5 +171,54 @@ namespace Szakdoga_autonyilvantartas.Model
         {
             return tulajdonos_nev;
         }
+
+
+
+        /*Validáció bár az adatbáziba nem megy fel rossza adat mert le van kezelve error providerekkel és label ir irja ha hiba van*/
+        public bool isValidGyartasiev(string gyartasi_ev)
+        {
+            if (gyartasi_ev == string.Empty)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public bool isValidUpperCaseStartGKT(string gepkocsi_tipusa)
+        {
+            if (!char.IsUpper(gepkocsi_tipusa.ElementAt(0)))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool isValidUpperCaseStartUzemanyag(string uzemanyag)
+        {
+            if (!char.IsUpper(uzemanyag.ElementAt(0)))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool isValidUpperCaseStartSebessegVT(string sebessegvalto_tipusa)
+        {
+            if (!char.IsUpper(sebessegvalto_tipusa.ElementAt(0)))
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool isValidUpperCaseTulajNev(string tulajdonos_nev)
+        {
+            if (!char.IsUpper(tulajdonos_nev.ElementAt(0)))
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

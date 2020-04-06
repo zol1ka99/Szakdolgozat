@@ -26,7 +26,7 @@ namespace Szakdoga_autonyilvantartas.Model
 
         public static string getSQLCommandGetAllRecord()
         {
-            return "SELECT * FROM cegek INNER JOIN tulajdonosok ON cegek.cegid = tulajdonosok.cegid";
+            return "SELECT * FROM cegek"; 
         }
     }
 }
