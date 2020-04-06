@@ -51,7 +51,37 @@ namespace Szakdoga_autonyilvantartas.repository.Auto
 										"(28, 'Skoda', 'Fabia', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Automata', '14')," +
 										"(29, 'Audi', 'A1', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Manuális', '15')," +
 										"(30, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
-										"(31, 'Volkswagen', 'Golf', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Automata', '16')";
+										"(31, 'BMW', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(32, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(33, 'Skoda', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(34, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(35, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(36, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(37, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(38, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(39, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(40, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(41, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(42, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(43, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(44, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(45, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(46, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(47, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(48, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(49, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(50, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(51, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(52, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(53, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(54, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(55, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(56, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(57, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(58, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(59, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(60, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(61, 'Volkswagen', 'Golf', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Automata', '16')";
 				MySqlCommand cmd = new MySqlCommand(query, connection);
 				cmd.ExecuteNonQuery();
 				connection.Close();
