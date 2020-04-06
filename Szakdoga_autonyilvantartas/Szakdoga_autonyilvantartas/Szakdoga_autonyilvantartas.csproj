@@ -86,6 +86,9 @@
     <Compile Include="model\Ceg.cs" />
     <Compile Include="model\CegDatabase.cs" />
     <Compile Include="model\Connection.cs" />
+    <Compile Include="Exception\ModelCarDateTimeException.cs" />
+    <Compile Include="Exception\ModelCarDateTimeFormatException.cs" />
+    <Compile Include="Exception\ModelCarKisbetuuzemanyagException.cs" />
     <Compile Include="model\Tulajdonos.cs" />
     <Compile Include="model\TulajdonosDatabase.cs" />
     <Compile Include="Program.cs" />

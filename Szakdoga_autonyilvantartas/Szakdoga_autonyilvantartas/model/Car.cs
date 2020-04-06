@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Szakdoga_autonyilvantartas.Repository;
 
 namespace Szakdoga_autonyilvantartas.Model
 {
-    partial class Car
+    public partial class Car
     {
         private int id;
         private string marka; //comboboxba be kell tölteni az adatokat
@@ -36,6 +37,28 @@ namespace Szakdoga_autonyilvantartas.Model
             this.uzemanyag = uzemanyag;
             this.sebessegvalto_tipusa = sebessegvalto_tipusa;
             this.tulajdonos_nev = tulajdonos_nev;
+
+
+        }
+
+        public bool isValid()
+        {
+            if (!isValidGyartasiev(gyartasi_ev))
+            {
+                throw new ModelCarDateTimeException("Ne hagyja üresen a mezőt!");
+            }
+
+            if (!isValidDateTime(gyartasi_ev))
+            {
+                throw new ModelCarDateTimeFormatException("Ne hagyja üresen a mezőt!");
+            }
+            if(!isValidUpperCaseStartUzemanyag(uzemanyag))
+            {
+                throw new ModelCarKisbetuuzemanyagException("Írja nagy betűvel!");
+            }
+
+
+            return true;
         }
 
 
@@ -181,8 +204,13 @@ namespace Szakdoga_autonyilvantartas.Model
             {
                 return false;
             }
-
             return true;
+        }
+
+        public bool isValidDateTime(string gyartasi_ev)
+        {
+            var regex = new Regex(@"^\d{4}[/.-]((0\d)|(1[012]))[/.-](([012]\d)|3[01])$");
+            return regex.IsMatch(gyartasi_ev);
         }
 
         public bool isValidUpperCaseStartGKT(string gepkocsi_tipusa)
