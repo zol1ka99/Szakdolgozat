@@ -21,10 +21,14 @@ namespace Szakdoga_autonyilvantartas.repository.Tulajdonosok
 
                 string query =
                     "INSERT IGNORE INTO `tulajdonosok` (`tulid`, `tulajdonos_nev`, `tulajdonos_szemelyiigszam`, `jogositvany_azon`, `email_cim`, `telefonszam`, `cegid`) VALUES " +
-                    "(1, 'Kiss Ferenc', '1234', 12351, 'feribacsi@valami.com', 202663557, 1)," +
-                    "(2, 'Kiss Ferencegy', '1234', 12351, 'feribacsi@valami1.com', 202623457, 2)," +
-                    "(3, 'Kiss Ferencketto', '1234', 12351, 'feribacsi@valami2.com', 202606547, 3)," +
-                    "(4, 'Kiss Ferencharom', '1234', 12351, 'feribacsi@valami3.com', 207756655, 4);";
+                    "(1, 'Kiss Ferenc1', '1234', 12351, 'feribacsi@valami1.com', 202663557, 1)," +
+                    "(2, 'Kiss Ferenc2', '1234', 12351, 'feribacsi@valami2.com', 202623457, 1)," +
+                    "(3, 'Kiss Ferenc3', '1234', 12351, 'feribacsi@valami3.com', 202606547, 2)," +
+                    "(4, 'Kiss Ferenc4', '1234', 12351, 'feribacsi@valami4.com', 207756655, 2)," +
+                    "(5, 'Kiss Ferenc5', '1234', 12351, 'feribacsi@valami5.com', 207756655, 3)," +
+                    "(6, 'Kiss Ferenc6', '1234', 12351, 'feribacsi@valami6.com', 207756655, 3)," +
+                    "(7, 'Kiss Ferenc7', '1234', 12351, 'feribacsi@valami7.com', 207756655, 4)," +
+                    "(8, 'Kiss Ferenc8', '1234', 12351, 'feribacsi@valami8.com', 207756655, 4)";
 
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
