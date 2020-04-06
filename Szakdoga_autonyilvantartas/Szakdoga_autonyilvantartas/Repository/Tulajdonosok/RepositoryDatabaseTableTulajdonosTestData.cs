@@ -28,7 +28,15 @@ namespace Szakdoga_autonyilvantartas.repository.Tulajdonosok
                     "(5, 'Kiss Ferenc5', '1234', 12351, 'feribacsi@valami5.com', 207756655, 3)," +
                     "(6, 'Kiss Ferenc6', '1234', 12351, 'feribacsi@valami6.com', 207756655, 3)," +
                     "(7, 'Kiss Ferenc7', '1234', 12351, 'feribacsi@valami7.com', 207756655, 4)," +
-                    "(8, 'Kiss Ferenc8', '1234', 12351, 'feribacsi@valami8.com', 207756655, 4)";
+                    "(8, 'Kiss Ferenc8', '1234', 12351, 'feribacsi@valami8.com', 207756655, 4)," +
+                    "(9, 'Kiss Ferenc9', '1234', 12351, 'feribacsi@valami9.com', 202663557, 5)," +
+                    "(10, 'Kiss Ferenc10', '1234', 12351, 'feribacsi@valami10.com', 202623457, 5)," +
+                    "(11, 'Kiss Ferenc11', '1234', 12351, 'feribacsi@valami11.com', 202606547, 6)," +
+                    "(12, 'Kiss Ferenc12', '1234', 12351, 'feribacsi@valami12.com', 207756655, 6)," +
+                    "(13, 'Kiss Ferenc13', '1234', 12351, 'feribacsi@valami13.com', 207756655, 7)," +
+                    "(14, 'Kiss Ferenc14', '1234', 12351, 'feribacsi@valami14.com', 207756655, 7)," +
+                    "(15, 'Kiss Ferenc15', '1234', 12351, 'feribacsi@valami15.com', 207756655, 8)," +
+                    "(16, 'Kiss Ferenc16', '1234', 12351, 'feribacsi@valami16.com', 207756655, 8)";
 
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);

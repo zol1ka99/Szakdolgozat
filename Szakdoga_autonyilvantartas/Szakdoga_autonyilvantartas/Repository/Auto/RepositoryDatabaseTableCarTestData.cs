@@ -36,7 +36,22 @@ namespace Szakdoga_autonyilvantartas.repository.Auto
 										"(13, 'Skoda', 'Fabia', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Automata', '7')," +
 										"(14, 'Audi', 'A1', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Manuális', '7')," +
 										"(15, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '8')," +
-										"(16, 'Volkswagen', 'Golf', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Automata', '8')";
+										"(16, 'Volkswagen', 'Golf', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Automata', '8')," +
+										"(17, 'BMW', '520D', '2018-04-14', 2007000, 'RZT-874', 150000, 'AZR8123665487547T', 'SzGK', 'Benzin', 'Automata', '9')," +
+										"(18, 'Opel', 'Astra', '2018-12-16', 2400000, 'OTU-756', 155400, 'AZR8122764987547T', 'SzGK', 'Dízel', 'Manuális', '9')," +
+										"(19, 'BMW', 'M5', '2020-02-15', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Automata', '10')," +
+										"(20, 'Skoda', 'Fabia', '2005-05-25', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Automata', '10')," +
+										"(21, 'BMW', 'X5', '2014-01-18', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Manuális', '11')," +
+										"(22, 'Skoda', 'Octavia', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Hibrid', 'Automata', '11')," +
+										"(23, 'Skoda', 'Citygo', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Manuális', '12')," +
+										"(24, 'BMW', '330I', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Hibrid', 'Automata', '12')," +
+										"(25, 'BMW', 'X1', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Automata', '13')," +
+										"(26, 'Skoda', 'Karoq', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Manuális', '13')," +
+										"(27, 'BMW', 'X7', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Hibrid', 'Automata', '14')," +
+										"(28, 'Skoda', 'Fabia', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Automata', '14')," +
+										"(29, 'Audi', 'A1', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Manuális', '15')," +
+										"(30, 'Bugatti', 'Chiron', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Dízel', 'Automata', '15')," +
+										"(31, 'Volkswagen', 'Golf', '2018-08-12', 2900000, 'RPT-543', 150800, 'AZR8168254987547T', 'SzGK', 'Benzin', 'Automata', '16')";
 				MySqlCommand cmd = new MySqlCommand(query, connection);
 				cmd.ExecuteNonQuery();
 				connection.Close();
