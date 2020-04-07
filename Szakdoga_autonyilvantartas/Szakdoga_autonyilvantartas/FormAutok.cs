@@ -166,8 +166,8 @@ namespace Szakdoga_autonyilvantartas
                 (dataGridViewAutok.Rows.Count > 0))
             {
                 dataGridViewAutok.Rows[0].Selected = true;
-                buttonUjMentes.Visible = false;
-                buttonMegsem.Visible = false;
+                buttonUjMentes.Visible = true;
+                buttonMegsem.Visible = true;
                 panelModositTorolGomb.Visible = true;
                 ujAdatfelvitel = false;
 
@@ -316,7 +316,7 @@ namespace Szakdoga_autonyilvantartas
         private void beallitGombokatKattintaskor()
         {
             ujAdatfelvitel = false;
-            buttonUjMentes.Visible = false;
+            buttonUjMentes.Visible = true;
             panelModositTorolGomb.Visible = true;
             //ide még jönnek majd az error providerek ha bevitelnél nem helyesek az adatok
         }
