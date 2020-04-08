@@ -1,0 +1,70 @@
+<?php
+require "footer.php";
+?>
+
+py-4 bg-dark text-white-50
+
+
+$('[name=confirm]').keyup(function(){
+    let pwd = $('[name=password]').val();
+    let pwdc = $('[name=confirm]').val();
+    let email = $('[name=email]').val();
+    let emailPattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+    if(emailPattern.test(email) && pwd === pwdc){
+        $("[type=submit]").removeAttr("disabled");
+    }
+    });
+});
+
+    font-family: "Comic Sans MS" !important;
+
+
+ Ha meg kívánja tekinteni az üzeneteit kattintson <a href="messages.php">ide!</a>
+
+ normális név regex: ^[A-Za-z0-9]*$
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="elso.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+
+
+    <?php
+ini_set("SMTP","ssl://smtp.gmail.com");
+ini_set("smtp_port","465");
+ini_set("sendmail_from",'email');
+
+if (isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email']) && isset($_POST['comment'])) {
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $email = $_POST['email'];
+    $comment = $_POST['comment'];
+    $to = 'martonzoli99@gmail.com';
+    $subject = "Új javaslat érkezett";
+    $body = '<html>
+                <body>
+                    <h2>Visszajelzés cardocket.hu</h2>
+                    <hr>
+                    <p>Name<br>' . $fname . $lname . '</p>
+                    <p>Email<br>' . $email . '</p>
+                </body>
+            </html>';
+
+    $headers = "Feladó: " . $fname . $lname . "<" . $email . ">\r\n";
+    $headers = "Válasz: " . $email . '\r\n';
+
+    $send = mail($to, $subject, $body, $headers);
+    if ($send) {
+        echo '<br>';
+        echo 'Köszönjük hogy felvetted velünk a kapcsolatot';
+    } else {
+        echo 'error';
+    }
+}

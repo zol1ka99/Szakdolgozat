@@ -1,0 +1,236 @@
+/*Up to top gombnak a formázása*/
+#mygotopbutton {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #343a40;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 70px;
+    height: 70px;
+}
+#mygotopbutton:hover {
+    background-color: #555;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+#dropdownMenuLink
+{
+    outline-color: grey !important;
+    background-color: #0288d1 !important;
+}
+
+/*Kapcsolat oldal hátterének beállítása*/
+#egesz-oldal-kapcsolat
+{
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+
+#sticky-footer
+{
+    background: linear-gradient(0deg, rgba(52,58,64,1) 0%, rgba(136,136,136,1) 95%) !important;
+}
+
+/*Zöld gombok formázása*/
+#bejelentkezesbutton
+{
+    background-color: #8bc34a !important;
+    border-color: #8bc34a !important;
+    outline-color: #8bc34a !important;
+    outline: #8bc34a !important;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+/*Regisztráció form formázása*/
+.form-signup
+{
+    align-content: center;
+    padding-top: 10px;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+#navigacios
+{
+    background: linear-gradient(180deg, rgba(52,58,64,1) 0%, rgba(136,136,136,1) 95%);
+}
+/*Kontakt oldal formázása*/
+.contact{
+    padding: 4%;
+    height: 400px;
+
+}
+.col-md-3{
+    /*background:#343a40;*/
+    background: linear-gradient(180deg, rgba(52,58,64,1) 20%, rgba(87,91,96,1) 60%, rgba(255,255,255,1) 100%);
+    padding: 4%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.contact-info{
+    margin-top:10%;
+}
+.contact-info img{
+    margin-bottom: 15%;
+}
+.contact-info h2{
+    margin-bottom: 10%;
+    color: white;
+    font-family: "Comic Sans MS" !important;
+
+}
+.contact-info h4{
+    color: white;
+    font-family: "Comic Sans MS" !important;
+
+}
+
+.col-md-9{
+    background: #fff;
+    padding: 3%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.contact-form label{
+    font-weight:600;
+}
+.contact-form button{
+    background: #8bc34a;
+    border-color: #8bc34a;
+    color: #fff;
+    font-weight: 600;
+    width: 25%;
+}
+.contact-form button:focus{
+    box-shadow:none;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*Bootstrap alert box formázása*/
+#alert {
+    padding: 0 !important;
+    max-width: 50% !important;
+    text-align: center;
+    margin-left: 25%;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*Footer formázása*/
+#sticky-footer {
+    position: fixed;
+    bottom: 0;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*Jumbotron miatt kell a body*/
+body
+{
+    margin: 0px;
+    padding: 0px;
+    height: 1000px;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*Regisztráció szöveg formázása*/
+#regisztracioszoveg
+{
+font-family: "Comic Sans MS" !important;
+padding-top: 10%;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*Regisztráció gomb formázása*/
+#regisztraciobutton
+{
+    margin: 8px;
+    text-align: center;
+    background-color: #8bc34a;
+    border-color: #8bc34a;
+    font-family: "Comic Sans MS" !important;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+
+#useravatar
+{
+    
+    width: 125px;
+}
+/*Regisztráció form formázása*/
+#regisztracioform
+{
+    margin: 8px;
+    text-align: center;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*Toast felugró értesítés formázása*/
+.toast
+{
+    min-width: 200px;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*Jumbotron szöveg és vonal formázása*/
+.section-default
+{
+    font-family: "Comic Sans MS" !important;
+}
+
+.vonal
+{
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0));
+}
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*Üdvözlő képernyő formázása*/
+#udvozlo
+{
+    font-family: "Comic Sans MS" !important;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*Jumbotron kinézete*/
+.jumbotron
+{
+    background-image: url(img/teslamodels.jpg);
+    min-height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*Minden tartalomra vonatkozó formázások*/
+html {
+    scroll-behavior: smooth;
+}
+/*-------------------------------------------------------------------------------------------*/
