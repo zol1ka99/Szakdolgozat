@@ -23,9 +23,9 @@ if (isset($_SESSION['userid'])) {
                 '<tr>' .
                 '<th>Azonosító</th>' .
                 '<th>Felhasználónév</th>' .
-                '<th>Jelszó</th>' .
+                //'<th>Jelszó</th>' .
                 '<th>Email cím</th>' .
-                '<th>Módosít</th>' .
+                //'<th>Módosít</th>' .
                 '<th>Töröl</th>' .
                 '</tr>' .
                 '</thead>' .
@@ -36,9 +36,7 @@ if (isset($_SESSION['userid'])) {
                 $tablazat .= "<tr id='" . $row['id'] . "'>
             <td>" . $row['id'] . "</td>
             <td>" . $row['felhasznalonev'] . "</td>
-            <td>" . $row['jelszo'] . "</td>
             <td>" . $row['emailcimfelhasznalo'] . "</td>
-            <td><button name='modosit' id='bejelentkezesbutton' class='btn btn-success'>Módosítás</button></td>
             <td><button name'torol' id='" . $row['id'] . "' class='btn btn-danger deleteuser'>Törlés</button></td>
           </tr>";
             }
@@ -49,6 +47,10 @@ if (isset($_SESSION['userid'])) {
 
 
         require 'footer.php';
+    }
+    else
+    {
+        header("Location: index.php?error=usercontrolerror");
     }
 
 

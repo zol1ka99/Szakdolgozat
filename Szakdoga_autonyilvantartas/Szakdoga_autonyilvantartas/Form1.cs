@@ -59,6 +59,7 @@ namespace Szakdoga_autonyilvantartas
             this.varosokTableAdapter.Fill(this.comboboxvarosokDataSet.varosok);
             // TODO: This line of code loads data into the 'comboboxautoDataSet.autok' table. You can move, or remove it, as needed.
             this.autokTableAdapter.Fill(this.comboboxautoDataSet.autok);
+
             rdCar.createTableCar();
             rdTulajdonos.createTableTulajdonos();
             rdCeg.createTableCeg();

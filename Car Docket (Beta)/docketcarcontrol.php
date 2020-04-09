@@ -12,7 +12,7 @@ if (isset($_SESSION['userid'])) {
     $pageNumbers = ceil($countAutokRows / $limit);
 
     if ($pageNumbers != 1) {
-        $form = '<div class="dropdown show"><a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oldal</a><div class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuLink">';
+        $form = '<div class="dropdown show"><a class="btn btn-primary dropdown-toggle" href="#" role="button"id="dropdownMenuLink"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Oldal</a><div class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuLink">';
         for ($i = 1; $i <= $pageNumbers; $i++) {
             $form .= '<a class="dropdown-item" href="docketcarcontrol.php?page=' . $i . '">' . $i . '</a>';
         }
@@ -27,7 +27,6 @@ if (isset($_SESSION['userid'])) {
     } else {
         $start = 0;
     }
-
 
     $sql = 'SELECT * FROM cars INNER JOIN tulajdonosok ON cars.tulid = tulajdonosok.tulid LIMIT ' . $start . ',' . $limit . ';';
     $stmt = mysqli_stmt_init($connection);

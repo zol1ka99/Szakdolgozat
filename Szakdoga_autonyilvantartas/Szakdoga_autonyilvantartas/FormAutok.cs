@@ -160,32 +160,7 @@ namespace Szakdoga_autonyilvantartas
             beallitGombokatUjCarMegsemEsMentes();
         }
 
-        private void beallitGombokatUjCarMegsemEsMentes()
-        {
-            if ((dataGridViewAutok.Rows != null) &&
-                (dataGridViewAutok.Rows.Count > 0))
-            {
-                dataGridViewAutok.Rows[0].Selected = true;
-                buttonUjMentes.Visible = true;
-                buttonMegsem.Visible = true;
-                panelModositTorolGomb.Visible = true;
-                ujAdatfelvitel = false;
-
-                textBoxAzonosito.Text = "";
-                comboBoxMarka.Text = "";
-                textBoxTipus.Text = "";
-                textBoxGyartasiEv.Text = "";
-                textBoxVetelar.Text = "";
-                textBoxRendszam.Text = "";
-                textBoxKilometeroraAllas.Text = "";
-                textBoxAlvazszam.Text = "";
-                textBoxGepkocsiTipusa.Text = "";
-                textBoxUzemanyag.Text = "";
-                textBoxSebessegvaltoTipusa.Text = "";
-                textBoxTulajdonosNeve.Text = "";
-            }
-        }
-
+       
         private void buttonModositAuto_Click(object sender, EventArgs e)
         {
             torolHibauzenetet();
@@ -254,6 +229,7 @@ namespace Szakdoga_autonyilvantartas
         private void buttonUjAuto_Click(object sender, EventArgs e)
         {
             ujAdatfelvitel = true;
+            buttonUjMentes.Visible = true;
             beallitGombokatTextboxokatUjAutonal();
             int ujAutoAzonosito = cars.getNextCarId();
             textBoxAzonosito.Text = ujAutoAzonosito.ToString();
@@ -316,7 +292,7 @@ namespace Szakdoga_autonyilvantartas
         private void beallitGombokatKattintaskor()
         {
             ujAdatfelvitel = false;
-            buttonUjMentes.Visible = true;
+            buttonUjMentes.Visible = false;
             panelModositTorolGomb.Visible = true;
             //ide még jönnek majd az error providerek ha bevitelnél nem helyesek az adatok
         }
@@ -336,6 +312,33 @@ namespace Szakdoga_autonyilvantartas
                 buttonUjAuto.Visible = true;
             }
         }
+
+        private void beallitGombokatUjCarMegsemEsMentes()
+        {
+            if ((dataGridViewAutok.Rows != null) &&
+                (dataGridViewAutok.Rows.Count > 0))
+            {
+                dataGridViewAutok.Rows[0].Selected = true;
+                buttonUjMentes.Visible = true;
+                buttonMegsem.Visible = true;
+                panelModositTorolGomb.Visible = true;
+                ujAdatfelvitel = false;
+
+                textBoxAzonosito.Text = "";
+                comboBoxMarka.Text = "";
+                textBoxTipus.Text = "";
+                textBoxGyartasiEv.Text = "";
+                textBoxVetelar.Text = "";
+                textBoxRendszam.Text = "";
+                textBoxKilometeroraAllas.Text = "";
+                textBoxAlvazszam.Text = "";
+                textBoxGepkocsiTipusa.Text = "";
+                textBoxUzemanyag.Text = "";
+                textBoxSebessegvaltoTipusa.Text = "";
+                textBoxTulajdonosNeve.Text = "";
+            }
+        }
+
 
         /// <summary>
         /// Data grid view (táblázat) beállításáért felelősd kód

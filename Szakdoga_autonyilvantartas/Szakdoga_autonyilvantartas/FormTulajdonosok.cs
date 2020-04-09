@@ -143,6 +143,7 @@ namespace Szakdoga_autonyilvantartas
         private void buttonUjTulajdonos_Click(object sender, EventArgs e)
         {
             ujAdatfelvitelTulajdonos = true;
+            buttonUjMentesTulajdonos.Visible = true;
             beallitGombokatTextboxokatUjTulajdonosnal();
             int ujTulajdonosAzonosito = tulajdonosok.getNextTulajdonosId();
             textBoxTulAzonosito.Text = ujTulajdonosAzonosito.ToString();
@@ -214,7 +215,7 @@ namespace Szakdoga_autonyilvantartas
             if ((dataGridViewTulajdonosok.Rows != null) && (dataGridViewTulajdonosok.Rows.Count > 0))
             {
                 dataGridViewTulajdonosok.Rows[0].Selected = true;
-                buttonUjMentesTulajdonos.Visible = false;
+                buttonUjMentesTulajdonos.Visible = true;
                 buttonMegsemTulajdonos.Visible = false;
                 panelModositTorolTulajdonos.Visible = true;
                 ujAdatfelvitelTulajdonos = false;

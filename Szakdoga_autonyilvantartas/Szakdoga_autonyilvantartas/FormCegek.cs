@@ -144,6 +144,7 @@ namespace Szakdoga_autonyilvantartas
         private void buttonUjCeg_Click(object sender, EventArgs e)
         {
             ujAdatfelvitelCeg = true;
+            buttonUjMentesCeg.Visible = true;
             beallitGombokatTextboxokatUjCegnel();
             int ujCegAzonosito = cegek.getNextCegId();
             textBoxCegAzonosito.Text = ujCegAzonosito.ToString();

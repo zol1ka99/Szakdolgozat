@@ -159,6 +159,27 @@ require "header.php";
      </div>
      </div>';
     }
+
+
+    if (strpos($fullUrl, "error=usercontrolerror") == true) {
+        echo '<div style="position: absolute; top: 56px; right: 40px;">
+     <div class="toast" data-delay="3000" role="alert" aria-live="assertive" aria-atomic="true">
+     <div class="toast-header">
+     <img src="img/Error.png" style="width: 17px;" class="rounded mr-2" alt="pipaicon">
+     <strong class="mr-auto">Sikerült</strong>
+     <small class="text-muted">Épp most</small>
+     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+     </button>
+     </div>
+     <div class="toast-body">
+         Önnek nincs hozzáférése ezekhez az adatokhoz!
+     </div>
+     </div>
+     </div>
+     </div>';
+    }
+
     ?>
 
     <div>
